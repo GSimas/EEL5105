@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, /home/alunos/Desktop/8213A/AULA1/Halfadder.bdf
+source_file = 1, /home/alunos/Desktop/8213A/AULA1/db/Halfadder.cbx.xml
+design_name = Halfadder
+instance = comp, \C~output\, C~output, Halfadder, 1
+instance = comp, \S~output\, S~output, Halfadder, 1
+instance = comp, \A~input\, A~input, Halfadder, 1
+instance = comp, \B~input\, B~input, Halfadder, 1
+instance = comp, \inst2~0\, inst2~0, Halfadder, 1
+instance = comp, \inst4~0\, inst4~0, Halfadder, 1
+instance = comp, \~QUARTUS_CREATED_GND~I\, ~QUARTUS_CREATED_GND~I, Halfadder, 1

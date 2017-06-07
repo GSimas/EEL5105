@@ -1,0 +1,25 @@
+|Aula2divertida
+SW[0] => LEDR.IN0
+SW[0] => LEDR.IN0
+SW[1] => LEDR.IN1
+SW[1] => LEDR.IN1
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+

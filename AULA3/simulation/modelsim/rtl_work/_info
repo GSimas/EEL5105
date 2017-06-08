@@ -1,0 +1,127 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alunos/Desktop/8213A/AULA3/simulation/modelsim
+Efa
+Z1 w1491312848
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/alunos/Desktop/8213A/AULA3/fa.vhd
+Z5 F/home/alunos/Desktop/8213A/AULA3/fa.vhd
+l0
+L4
+V`8[MDSJ_@c2gAQI:]nGbR3
+!s100 DdW87ddf877U5Xoh9>:V41
+Z6 OV;C;10.3d;59
+31
+Z7 !s110 1491314355
+!i10b 1
+Z8 !s108 1491314355.468284
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA3/fa.vhd|
+Z10 !s107 /home/alunos/Desktop/8213A/AULA3/fa.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Afa_estr
+R2
+R3
+DEx4 work 2 fa 0 22 `8[MDSJ_@c2gAQI:]nGbR3
+l14
+L13
+VI?R0g`AlVdCe?idSRf8zl0
+!s100 L=nWWjobOJkEWZ0Wgo_XY3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eha
+Z13 w1491311300
+R2
+R3
+R0
+Z14 8/home/alunos/Desktop/8213A/AULA3/ha.vhd
+Z15 F/home/alunos/Desktop/8213A/AULA3/ha.vhd
+l0
+L4
+V;60[5DB6XT7T@:S_RJ]Vn2
+!s100 5K2gni[6@VWWY:8ZQVDnL1
+R6
+31
+R7
+!i10b 1
+Z16 !s108 1491314355.412254
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA3/ha.vhd|
+Z18 !s107 /home/alunos/Desktop/8213A/AULA3/ha.vhd|
+!i113 1
+R11
+R12
+Aha_estr
+R2
+R3
+DEx4 work 2 ha 0 22 ;60[5DB6XT7T@:S_RJ]Vn2
+l13
+L12
+V_6A_TW0Nj3z9>8HUh>lb^1
+!s100 >M;>d<:0mci6dXhC4L:fI1
+R6
+31
+R7
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R11
+R12
+Etopo
+Z19 w1491313733
+R2
+R3
+R0
+Z20 8/home/alunos/Desktop/8213A/AULA3/topo.vhd
+Z21 F/home/alunos/Desktop/8213A/AULA3/topo.vhd
+l0
+L4
+VR>7mJhdkEb2c@obW;5oVf2
+!s100 PB`?aBW=;SYHnM9Q?KKUI3
+R6
+31
+R7
+!i10b 1
+Z22 !s108 1491314355.290583
+Z23 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA3/topo.vhd|
+Z24 !s107 /home/alunos/Desktop/8213A/AULA3/topo.vhd|
+!i113 1
+R11
+R12
+Atopo_estru
+R2
+R3
+DEx4 work 4 topo 0 22 R>7mJhdkEb2c@obW;5oVf2
+l44
+L10
+V;`]SlMIWE0b03iZ21YkTP2
+!s100 k]NK21cY49kShL4gHni=83
+R6
+31
+R7
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R11
+R12

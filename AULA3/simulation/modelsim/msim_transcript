@@ -1,0 +1,47 @@
+# do topo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA3/topo.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 10:59:15 on Apr 04,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA3/topo.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity topo
+# -- Compiling architecture topo_estru of topo
+# End time: 10:59:15 on Apr 04,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA3/ha.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 10:59:15 on Apr 04,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA3/ha.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity HA
+# -- Compiling architecture ha_estr of HA
+# End time: 10:59:15 on Apr 04,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA3/fa.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 10:59:15 on Apr 04,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA3/fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture fa_estr of FA
+# End time: 10:59:15 on Apr 04,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

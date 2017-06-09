@@ -1,0 +1,62 @@
+|Aula4Mux
+SW[0] => C1:L0.A
+SW[0] => C3:L2.A
+SW[1] => C1:L0.B
+SW[1] => C2:L1.A
+SW[1] => C3:L2.B
+SW[2] => C1:L0.C
+SW[2] => C2:L1.B
+SW[2] => C3:L2.C
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => C4:L3.z
+SW[8] => C4:L3.s[0]
+SW[9] => C4:L3.s[1]
+LEDR[0] <= C4:L3.F
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+
+
+|Aula4Mux|C1:L0
+A => F.IN0
+B => F.IN1
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula4Mux|C2:L1
+A => F.IN0
+B => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula4Mux|C3:L2
+A => F.IN1
+B => F.IN0
+C => F.IN1
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Aula4Mux|C4:L3
+w => F.DATAB
+x => F.DATAB
+y => F.DATAB
+z => F.DATAA
+s[0] => Equal0.IN0
+s[0] => Equal1.IN1
+s[0] => Equal2.IN1
+s[1] => Equal0.IN1
+s[1] => Equal1.IN0
+s[1] => Equal2.IN0
+F <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

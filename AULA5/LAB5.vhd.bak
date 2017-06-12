@@ -1,0 +1,33 @@
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+
+entity LAB5 is
+port (SW: in std_logic_vector(9 downto 0);
+		HEX0: out std_logic_vector(6 downto 0);
+		LEDR: out std_logic_vector(9 downto 0);
+);
+end LAB5;
+
+architecture lab_stru of LAB5 is
+signal F, F1, F2, F3, F4: std_logic_vector(3 downto 0);
+
+component C1
+port (A: in std_logic_vector(3 downto 0);
+		B: in std_logic_vector(3 downto 0);
+		F: out std_logic_vector(3 downto 0)
+		);
+end component;
+
+component C2
+port (A: in std_logic_vector(3 downto 0);
+		B: in std_logic_vector(3 downto 0);
+		F: out std_logic_vector(3 downto 0)
+		);
+end component;
+
+component C3
+port (A: in std_logic_vector(3 downto 0);
+		B: in std_logic_vector(3 downto 0);
+		F: out std_logic_vector(3 downto 0)
+		);
+end component;

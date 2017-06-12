@@ -1,0 +1,156 @@
+# do LAB5_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/15.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/C1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/C1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity C1
+# -- Compiling architecture circuito of C1
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/C2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/C2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity C2
+# -- Compiling architecture circuito of C2
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/C3.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/C3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity C3
+# -- Compiling architecture circuito of C3
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/C4.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/C4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity C4
+# -- Compiling architecture circuito of C4
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/mux4x1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/mux4x1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4x1
+# -- Compiling architecture circuito of mux4x1
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/LAB5.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/LAB5.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LAB5
+# -- Compiling architecture lab_stru of LAB5
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/alunos/Desktop/8213A/AULA5/decod7seg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 11:06:28 on Apr 18,2017
+# vcom -reportprogress 300 -93 -work work /home/alunos/Desktop/8213A/AULA5/decod7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity decod7seg
+# -- Compiling architecture decod of decod7seg
+# End time: 11:06:28 on Apr 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.c1 work.c2 work.c3 work.c4 work.decod7seg work.lab5 work.mux4x1
+# vsim -i -l msim_transcript -do "LAB5_run_msim_rtl_vhdl.do" 
+# Start time: 11:06:34 on Apr 18,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.c1(circuito)
+# Loading work.c2(circuito)
+# Loading work.c3(circuito)
+# Loading work.c4(circuito)
+# Loading work.decod7seg(decod)
+# Loading work.lab5(lab_stru)
+# Loading work.mux4x1(circuito)
+# ** Failure: (vsim-3817) Port "B" of entity "c4" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /lab5/L4 File: /home/alunos/Desktop/8213A/AULA5/C4.vhd Line: 6
+# Fatal error in file /home/alunos/Desktop/8213A/AULA5/C4.vhd
+#  while elaborating region: /lab5/L4
+# Load interrupted
+# Error loading design
+vsim work.c1 work.c2 work.c3 work.c4 work.decod7seg work.lab5 work.mux4x1
+# vsim 
+# Start time: 11:06:42 on Apr 18,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.c1(circuito)
+# Loading work.c2(circuito)
+# Loading work.c3(circuito)
+# Loading work.c4(circuito)
+# Loading work.decod7seg(decod)
+# Loading work.lab5(lab_stru)
+# Loading work.mux4x1(circuito)
+# ** Failure: (vsim-3817) Port "B" of entity "c4" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /lab5/L4 File: /home/alunos/Desktop/8213A/AULA5/C4.vhd Line: 6
+# Fatal error in file /home/alunos/Desktop/8213A/AULA5/C4.vhd
+#  while elaborating region: /lab5/L4
+# Load interrupted
+# Error loading design
+vsim work.c1(circuito) work.c2(circuito) work.c3(circuito) work.c4(circuito) work.decod7seg(decod) work.lab5(lab_stru) work.mux4x1(circuito)
+# vsim 
+# Start time: 11:06:56 on Apr 18,2017
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.c1(circuito)
+# Loading work.c2(circuito)
+# Loading work.c3(circuito)
+# Loading work.c4(circuito)
+# Loading work.decod7seg(decod)
+# Loading work.lab5(lab_stru)
+# Loading work.mux4x1(circuito)
+# ** Failure: (vsim-3817) Port "B" of entity "c4" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /lab5/L4 File: /home/alunos/Desktop/8213A/AULA5/C4.vhd Line: 6
+# Fatal error in file /home/alunos/Desktop/8213A/AULA5/C4.vhd
+#  while elaborating region: /lab5/L4
+# Load interrupted
+# Error loading design

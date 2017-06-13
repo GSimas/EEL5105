@@ -1,0 +1,326 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/alunos/Desktop/8213A/AULA6/simulation/modelsim
+Ec1
+Z1 w1492518908
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8/home/alunos/Desktop/8213A/AULA6/C1.vhd
+Z7 F/home/alunos/Desktop/8213A/AULA6/C1.vhd
+l0
+L5
+VmcYHH2j>FP[U@YAebFRMI1
+!s100 2jRTl6RMKn]FY2`PE`YCG0
+Z8 OV;C;10.3d;59
+31
+Z9 !s110 1493732032
+!i10b 1
+Z10 !s108 1493732032.067385
+Z11 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/C1.vhd|
+Z12 !s107 /home/alunos/Desktop/8213A/AULA6/C1.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1
+Acircuito
+R2
+R3
+R4
+R5
+DEx4 work 2 c1 0 22 mcYHH2j>FP[U@YAebFRMI1
+l13
+L12
+VSAZ2iJZk8RET=9NB<BHSn2
+!s100 J?k@HOXNTG6acXkV5;ezi0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ec2
+Z15 w1492518684
+R4
+R5
+R0
+Z16 8/home/alunos/Desktop/8213A/AULA6/C2.vhd
+Z17 F/home/alunos/Desktop/8213A/AULA6/C2.vhd
+l0
+L4
+V?_MSPc:5g7bB:VXBZFRQS0
+!s100 T0F>Fz?:0Oz<?UU8ocl`20
+R8
+31
+R9
+!i10b 1
+Z18 !s108 1493732032.011245
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/C2.vhd|
+Z20 !s107 /home/alunos/Desktop/8213A/AULA6/C2.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R4
+R5
+DEx4 work 2 c2 0 22 ?_MSPc:5g7bB:VXBZFRQS0
+l12
+L11
+Vlj35OG:B>:Z_ee@S0F7KY0
+!s100 jzM:nkNX^^1EYj7g`od`;1
+R8
+31
+R9
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R13
+R14
+Ec3
+Z21 w1492518807
+R4
+R5
+R0
+Z22 8/home/alunos/Desktop/8213A/AULA6/C3.vhd
+Z23 F/home/alunos/Desktop/8213A/AULA6/C3.vhd
+l0
+L4
+VVAY14gJ44aGZ<b@E_@zNK3
+!s100 33<Fom28`0eTWGRgV1a:33
+R8
+31
+Z24 !s110 1493732031
+!i10b 1
+Z25 !s108 1493732031.956198
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/C3.vhd|
+Z27 !s107 /home/alunos/Desktop/8213A/AULA6/C3.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R4
+R5
+DEx4 work 2 c3 0 22 VAY14gJ44aGZ<b@E_@zNK3
+l12
+L11
+VjFE5AO`dgK7gTZ6MAn2Rk0
+!s100 ;VdN0dH6G7nmOBjSP9Ic]3
+R8
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R13
+R14
+Ec4
+Z28 w1492518913
+R4
+R5
+R0
+Z29 8/home/alunos/Desktop/8213A/AULA6/C4.vhd
+Z30 F/home/alunos/Desktop/8213A/AULA6/C4.vhd
+l0
+L4
+VH]]oYBE;F@o^4>[9Oo``=2
+!s100 >?AV7O:5aIWo8GdoD<@:43
+R8
+31
+R24
+!i10b 1
+Z31 !s108 1493732031.901824
+Z32 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/C4.vhd|
+Z33 !s107 /home/alunos/Desktop/8213A/AULA6/C4.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R4
+R5
+DEx4 work 2 c4 0 22 H]]oYBE;F@o^4>[9Oo``=2
+l12
+L11
+VG;_e_=LAdlFA1K[=z>jla3
+!s100 cK[Nb5l;6hY]lDf]PRmME1
+R8
+31
+R24
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R13
+R14
+Ed_4ff
+Z34 w1493730255
+R4
+R5
+R0
+Z35 8/home/alunos/Desktop/8213A/AULA6/reg4.vhd
+Z36 F/home/alunos/Desktop/8213A/AULA6/reg4.vhd
+l0
+L4
+V:WK<Y7IhEPXJ2SBJW1@am2
+!s100 2aSji[aQ^^CWSzZ^d`X>j3
+R8
+31
+R9
+!i10b 1
+Z37 !s108 1493732032.180214
+Z38 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/reg4.vhd|
+Z39 !s107 /home/alunos/Desktop/8213A/AULA6/reg4.vhd|
+!i113 1
+R13
+R14
+Abehv
+R4
+R5
+DEx4 work 5 d_4ff 0 22 :WK<Y7IhEPXJ2SBJW1@am2
+l13
+L12
+V^`jA7`DBo_aOmUG7FIQCH2
+!s100 m8n]QUN`@0`QIlF63PXMj3
+R8
+31
+R9
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R13
+R14
+Edecod7seg
+Z40 w1492520232
+R4
+R5
+R0
+Z41 8/home/alunos/Desktop/8213A/AULA6/decod7seg.vhd
+Z42 F/home/alunos/Desktop/8213A/AULA6/decod7seg.vhd
+l0
+L4
+V6gz:mP3cKjWMFMz9[kY=f3
+!s100 LgmfSdi];ACIOoc<^`a0X2
+R8
+31
+R24
+!i10b 1
+Z43 !s108 1493732031.848548
+Z44 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/decod7seg.vhd|
+Z45 !s107 /home/alunos/Desktop/8213A/AULA6/decod7seg.vhd|
+!i113 1
+R13
+R14
+Adecod
+R4
+R5
+DEx4 work 9 decod7seg 0 22 6gz:mP3cKjWMFMz9[kY=f3
+l11
+L10
+V=o@noaGAb=IN=>;RfbkiO1
+!s100 8e@:]_h`C6hD3LkEHXEfc0
+R8
+31
+R24
+!i10b 1
+R43
+R44
+R45
+!i113 1
+R13
+R14
+Elab6
+Z46 w1493730239
+R4
+R5
+R0
+Z47 8/home/alunos/Desktop/8213A/AULA6/LAB6.vhd
+Z48 F/home/alunos/Desktop/8213A/AULA6/LAB6.vhd
+l0
+L4
+V460TFMAK]NA0G0ERf?IhP1
+!s100 =iKlUF>m;a`k=4DAin2zf2
+R8
+31
+R9
+!i10b 1
+Z49 !s108 1493732032.126726
+Z50 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/LAB6.vhd|
+Z51 !s107 /home/alunos/Desktop/8213A/AULA6/LAB6.vhd|
+!i113 1
+R13
+R14
+Alab_stru
+R4
+R5
+DEx4 work 4 lab6 0 22 460TFMAK]NA0G0ERf?IhP1
+l65
+L13
+V:LchDmo527kNEF>Ph4zaW0
+!s100 3EP^7;hTQZBjMGm8ejhP;1
+R8
+31
+R9
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R13
+R14
+Emux4x1
+Z52 w1492520287
+R4
+R5
+R0
+Z53 8/home/alunos/Desktop/8213A/AULA6/mux4x1.vhd
+Z54 F/home/alunos/Desktop/8213A/AULA6/mux4x1.vhd
+l0
+L4
+Vk1:@]I?alUMZiTDQ1m2Sz0
+!s100 :HIEOcjF>0aR4gFQ2H`Q31
+R8
+31
+R24
+!i10b 1
+Z55 !s108 1493732031.733995
+Z56 !s90 -reportprogress|300|-93|-work|work|/home/alunos/Desktop/8213A/AULA6/mux4x1.vhd|
+Z57 !s107 /home/alunos/Desktop/8213A/AULA6/mux4x1.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R4
+R5
+DEx4 work 6 mux4x1 0 22 k1:@]I?alUMZiTDQ1m2Sz0
+l12
+L11
+V>aPc;FR[fKTYlPP0OiV=93
+!s100 0lN`UZ>T9R`ll9SN7MHYA0
+R8
+31
+R24
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R13
+R14

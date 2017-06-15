@@ -1,0 +1,91 @@
+|LAB7a
+LEDR[0] <= FSM_Conta:L0.contagem[0]
+LEDR[1] <= FSM_Conta:L0.contagem[1]
+LEDR[2] <= FSM_Conta:L0.contagem[2]
+LEDR[3] <= FSM_Conta:L0.contagem[3]
+KEY[0] => FSM_Conta:L0.RST
+KEY[1] => FSM_Conta:L0.CLK
+HEX0[0] <= decod7seg:L1.F[0]
+HEX0[1] <= decod7seg:L1.F[1]
+HEX0[2] <= decod7seg:L1.F[2]
+HEX0[3] <= decod7seg:L1.F[3]
+HEX0[4] <= decod7seg:L1.F[4]
+HEX0[5] <= decod7seg:L1.F[5]
+HEX0[6] <= decod7seg:L1.F[6]
+
+
+|LAB7a|FSM_Conta:L0
+CLK => EA~1.DATAIN
+RST => EA~3.DATAIN
+contagem[0] <= contagem.DB_MAX_OUTPUT_PORT_TYPE
+contagem[1] <= contagem.DB_MAX_OUTPUT_PORT_TYPE
+contagem[2] <= contagem.DB_MAX_OUTPUT_PORT_TYPE
+contagem[3] <= <GND>
+
+
+|LAB7a|decod7seg:L1
+C[0] => Equal0.IN3
+C[0] => Equal1.IN1
+C[0] => Equal2.IN3
+C[0] => Equal3.IN1
+C[0] => Equal4.IN3
+C[0] => Equal5.IN2
+C[0] => Equal6.IN3
+C[0] => Equal7.IN1
+C[0] => Equal8.IN3
+C[0] => Equal9.IN2
+C[0] => Equal10.IN3
+C[0] => Equal11.IN2
+C[0] => Equal12.IN3
+C[0] => Equal13.IN3
+C[1] => Equal0.IN0
+C[1] => Equal1.IN0
+C[1] => Equal2.IN2
+C[1] => Equal3.IN3
+C[1] => Equal4.IN1
+C[1] => Equal5.IN1
+C[1] => Equal6.IN2
+C[1] => Equal7.IN3
+C[1] => Equal8.IN1
+C[1] => Equal9.IN1
+C[1] => Equal10.IN2
+C[1] => Equal11.IN3
+C[1] => Equal12.IN2
+C[1] => Equal13.IN2
+C[2] => Equal0.IN2
+C[2] => Equal1.IN3
+C[2] => Equal2.IN0
+C[2] => Equal3.IN0
+C[2] => Equal4.IN0
+C[2] => Equal5.IN0
+C[2] => Equal6.IN1
+C[2] => Equal7.IN2
+C[2] => Equal8.IN2
+C[2] => Equal9.IN3
+C[2] => Equal10.IN1
+C[2] => Equal11.IN1
+C[2] => Equal12.IN1
+C[2] => Equal13.IN1
+C[3] => Equal0.IN1
+C[3] => Equal1.IN2
+C[3] => Equal2.IN1
+C[3] => Equal3.IN2
+C[3] => Equal4.IN2
+C[3] => Equal5.IN3
+C[3] => Equal6.IN0
+C[3] => Equal7.IN0
+C[3] => Equal8.IN0
+C[3] => Equal9.IN0
+C[3] => Equal10.IN0
+C[3] => Equal11.IN0
+C[3] => Equal12.IN0
+C[3] => Equal13.IN0
+F[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[1] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[2] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[3] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[4] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[5] <= F.DB_MAX_OUTPUT_PORT_TYPE
+F[6] <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+

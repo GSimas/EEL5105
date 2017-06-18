@@ -1,0 +1,13 @@
+Quartus
+ex 1 esquematico
+ex1 diagrama de tempo
+ex2 esquematico
+ex2 diagrama de tempo
+ex3 esquematico
+ex3 diagrama de tempo
+
+
+Proteus
+ex1
+ex2
+ex3

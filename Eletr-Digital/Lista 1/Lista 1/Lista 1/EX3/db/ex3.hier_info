@@ -1,0 +1,21 @@
+|ex3
+SAIDA <= inst24.DB_MAX_OUTPUT_PORT_TYPE
+RESET => inst24.ACLR
+RESET => inst23.ACLR
+RESET => inst22.ACLR
+RESET => inst21.ACLR
+CLOCK => inst24.CLK
+CLOCK => inst23.CLK
+CLOCK => inst22.CLK
+CLOCK => inst21.CLK
+Q3 => inst21.DATAIN
+WRITESHIFT => inst13.IN1
+WRITESHIFT => inst.IN0
+WRITESHIFT => inst.IN1
+WRITESHIFT => inst16.IN1
+WRITESHIFT => inst19.IN1
+Q2 => inst12.IN1
+Q1 => inst15.IN1
+Q0 => inst18.IN1
+
+

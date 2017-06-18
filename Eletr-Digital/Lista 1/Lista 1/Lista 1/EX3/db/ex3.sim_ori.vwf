@@ -1,0 +1,341 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 1000.0;
+	SIMULATION_TIME = 1000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("CLOCK")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q0")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q1")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q2")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("Q3")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("RESET")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("SAIDA")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("WRITESHIFT")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("CLOCK")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 20;
+			LEVEL 0 FOR 25.0;
+			LEVEL 1 FOR 25.0;
+		}
+	}
+}
+
+TRANSITION_LIST("Q0")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.151;
+		LEVEL 1 FOR 47.373;
+		LEVEL 0 FOR 71.798;
+		LEVEL 1 FOR 96.965;
+		LEVEL 0 FOR 22.206;
+		LEVEL 1 FOR 48.113;
+		LEVEL 0 FOR 30.348;
+		LEVEL 1 FOR 108.808;
+		LEVEL 0 FOR 21.466;
+		LEVEL 1 FOR 24.426;
+		LEVEL 0 FOR 25.907;
+		LEVEL 1 FOR 159.141;
+		LEVEL 0 FOR 51.073;
+		LEVEL 1 FOR 148.779;
+		LEVEL 0 FOR 15.544;
+		LEVEL 1 FOR 69.578;
+		LEVEL 0 FOR 13.324;
+	}
+}
+
+TRANSITION_LIST("Q1")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.151;
+		LEVEL 1 FOR 47.373;
+		LEVEL 0 FOR 71.798;
+		LEVEL 1 FOR 96.965;
+		LEVEL 0 FOR 22.206;
+		LEVEL 1 FOR 48.113;
+		LEVEL 0 FOR 30.348;
+		LEVEL 1 FOR 108.808;
+		LEVEL 0 FOR 21.466;
+		LEVEL 1 FOR 24.426;
+		LEVEL 0 FOR 25.907;
+		LEVEL 1 FOR 159.141;
+		LEVEL 0 FOR 51.073;
+		LEVEL 1 FOR 148.779;
+		LEVEL 0 FOR 15.544;
+		LEVEL 1 FOR 69.578;
+		LEVEL 0 FOR 13.324;
+	}
+}
+
+TRANSITION_LIST("Q2")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.151;
+		LEVEL 1 FOR 47.373;
+		LEVEL 0 FOR 71.798;
+		LEVEL 1 FOR 96.965;
+		LEVEL 0 FOR 22.206;
+		LEVEL 1 FOR 48.113;
+		LEVEL 0 FOR 30.348;
+		LEVEL 1 FOR 108.808;
+		LEVEL 0 FOR 21.466;
+		LEVEL 1 FOR 24.426;
+		LEVEL 0 FOR 25.907;
+		LEVEL 1 FOR 159.141;
+		LEVEL 0 FOR 51.073;
+		LEVEL 1 FOR 148.779;
+		LEVEL 0 FOR 15.544;
+		LEVEL 1 FOR 69.578;
+		LEVEL 0 FOR 13.324;
+	}
+}
+
+TRANSITION_LIST("Q3")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 45.151;
+		LEVEL 1 FOR 47.373;
+		LEVEL 0 FOR 71.798;
+		LEVEL 1 FOR 167.284;
+		LEVEL 0 FOR 30.348;
+		LEVEL 1 FOR 108.808;
+		LEVEL 0 FOR 21.466;
+		LEVEL 1 FOR 24.426;
+		LEVEL 0 FOR 25.907;
+		LEVEL 1 FOR 159.141;
+		LEVEL 0 FOR 51.073;
+		LEVEL 1 FOR 148.779;
+		LEVEL 0 FOR 15.544;
+		LEVEL 1 FOR 69.578;
+		LEVEL 0 FOR 13.324;
+	}
+}
+
+TRANSITION_LIST("RESET")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 146.558;
+		LEVEL 0 FOR 94.004;
+		LEVEL 1 FOR 290.896;
+		LEVEL 0 FOR 103.627;
+		LEVEL 1 FOR 364.915;
+	}
+}
+
+TRANSITION_LIST("SAIDA")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 81.701;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 868.299;
+	}
+}
+
+TRANSITION_LIST("WRITESHIFT")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 282.753;
+		LEVEL 1 FOR 177.646;
+		LEVEL 0 FOR 223.539;
+		LEVEL 1 FOR 315.322;
+		LEVEL 0 FOR 0.74;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "CLOCK";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q2";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "Q3";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "RESET";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "WRITESHIFT";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "SAIDA";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = ASCII;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 24300;
+	MASTER = TRUE;
+}
+;

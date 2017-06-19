@@ -1,0 +1,213 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'FSM_clock:L6|conta1[0]'
+Slack : -10.259
+TNS   : -5865.442
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -5.254
+TNS   : -266.971
+
+Type  : Slow 1100mV 85C Model Hold 'FSM_clock:L6|conta1[0]'
+Slack : -1.371
+TNS   : -1.371
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.374
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'FSM_clock:L6|conta1[0]'
+Slack : -9.482
+TNS   : -4951.025
+
+Type  : Slow 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -8.008
+TNS   : -479.236
+
+Type  : Slow 1100mV 85C Model Recovery 'FSM_control:L32|EA.E0'
+Slack : -3.183
+TNS   : -33.348
+
+Type  : Slow 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.998
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'FSM_clock:L6|conta1[0]'
+Slack : 1.100
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'FSM_control:L32|EA.E0'
+Slack : 1.352
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM_clock:L6|conta1[0]'
+Slack : -2.923
+TNS   : -9031.387
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -75.885
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FSM_control:L32|EA.E0'
+Slack : 0.060
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'FSM_clock:L6|conta1[0]'
+Slack : -10.080
+TNS   : -5799.436
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -4.885
+TNS   : -258.116
+
+Type  : Slow 1100mV 0C Model Hold 'FSM_clock:L6|conta1[0]'
+Slack : -1.341
+TNS   : -1.341
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.141
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'FSM_clock:L6|conta1[0]'
+Slack : -9.259
+TNS   : -4824.897
+
+Type  : Slow 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -7.647
+TNS   : -461.804
+
+Type  : Slow 1100mV 0C Model Recovery 'FSM_control:L32|EA.E0'
+Slack : -3.051
+TNS   : -31.492
+
+Type  : Slow 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.581
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'FSM_clock:L6|conta1[0]'
+Slack : 0.925
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'FSM_control:L32|EA.E0'
+Slack : 1.208
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM_clock:L6|conta1[0]'
+Slack : -2.858
+TNS   : -8818.938
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.394
+TNS   : -82.199
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FSM_control:L32|EA.E0'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'FSM_clock:L6|conta1[0]'
+Slack : -7.000
+TNS   : -3655.025
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : -3.427
+TNS   : -138.458
+
+Type  : Fast 1100mV 85C Model Hold 'FSM_clock:L6|conta1[0]'
+Slack : -0.517
+TNS   : -0.517
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'FSM_clock:L6|conta1[0]'
+Slack : -6.308
+TNS   : -3305.744
+
+Type  : Fast 1100mV 85C Model Recovery 'CLOCK_50'
+Slack : -5.021
+TNS   : -248.312
+
+Type  : Fast 1100mV 85C Model Recovery 'FSM_control:L32|EA.E0'
+Slack : -1.771
+TNS   : -17.569
+
+Type  : Fast 1100mV 85C Model Removal 'CLOCK_50'
+Slack : 0.540
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'FSM_control:L32|EA.E0'
+Slack : 1.064
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'FSM_clock:L6|conta1[0]'
+Slack : 1.229
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM_clock:L6|conta1[0]'
+Slack : -1.583
+TNS   : -3801.329
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.093
+TNS   : -12.319
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FSM_control:L32|EA.E0'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'FSM_clock:L6|conta1[0]'
+Slack : -6.260
+TNS   : -3310.181
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : -2.840
+TNS   : -112.397
+
+Type  : Fast 1100mV 0C Model Hold 'FSM_clock:L6|conta1[0]'
+Slack : -0.526
+TNS   : -0.526
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'FSM_clock:L6|conta1[0]'
+Slack : -5.640
+TNS   : -2949.070
+
+Type  : Fast 1100mV 0C Model Recovery 'CLOCK_50'
+Slack : -4.296
+TNS   : -208.809
+
+Type  : Fast 1100mV 0C Model Recovery 'FSM_control:L32|EA.E0'
+Slack : -1.424
+TNS   : -13.582
+
+Type  : Fast 1100mV 0C Model Removal 'CLOCK_50'
+Slack : 0.487
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'FSM_clock:L6|conta1[0]'
+Slack : 0.936
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'FSM_control:L32|EA.E0'
+Slack : 0.946
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM_clock:L6|conta1[0]'
+Slack : -1.375
+TNS   : -3347.454
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -0.090
+TNS   : -12.302
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FSM_control:L32|EA.E0'
+Slack : 0.186
+TNS   : 0.000
+
+------------------------------------------------------------

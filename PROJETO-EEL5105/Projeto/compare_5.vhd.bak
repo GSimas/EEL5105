@@ -1,0 +1,11 @@
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+
+entity compare_5 is
+port (CNT_B: in std_logic_vector(4 downto 0);
+		END_BONUS: out std_logic;
+		);
+end decod7seg;
+
+architecture decod of decod7seg is
+begin

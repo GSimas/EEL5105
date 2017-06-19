@@ -1,0 +1,59 @@
+
+State Machine - |PROJETO|FSM_control:L32|EA
+Name EA.E3 EA.E2 EA.E1 EA.E0 
+EA.E0 0 0 0 0 
+EA.E1 0 0 1 1 
+EA.E2 0 1 0 1 
+EA.E3 1 0 0 1 
+
+State Machine - |PROJETO|FSM_speed:L15|EA
+Name EA.S5 EA.S4 EA.S3 EA.S2 EA.S1 EA.S0 
+EA.S0 0 0 0 0 0 0 
+EA.S1 0 0 0 0 1 1 
+EA.S2 0 0 0 1 0 1 
+EA.S3 0 0 1 0 0 1 
+EA.S4 0 1 0 0 0 1 
+EA.S5 1 0 0 0 0 1 
+
+State Machine - |PROJETO|FSM_position:L14|EA
+Name EA.SF EA.SE EA.SD EA.SC EA.SB EA.SA EA.S9 EA.S8 EA.S0 EA.S6 EA.S5 EA.S4 EA.S3 EA.S2 EA.S1 EA.S7 
+EA.S7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+EA.S1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+EA.S2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+EA.S3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+EA.S4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+EA.S5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+EA.S6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+EA.S0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+EA.S8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+EA.S9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+EA.SA 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+EA.SB 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+EA.SC 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+EA.SD 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+EA.SE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+EA.SF 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |PROJETO|ButtonSync:L1|btn3state
+Name btn3state.EsperaSoltar btn3state.SaidaAtiva btn3state.EsperaApertar 
+btn3state.EsperaApertar 0 0 0 
+btn3state.SaidaAtiva 0 1 1 
+btn3state.EsperaSoltar 1 0 1 
+
+State Machine - |PROJETO|ButtonSync:L1|btn2state
+Name btn2state.EsperaSoltar btn2state.SaidaAtiva btn2state.EsperaApertar 
+btn2state.EsperaApertar 0 0 0 
+btn2state.SaidaAtiva 0 1 1 
+btn2state.EsperaSoltar 1 0 1 
+
+State Machine - |PROJETO|ButtonSync:L1|btn1state
+Name btn1state.EsperaSoltar btn1state.SaidaAtiva btn1state.EsperaApertar 
+btn1state.EsperaApertar 0 0 0 
+btn1state.SaidaAtiva 0 1 1 
+btn1state.EsperaSoltar 1 0 1 
+
+State Machine - |PROJETO|ButtonSync:L1|btn0state
+Name btn0state.EsperaSoltar btn0state.SaidaAtiva btn0state.EsperaApertar 
+btn0state.EsperaApertar 0 0 0 
+btn0state.SaidaAtiva 0 1 1 
+btn0state.EsperaSoltar 1 0 1 

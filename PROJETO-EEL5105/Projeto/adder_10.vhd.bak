@@ -1,0 +1,9 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity adder_10 is port(
+	IN1, IN2: in std_logic_vector(9 downto 0);
+	OUT1: out std_logic_vector(9 downto 0)
+	);
+end adder_10;

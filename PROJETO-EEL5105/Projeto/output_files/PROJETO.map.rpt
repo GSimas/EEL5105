@@ -1,0 +1,994 @@
+Analysis & Synthesis report for PROJETO
+Mon Jun 19 10:31:26 2017
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |PROJETO|FSM_control:L32|EA
+  9. State Machine - |PROJETO|FSM_speed:L15|EA
+ 10. State Machine - |PROJETO|FSM_position:L14|EA
+ 11. State Machine - |PROJETO|ButtonSync:L1|btn3state
+ 12. State Machine - |PROJETO|ButtonSync:L1|btn2state
+ 13. State Machine - |PROJETO|ButtonSync:L1|btn1state
+ 14. State Machine - |PROJETO|ButtonSync:L1|btn0state
+ 15. User-Specified and Inferred Latches
+ 16. Registers Removed During Synthesis
+ 17. General Register Statistics
+ 18. Inverted Register Statistics
+ 19. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 20. Port Connectivity Checks: "mux2x1_30:L53"
+ 21. Port Connectivity Checks: "mux2x1_10:L52"
+ 22. Port Connectivity Checks: "mux16x1_32:L51"
+ 23. Port Connectivity Checks: "mux4x1_30:L49"
+ 24. Port Connectivity Checks: "adder_10:L13"
+ 25. Port Connectivity Checks: "compare_5:L12"
+ 26. Port Connectivity Checks: "compare_10:L11"
+ 27. Port Connectivity Checks: "compare_10:L10"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jun 19 10:31:26 2017       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; PROJETO                                     ;
+; Top-level Entity Name           ; PROJETO                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 1210                                        ;
+; Total pins                      ; 67                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; PROJETO            ; PROJETO            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; map4.vhd                         ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map4.vhd         ;         ;
+; map3.vhd                         ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map3.vhd         ;         ;
+; map2.vhd                         ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map2.vhd         ;         ;
+; map1.vhd                         ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map1.vhd         ;         ;
+; ButtonSync.vhd                   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/ButtonSync.vhd   ;         ;
+; PROJETO.vhd                      ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd      ;         ;
+; FSM_speed.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_speed.vhd    ;         ;
+; FSM_control.vhd                  ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd  ;         ;
+; FSM_position.vhd                 ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_position.vhd ;         ;
+; FSM_clock.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd    ;         ;
+; Mux8x1.vhd                       ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd       ;         ;
+; Mux16x1.vhd                      ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux16x1.vhd      ;         ;
+; Mux2x1_30.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_30.vhd    ;         ;
+; Mux2x1_10.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_10.vhd    ;         ;
+; Mux4x1_32.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_32.vhd    ;         ;
+; Mux4x1_30.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_30.vhd    ;         ;
+; decod7seg.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/decod7seg.vhd    ;         ;
+; compare_5.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_5.vhd    ;         ;
+; compare_10.vhd                   ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_10.vhd   ;         ;
+; adder_10.vhd                     ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/adder_10.vhd     ;         ;
+; rot_32.vhd                       ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd       ;         ;
+; Conta_des.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_des.vhd    ;         ;
+; Conta_bonus.vhd                  ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_bonus.vhd  ;         ;
+; Conta_asc.vhd                    ; yes             ; User VHDL File  ; C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_asc.vhd    ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 693            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 757            ;
+;     -- 7 input functions                    ; 11             ;
+;     -- 6 input functions                    ; 100            ;
+;     -- 5 input functions                    ; 238            ;
+;     -- 4 input functions                    ; 39             ;
+;     -- <=3 input functions                  ; 369            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 1210           ;
+;                                             ;                ;
+; I/O pins                                    ; 67             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; mux8x1:L50|REG ;
+; Maximum fan-out                             ; 1054           ;
+; Total fan-out                               ; 7050           ;
+; Average fan-out                             ; 3.36           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+--------------+--------------+
+; |PROJETO                   ; 757 (0)             ; 1210 (0)                  ; 0                 ; 0          ; 67   ; 0            ; |PROJETO                  ; PROJETO      ; work         ;
+;    |ButtonSync:L1|         ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|ButtonSync:L1    ; ButtonSync   ; work         ;
+;    |Conta_asc:L8|          ; 15 (15)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|Conta_asc:L8     ; Conta_asc    ; work         ;
+;    |Conta_bonus:L9|        ; 6 (6)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|Conta_bonus:L9   ; Conta_bonus  ; work         ;
+;    |Conta_des:L7|          ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|Conta_des:L7     ; Conta_des    ; work         ;
+;    |FSM_clock:L6|          ; 157 (157)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|FSM_clock:L6     ; FSM_clock    ; work         ;
+;    |FSM_control:L32|       ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|FSM_control:L32  ; FSM_control  ; work         ;
+;    |FSM_position:L14|      ; 24 (24)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|FSM_position:L14 ; FSM_position ; work         ;
+;    |FSM_speed:L15|         ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|FSM_speed:L15    ; FSM_speed    ; work         ;
+;    |adder_10:L13|          ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|adder_10:L13     ; adder_10     ; work         ;
+;    |compare_10:L10|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|compare_10:L10   ; compare_10   ; work         ;
+;    |compare_10:L11|        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|compare_10:L11   ; compare_10   ; work         ;
+;    |compare_5:L12|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|compare_5:L12    ; compare_5    ; work         ;
+;    |decod7seg:L55|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|decod7seg:L55    ; decod7seg    ; work         ;
+;    |decod7seg:L56|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|decod7seg:L56    ; decod7seg    ; work         ;
+;    |decod7seg:L57|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|decod7seg:L57    ; decod7seg    ; work         ;
+;    |decod7seg:L58|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|decod7seg:L58    ; decod7seg    ; work         ;
+;    |decod7seg:L59|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|decod7seg:L59    ; decod7seg    ; work         ;
+;    |mux16x1_32:L51|        ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux16x1_32:L51   ; mux16x1_32   ; work         ;
+;    |mux2x1_10:L52|         ; 46 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux2x1_10:L52    ; mux2x1_10    ; work         ;
+;    |mux4x1_30:L49|         ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux4x1_30:L49    ; mux4x1_30    ; work         ;
+;    |mux4x1_32:L39|         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux4x1_32:L39    ; mux4x1_32    ; work         ;
+;    |mux4x1_32:L45|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux4x1_32:L45    ; mux4x1_32    ; work         ;
+;    |mux8x1:L50|            ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|mux8x1:L50       ; mux8x1       ; work         ;
+;    |rot_32:L16|            ; 22 (22)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L16       ; rot_32       ; work         ;
+;    |rot_32:L17|            ; 21 (21)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L17       ; rot_32       ; work         ;
+;    |rot_32:L18|            ; 36 (36)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L18       ; rot_32       ; work         ;
+;    |rot_32:L19|            ; 16 (16)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L19       ; rot_32       ; work         ;
+;    |rot_32:L20|            ; 27 (27)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L20       ; rot_32       ; work         ;
+;    |rot_32:L21|            ; 28 (28)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L21       ; rot_32       ; work         ;
+;    |rot_32:L22|            ; 26 (26)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L22       ; rot_32       ; work         ;
+;    |rot_32:L23|            ; 18 (18)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L23       ; rot_32       ; work         ;
+;    |rot_32:L24|            ; 27 (27)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L24       ; rot_32       ; work         ;
+;    |rot_32:L25|            ; 21 (21)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L25       ; rot_32       ; work         ;
+;    |rot_32:L26|            ; 32 (32)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L26       ; rot_32       ; work         ;
+;    |rot_32:L27|            ; 21 (21)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L27       ; rot_32       ; work         ;
+;    |rot_32:L28|            ; 23 (23)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L28       ; rot_32       ; work         ;
+;    |rot_32:L29|            ; 24 (24)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L29       ; rot_32       ; work         ;
+;    |rot_32:L30|            ; 17 (17)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L30       ; rot_32       ; work         ;
+;    |rot_32:L31|            ; 21 (21)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |PROJETO|rot_32:L31       ; rot_32       ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------+
+; State Machine - |PROJETO|FSM_control:L32|EA ;
++-------+-------+-------+-------+-------------+
+; Name  ; EA.E3 ; EA.E2 ; EA.E1 ; EA.E0       ;
++-------+-------+-------+-------+-------------+
+; EA.E0 ; 0     ; 0     ; 0     ; 0           ;
+; EA.E1 ; 0     ; 0     ; 1     ; 1           ;
+; EA.E2 ; 0     ; 1     ; 0     ; 1           ;
+; EA.E3 ; 1     ; 0     ; 0     ; 1           ;
++-------+-------+-------+-------+-------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------+
+; State Machine - |PROJETO|FSM_speed:L15|EA             ;
++-------+-------+-------+-------+-------+-------+-------+
+; Name  ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S0 ;
++-------+-------+-------+-------+-------+-------+-------+
+; EA.S0 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1 ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2 ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3 ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4 ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5 ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |PROJETO|FSM_position:L14|EA                                                                                          ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; Name  ; EA.SF ; EA.SE ; EA.SD ; EA.SC ; EA.SB ; EA.SA ; EA.S9 ; EA.S8 ; EA.S0 ; EA.S6 ; EA.S5 ; EA.S4 ; EA.S3 ; EA.S2 ; EA.S1 ; EA.S7 ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+; EA.S7 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ;
+; EA.S1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 1     ;
+; EA.S2 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 1     ;
+; EA.S3 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 1     ;
+; EA.S4 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S5 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S6 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S0 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S8 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.S9 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SA ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SB ; 0     ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SC ; 0     ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SD ; 0     ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SE ; 0     ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
+; EA.SF ; 1     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 0     ; 1     ;
++-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |PROJETO|ButtonSync:L1|btn3state                                                  ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn3state.EsperaSoltar ; btn3state.SaidaAtiva ; btn3state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn3state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn3state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn3state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |PROJETO|ButtonSync:L1|btn2state                                                  ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn2state.EsperaSoltar ; btn2state.SaidaAtiva ; btn2state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn2state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn2state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn2state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |PROJETO|ButtonSync:L1|btn1state                                                  ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn1state.EsperaSoltar ; btn1state.SaidaAtiva ; btn1state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn1state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn1state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn1state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |PROJETO|ButtonSync:L1|btn0state                                                  ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn0state.EsperaSoltar ; btn0state.SaidaAtiva ; btn0state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn0state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn0state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn0state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; FSM_clock:L6|sig_led                               ; FSM_clock:L6|Equal3 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ButtonSync:L1|btn3state.EsperaSoltar  ; Lost fanout                            ;
+; ButtonSync:L1|btn2state.EsperaSoltar  ; Lost fanout                            ;
+; ButtonSync:L1|btn1state.EsperaSoltar  ; Lost fanout                            ;
+; ButtonSync:L1|btn0state.EsperaSoltar  ; Lost fanout                            ;
+; Conta_asc:L8|contador2[4]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1210  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 690   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1062  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Conta_des:L7|contador2[3]              ; 7       ;
+; Conta_des:L7|contador2[0]              ; 8       ;
+; Conta_des:L7|contador1[3]              ; 4       ;
+; Conta_des:L7|contador1[0]              ; 7       ;
+; Conta_bonus:L9|contador[0]             ; 8       ;
+; Conta_bonus:L9|contador[1]             ; 7       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PROJETO|decod7seg:L54|F       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PROJETO|mux4x1_30:L49|REG[12] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |PROJETO|mux4x1_30:L49|REG[13] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |PROJETO|mux4x1_30:L49|REG[2]  ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 30 LEs               ; 12 LEs                 ; No         ; |PROJETO|decod7seg:L59|F[4]    ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 30 LEs               ; 12 LEs                 ; No         ; |PROJETO|decod7seg:L58|F[0]    ;
+; 17:1               ; 9 bits    ; 99 LEs        ; 99 LEs               ; 0 LEs                  ; No         ; |PROJETO|mux2x1_10:L52|REG[7]  ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 30 LEs               ; 12 LEs                 ; No         ; |PROJETO|decod7seg:L57|F[4]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++-----------------------------------------------+
+; Port Connectivity Checks: "mux2x1_30:L53"     ;
++-------------+-------+----------+--------------+
+; Port        ; Type  ; Severity ; Details      ;
++-------------+-------+----------+--------------+
+; in0[28..26] ; Input ; Info     ; Stuck at VCC ;
+; in0[16..15] ; Input ; Info     ; Stuck at VCC ;
+; in0[29]     ; Input ; Info     ; Stuck at GND ;
+; in0[25]     ; Input ; Info     ; Stuck at GND ;
+; in0[19]     ; Input ; Info     ; Stuck at GND ;
+; in0[18]     ; Input ; Info     ; Stuck at VCC ;
+; in0[17]     ; Input ; Info     ; Stuck at GND ;
+; in1[29..27] ; Input ; Info     ; Stuck at VCC ;
+; in1[19..18] ; Input ; Info     ; Stuck at VCC ;
+; in1[26..23] ; Input ; Info     ; Stuck at GND ;
+; in1[17..16] ; Input ; Info     ; Stuck at GND ;
+; in1[15]     ; Input ; Info     ; Stuck at VCC ;
+; in1[14]     ; Input ; Info     ; Stuck at GND ;
++-------------+-------+----------+--------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "mux2x1_10:L52" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; in0  ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux16x1_32:L51"                                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; reg[21..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "mux4x1_30:L49"      ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; map2[28..26] ; Input ; Info     ; Stuck at VCC ;
+; map2[17..16] ; Input ; Info     ; Stuck at VCC ;
+; map2[7..5]   ; Input ; Info     ; Stuck at VCC ;
+; map2[15..14] ; Input ; Info     ; Stuck at GND ;
+; map2[4..2]   ; Input ; Info     ; Stuck at GND ;
+; map2[29]     ; Input ; Info     ; Stuck at GND ;
+; map2[25]     ; Input ; Info     ; Stuck at GND ;
+; map2[19]     ; Input ; Info     ; Stuck at VCC ;
+; map2[18]     ; Input ; Info     ; Stuck at GND ;
+; map2[13]     ; Input ; Info     ; Stuck at VCC ;
+; map2[12]     ; Input ; Info     ; Stuck at GND ;
+; map2[11]     ; Input ; Info     ; Stuck at VCC ;
+; map2[10]     ; Input ; Info     ; Stuck at GND ;
+; map2[9]      ; Input ; Info     ; Stuck at VCC ;
+; map2[8]      ; Input ; Info     ; Stuck at GND ;
+; map3[28..26] ; Input ; Info     ; Stuck at VCC ;
+; map3[19..15] ; Input ; Info     ; Stuck at VCC ;
+; map3[8..5]   ; Input ; Info     ; Stuck at VCC ;
+; map3[3..0]   ; Input ; Info     ; Stuck at VCC ;
+; map3[14..9]  ; Input ; Info     ; Stuck at GND ;
+; map3[29]     ; Input ; Info     ; Stuck at GND ;
+; map3[25]     ; Input ; Info     ; Stuck at GND ;
+; map3[4]      ; Input ; Info     ; Stuck at GND ;
+; map4[28..26] ; Input ; Info     ; Stuck at VCC ;
+; map4[17..13] ; Input ; Info     ; Stuck at VCC ;
+; map4[29]     ; Input ; Info     ; Stuck at GND ;
+; map4[25]     ; Input ; Info     ; Stuck at GND ;
+; map4[19]     ; Input ; Info     ; Stuck at VCC ;
+; map4[18]     ; Input ; Info     ; Stuck at GND ;
+; map4[12]     ; Input ; Info     ; Stuck at GND ;
+; map4[11]     ; Input ; Info     ; Stuck at VCC ;
+; map4[10]     ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "adder_10:L13"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; in1[9..6] ; Input ; Info     ; Stuck at GND ;
+; in1[0]    ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "compare_5:L12" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; in1  ; Input ; Info     ; Stuck at GND    ;
++------+-------+----------+-----------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "compare_10:L11"  ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; in1[9..8] ; Input ; Info     ; Stuck at GND ;
+; in1[6..0] ; Input ; Info     ; Stuck at GND ;
+; in1[7]    ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "compare_10:L10" ;
++------+-------+----------+------------------+
+; Port ; Type  ; Severity ; Details          ;
++------+-------+----------+------------------+
+; in1  ; Input ; Info     ; Stuck at GND     ;
++------+-------+----------+------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1210                        ;
+;     CLR               ; 140                         ;
+;     ENA               ; 512                         ;
+;     ENA CLR           ; 550                         ;
+;     plain             ; 8                           ;
+; arriav_lcell_comb     ; 763                         ;
+;     arith             ; 133                         ;
+;         1 data inputs ; 125                         ;
+;         2 data inputs ; 8                           ;
+;     extend            ; 11                          ;
+;         7 data inputs ; 11                          ;
+;     normal            ; 619                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 207                         ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 238                         ;
+;         6 data inputs ; 100                         ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 2.02                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:14     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Mon Jun 19 10:29:56 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PROJETO -c PROJETO
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file map4.vhd
+    Info (12022): Found design unit 1: map4-map4_struct File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map4.vhd Line: 11
+    Info (12023): Found entity 1: map4 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map4.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file map3.vhd
+    Info (12022): Found design unit 1: map3-map3_struct File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map3.vhd Line: 11
+    Info (12023): Found entity 1: map3 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file map2.vhd
+    Info (12022): Found design unit 1: map2-map2_struct File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map2.vhd Line: 11
+    Info (12023): Found entity 1: map2 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file map1.vhd
+    Info (12022): Found design unit 1: map1-map1_struct File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map1.vhd Line: 11
+    Info (12023): Found entity 1: map1 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/map1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file buttonsync.vhd
+    Info (12022): Found design unit 1: ButtonSync-ButtonSyncImpl File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/ButtonSync.vhd Line: 24
+    Info (12023): Found entity 1: ButtonSync File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/ButtonSync.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file projeto.vhd
+    Info (12022): Found design unit 1: PROJETO-topo_stru File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 22
+    Info (12023): Found entity 1: PROJETO File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_speed.vhd
+    Info (12022): Found design unit 1: FSM_speed-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_speed.vhd Line: 13
+    Info (12023): Found entity 1: FSM_speed File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_speed.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_control.vhd
+    Info (12022): Found design unit 1: FSM_control-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 15
+    Info (12023): Found entity 1: FSM_control File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_position.vhd
+    Info (12022): Found design unit 1: FSM_position-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_position.vhd Line: 14
+    Info (12023): Found entity 1: FSM_position File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_position.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file fsm_clock.vhd
+    Info (12022): Found design unit 1: FSM_clock-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd Line: 14
+    Info (12023): Found entity 1: FSM_clock File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mux8x1.vhd
+    Info (12022): Found design unit 1: mux8x1-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 13
+    Info (12023): Found entity 1: mux8x1 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux16x1.vhd
+    Info (12022): Found design unit 1: mux16x1_32-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux16x1.vhd Line: 13
+    Info (12023): Found entity 1: mux16x1_32 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux16x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_30.vhd
+    Info (12022): Found design unit 1: mux2x1_30-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_30.vhd Line: 13
+    Info (12023): Found entity 1: mux2x1_30 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_30.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_10.vhd
+    Info (12022): Found design unit 1: mux2x1_10-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_10.vhd Line: 13
+    Info (12023): Found entity 1: mux2x1_10 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux2x1_10.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_32.vhd
+    Info (12022): Found design unit 1: mux4x1_32-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_32.vhd Line: 13
+    Info (12023): Found entity 1: mux4x1_32 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_32.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_30.vhd
+    Info (12022): Found design unit 1: mux4x1_30-circuito File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_30.vhd Line: 13
+    Info (12023): Found entity 1: mux4x1_30 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux4x1_30.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decod7seg.vhd
+    Info (12022): Found design unit 1: decod7seg-decod File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/decod7seg.vhd Line: 12
+    Info (12023): Found entity 1: decod7seg File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/decod7seg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file compare_5.vhd
+    Info (12022): Found design unit 1: compare_5-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_5.vhd Line: 13
+    Info (12023): Found entity 1: compare_5 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_5.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file compare_10.vhd
+    Info (12022): Found design unit 1: compare_10-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_10.vhd Line: 13
+    Info (12023): Found entity 1: compare_10 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/compare_10.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file adder_10.vhd
+    Info (12022): Found design unit 1: adder_10-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/adder_10.vhd Line: 13
+    Info (12023): Found entity 1: adder_10 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/adder_10.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file rot_32.vhd
+    Info (12022): Found design unit 1: rot_32-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 14
+    Info (12023): Found entity 1: rot_32 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conta_des.vhd
+    Info (12022): Found design unit 1: Conta_des-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_des.vhd Line: 13
+    Info (12023): Found entity 1: Conta_des File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_des.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file conta_bonus.vhd
+    Info (12022): Found design unit 1: Conta_bonus-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_bonus.vhd Line: 13
+    Info (12023): Found entity 1: Conta_bonus File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_bonus.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file conta_asc.vhd
+    Info (12022): Found design unit 1: Conta_asc-bhv File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_asc.vhd Line: 13
+    Info (12023): Found entity 1: Conta_asc File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_asc.vhd Line: 6
+Info (12127): Elaborating entity "PROJETO" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(60): used explicit default value for signal "soma" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 60
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(72): used explicit default value for signal "mux1" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 72
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(73): used explicit default value for signal "mux2" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 73
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(74): used explicit default value for signal "mux3" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 74
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(77): used explicit default value for signal "mux2_sig1" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 77
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(78): used explicit default value for signal "mux2_sig2" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 78
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(80): used explicit default value for signal "mux2_30_sig1" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 80
+Warning (10540): VHDL Signal Declaration warning at PROJETO.vhd(81): used explicit default value for signal "mux2_30_sig2" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 81
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "ButtonSync:L1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 291
+Info (12128): Elaborating entity "map1" for hierarchy "map1:L2" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 296
+Info (12128): Elaborating entity "map2" for hierarchy "map2:L3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 299
+Info (12128): Elaborating entity "map3" for hierarchy "map3:L4" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 302
+Info (12128): Elaborating entity "map4" for hierarchy "map4:L5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 305
+Info (12128): Elaborating entity "FSM_clock" for hierarchy "FSM_clock:L6" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 311
+Warning (10492): VHDL Process Statement warning at FSM_clock.vhd(61): signal "sig_led" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd Line: 61
+Warning (10631): VHDL Process Statement warning at FSM_clock.vhd(21): inferring latch(es) for signal or variable "sig_led", which holds its previous value in one or more paths through the process File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd Line: 21
+Info (10041): Inferred latch for "sig_led" at FSM_clock.vhd(21) File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_clock.vhd Line: 21
+Info (12128): Elaborating entity "Conta_des" for hierarchy "Conta_des:L7" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 313
+Info (12128): Elaborating entity "Conta_asc" for hierarchy "Conta_asc:L8" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 315
+Warning (10540): VHDL Signal Declaration warning at Conta_asc.vhd(17): used explicit default value for signal "speed_sig" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_asc.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at Conta_asc.vhd(28): signal "speed_sig" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Conta_asc.vhd Line: 28
+Info (12128): Elaborating entity "Conta_bonus" for hierarchy "Conta_bonus:L9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 317
+Info (12128): Elaborating entity "compare_10" for hierarchy "compare_10:L10" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 322
+Info (12128): Elaborating entity "compare_5" for hierarchy "compare_5:L12" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 326
+Info (12128): Elaborating entity "adder_10" for hierarchy "adder_10:L13" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 328
+Info (12128): Elaborating entity "FSM_position" for hierarchy "FSM_position:L14" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 333
+Info (12128): Elaborating entity "FSM_speed" for hierarchy "FSM_speed:L15" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 335
+Info (12128): Elaborating entity "rot_32" for hierarchy "rot_32:L16" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 337
+Warning (10540): VHDL Signal Declaration warning at rot_32.vhd(18): used explicit default value for signal "speed_sig" because signal was never assigned a value File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at rot_32.vhd(29): signal "REG_IN" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 29
+Info (12128): Elaborating entity "FSM_control" for hierarchy "FSM_control:L32" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 357
+Warning (10631): VHDL Process Statement warning at FSM_control.vhd(35): inferring latch(es) for signal or variable "PE", which holds its previous value in one or more paths through the process File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 35
+Info (10041): Inferred latch for "PE.E3" at FSM_control.vhd(35) File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 35
+Info (10041): Inferred latch for "PE.E2" at FSM_control.vhd(35) File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 35
+Info (10041): Inferred latch for "PE.E1" at FSM_control.vhd(35) File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 35
+Info (10041): Inferred latch for "PE.E0" at FSM_control.vhd(35) File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/FSM_control.vhd Line: 35
+Info (12128): Elaborating entity "mux4x1_32" for hierarchy "mux4x1_32:L33" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 363
+Info (12128): Elaborating entity "mux4x1_30" for hierarchy "mux4x1_30:L49" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 380
+Info (12128): Elaborating entity "mux8x1" for hierarchy "mux8x1:L50" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 382
+Info (12128): Elaborating entity "mux16x1_32" for hierarchy "mux16x1_32:L51" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 384
+Info (12128): Elaborating entity "mux2x1_10" for hierarchy "mux2x1_10:L52" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 388
+Info (12128): Elaborating entity "mux2x1_30" for hierarchy "mux2x1_30:L53" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 390
+Info (12128): Elaborating entity "decod7seg" for hierarchy "decod7seg:L54" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 392
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer mux8x1:L50|REG File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 7
+    Warning (19017): Found clock multiplexer mux8x1:L50|REG~0 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 7
+    Warning (19017): Found clock multiplexer mux8x1:L50|REG~1 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 7
+    Warning (19017): Found clock multiplexer mux8x1:L50|REG~2 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 7
+    Warning (19017): Found clock multiplexer mux8x1:L50|REG~3 File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/Mux8x1.vhd Line: 7
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "rot_32:L27|shl[22]" is converted into an equivalent circuit using register "rot_32:L27|shl[22]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[22]" is converted into an equivalent circuit using register "rot_32:L30|shl[22]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[22]" is converted into an equivalent circuit using register "rot_32:L28|shl[22]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[22]" is converted into an equivalent circuit using register "rot_32:L29|shl[22]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[22]" is converted into an equivalent circuit using register "rot_32:L18|shl[22]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[22]" is converted into an equivalent circuit using register "rot_32:L19|shl[22]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[22]" is converted into an equivalent circuit using register "rot_32:L22|shl[22]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[22]" is converted into an equivalent circuit using register "rot_32:L20|shl[22]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[22]" is converted into an equivalent circuit using register "rot_32:L21|shl[22]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[23]" is converted into an equivalent circuit using register "rot_32:L28|shl[23]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[23]" is converted into an equivalent circuit using register "rot_32:L18|shl[23]~_emulated" and latch "rot_32:L18|shl[23]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[23]" is converted into an equivalent circuit using register "rot_32:L19|shl[23]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[23]" is converted into an equivalent circuit using register "rot_32:L17|shl[23]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[23]" is converted into an equivalent circuit using register "rot_32:L20|shl[23]~_emulated" and latch "rot_32:L20|shl[23]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[23]" is converted into an equivalent circuit using register "rot_32:L21|shl[23]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[24]" is converted into an equivalent circuit using register "rot_32:L26|shl[24]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[24]" is converted into an equivalent circuit using register "rot_32:L27|shl[24]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[24]" is converted into an equivalent circuit using register "rot_32:L24|shl[24]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[24]" is converted into an equivalent circuit using register "rot_32:L30|shl[24]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[24]" is converted into an equivalent circuit using register "rot_32:L28|shl[24]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[24]" is converted into an equivalent circuit using register "rot_32:L18|shl[24]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[24]" is converted into an equivalent circuit using register "rot_32:L19|shl[24]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[24]" is converted into an equivalent circuit using register "rot_32:L17|shl[24]~_emulated" and latch "rot_32:L17|shl[24]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[24]" is converted into an equivalent circuit using register "rot_32:L23|shl[24]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[24]" is converted into an equivalent circuit using register "rot_32:L20|shl[24]~_emulated" and latch "rot_32:L20|shl[23]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[25]" is converted into an equivalent circuit using register "rot_32:L26|shl[25]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[25]" is converted into an equivalent circuit using register "rot_32:L27|shl[25]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[25]" is converted into an equivalent circuit using register "rot_32:L24|shl[25]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[25]" is converted into an equivalent circuit using register "rot_32:L30|shl[25]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[25]" is converted into an equivalent circuit using register "rot_32:L29|shl[25]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[25]" is converted into an equivalent circuit using register "rot_32:L18|shl[25]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[25]" is converted into an equivalent circuit using register "rot_32:L23|shl[25]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[26]" is converted into an equivalent circuit using register "rot_32:L26|shl[26]~_emulated" and latch "rot_32:L26|shl[26]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[26]" is converted into an equivalent circuit using register "rot_32:L24|shl[26]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[26]" is converted into an equivalent circuit using register "rot_32:L31|shl[26]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[26]" is converted into an equivalent circuit using register "rot_32:L18|shl[26]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[26]" is converted into an equivalent circuit using register "rot_32:L23|shl[26]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[27]" is converted into an equivalent circuit using register "rot_32:L26|shl[27]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[27]" is converted into an equivalent circuit using register "rot_32:L18|shl[27]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[28]" is converted into an equivalent circuit using register "rot_32:L31|shl[28]~_emulated" and latch "rot_32:L26|shl[26]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[28]" is converted into an equivalent circuit using register "rot_32:L18|shl[28]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[28]" is converted into an equivalent circuit using register "rot_32:L22|shl[28]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[28]" is converted into an equivalent circuit using register "rot_32:L20|shl[28]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[29]" is converted into an equivalent circuit using register "rot_32:L18|shl[29]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[29]" is converted into an equivalent circuit using register "rot_32:L16|shl[29]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[21]" is converted into an equivalent circuit using register "rot_32:L27|shl[21]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[21]" is converted into an equivalent circuit using register "rot_32:L28|shl[21]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[21]" is converted into an equivalent circuit using register "rot_32:L29|shl[21]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[21]" is converted into an equivalent circuit using register "rot_32:L16|shl[21]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[21]" is converted into an equivalent circuit using register "rot_32:L22|shl[21]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[21]" is converted into an equivalent circuit using register "rot_32:L23|shl[21]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[21]" is converted into an equivalent circuit using register "rot_32:L20|shl[21]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[21]" is converted into an equivalent circuit using register "rot_32:L21|shl[21]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[20]" is converted into an equivalent circuit using register "rot_32:L26|shl[20]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[20]" is converted into an equivalent circuit using register "rot_32:L31|shl[20]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[20]" is converted into an equivalent circuit using register "rot_32:L29|shl[20]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[20]" is converted into an equivalent circuit using register "rot_32:L22|shl[20]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[20]" is converted into an equivalent circuit using register "rot_32:L20|shl[20]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[20]" is converted into an equivalent circuit using register "rot_32:L21|shl[20]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[19]" is converted into an equivalent circuit using register "rot_32:L26|shl[19]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[19]" is converted into an equivalent circuit using register "rot_32:L24|shl[19]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[19]" is converted into an equivalent circuit using register "rot_32:L31|shl[19]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[19]" is converted into an equivalent circuit using register "rot_32:L22|shl[19]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[19]" is converted into an equivalent circuit using register "rot_32:L21|shl[19]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[18]" is converted into an equivalent circuit using register "rot_32:L26|shl[18]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[18]" is converted into an equivalent circuit using register "rot_32:L25|shl[18]~_emulated" and latch "rot_32:L20|shl[23]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[17]" is converted into an equivalent circuit using register "rot_32:L26|shl[17]~_emulated" and latch "rot_32:L20|shl[23]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[17]" is converted into an equivalent circuit using register "rot_32:L24|shl[17]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[17]" is converted into an equivalent circuit using register "rot_32:L25|shl[17]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[17]" is converted into an equivalent circuit using register "rot_32:L30|shl[17]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[17]" is converted into an equivalent circuit using register "rot_32:L18|shl[17]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[17]" is converted into an equivalent circuit using register "rot_32:L16|shl[17]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[17]" is converted into an equivalent circuit using register "rot_32:L22|shl[17]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[17]" is converted into an equivalent circuit using register "rot_32:L23|shl[17]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[16]" is converted into an equivalent circuit using register "rot_32:L26|shl[16]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[16]" is converted into an equivalent circuit using register "rot_32:L24|shl[16]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[16]" is converted into an equivalent circuit using register "rot_32:L25|shl[16]~_emulated" and latch "rot_32:L25|shl[16]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[16]" is converted into an equivalent circuit using register "rot_32:L18|shl[16]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[16]" is converted into an equivalent circuit using register "rot_32:L16|shl[16]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[16]" is converted into an equivalent circuit using register "rot_32:L17|shl[16]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[16]" is converted into an equivalent circuit using register "rot_32:L22|shl[16]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[16]" is converted into an equivalent circuit using register "rot_32:L23|shl[16]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[16]" is converted into an equivalent circuit using register "rot_32:L20|shl[16]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[16]" is converted into an equivalent circuit using register "rot_32:L21|shl[16]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[15]" is converted into an equivalent circuit using register "rot_32:L26|shl[15]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[15]" is converted into an equivalent circuit using register "rot_32:L27|shl[15]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[15]" is converted into an equivalent circuit using register "rot_32:L24|shl[15]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[15]" is converted into an equivalent circuit using register "rot_32:L25|shl[15]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[15]" is converted into an equivalent circuit using register "rot_32:L18|shl[15]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[15]" is converted into an equivalent circuit using register "rot_32:L16|shl[15]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[15]" is converted into an equivalent circuit using register "rot_32:L17|shl[15]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[15]" is converted into an equivalent circuit using register "rot_32:L22|shl[15]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[15]" is converted into an equivalent circuit using register "rot_32:L23|shl[15]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[15]" is converted into an equivalent circuit using register "rot_32:L20|shl[15]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[15]" is converted into an equivalent circuit using register "rot_32:L21|shl[15]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[14]" is converted into an equivalent circuit using register "rot_32:L31|shl[14]~_emulated" and latch "rot_32:L26|shl[26]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[14]" is converted into an equivalent circuit using register "rot_32:L28|shl[14]~_emulated" and latch "rot_32:L26|shl[26]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[14]" is converted into an equivalent circuit using register "rot_32:L29|shl[14]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[14]" is converted into an equivalent circuit using register "rot_32:L18|shl[14]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[14]" is converted into an equivalent circuit using register "rot_32:L16|shl[14]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[14]" is converted into an equivalent circuit using register "rot_32:L20|shl[14]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[13]" is converted into an equivalent circuit using register "rot_32:L23|shl[13]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[12]" is converted into an equivalent circuit using register "rot_32:L26|shl[12]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[12]" is converted into an equivalent circuit using register "rot_32:L27|shl[12]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[11]" is converted into an equivalent circuit using register "rot_32:L24|shl[11]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[11]" is converted into an equivalent circuit using register "rot_32:L25|shl[11]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[11]" is converted into an equivalent circuit using register "rot_32:L28|shl[11]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[11]" is converted into an equivalent circuit using register "rot_32:L29|shl[11]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[11]" is converted into an equivalent circuit using register "rot_32:L16|shl[11]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[11]" is converted into an equivalent circuit using register "rot_32:L17|shl[11]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[10]" is converted into an equivalent circuit using register "rot_32:L24|shl[10]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[10]" is converted into an equivalent circuit using register "rot_32:L25|shl[10]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[10]" is converted into an equivalent circuit using register "rot_32:L31|shl[10]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[10]" is converted into an equivalent circuit using register "rot_32:L28|shl[10]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[10]" is converted into an equivalent circuit using register "rot_32:L29|shl[10]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[10]" is converted into an equivalent circuit using register "rot_32:L16|shl[10]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[10]" is converted into an equivalent circuit using register "rot_32:L17|shl[10]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[9]" is converted into an equivalent circuit using register "rot_32:L19|shl[9]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[9]" is converted into an equivalent circuit using register "rot_32:L20|shl[9]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[9]" is converted into an equivalent circuit using register "rot_32:L21|shl[9]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[8]" is converted into an equivalent circuit using register "rot_32:L28|shl[8]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[8]" is converted into an equivalent circuit using register "rot_32:L19|shl[8]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[8]" is converted into an equivalent circuit using register "rot_32:L20|shl[8]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[8]" is converted into an equivalent circuit using register "rot_32:L21|shl[8]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[7]" is converted into an equivalent circuit using register "rot_32:L26|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[7]" is converted into an equivalent circuit using register "rot_32:L27|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[7]" is converted into an equivalent circuit using register "rot_32:L24|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[7]" is converted into an equivalent circuit using register "rot_32:L25|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[7]" is converted into an equivalent circuit using register "rot_32:L30|shl[7]~_emulated" and latch "rot_32:L28|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[7]" is converted into an equivalent circuit using register "rot_32:L31|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[7]" is converted into an equivalent circuit using register "rot_32:L28|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[7]" is converted into an equivalent circuit using register "rot_32:L29|shl[7]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[7]" is converted into an equivalent circuit using register "rot_32:L18|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[7]" is converted into an equivalent circuit using register "rot_32:L19|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[7]" is converted into an equivalent circuit using register "rot_32:L16|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[7]" is converted into an equivalent circuit using register "rot_32:L17|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[7]" is converted into an equivalent circuit using register "rot_32:L22|shl[7]~_emulated" and latch "rot_32:L17|shl[24]~3" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[7]" is converted into an equivalent circuit using register "rot_32:L20|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[7]" is converted into an equivalent circuit using register "rot_32:L21|shl[7]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[6]" is converted into an equivalent circuit using register "rot_32:L26|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[6]" is converted into an equivalent circuit using register "rot_32:L27|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[6]" is converted into an equivalent circuit using register "rot_32:L24|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[6]" is converted into an equivalent circuit using register "rot_32:L25|shl[6]~_emulated" and latch "rot_32:L18|shl[23]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[6]" is converted into an equivalent circuit using register "rot_32:L30|shl[6]~_emulated" and latch "rot_32:L25|shl[16]~5" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[6]" is converted into an equivalent circuit using register "rot_32:L31|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[6]" is converted into an equivalent circuit using register "rot_32:L28|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[6]" is converted into an equivalent circuit using register "rot_32:L29|shl[6]~_emulated" and latch "rot_32:L18|shl[24]~9" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[6]" is converted into an equivalent circuit using register "rot_32:L18|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[6]" is converted into an equivalent circuit using register "rot_32:L19|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[6]" is converted into an equivalent circuit using register "rot_32:L16|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[6]" is converted into an equivalent circuit using register "rot_32:L17|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[6]" is converted into an equivalent circuit using register "rot_32:L22|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L20|shl[6]" is converted into an equivalent circuit using register "rot_32:L20|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[6]" is converted into an equivalent circuit using register "rot_32:L21|shl[6]~_emulated" and latch "rot_32:L29|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[5]" is converted into an equivalent circuit using register "rot_32:L26|shl[5]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[5]" is converted into an equivalent circuit using register "rot_32:L27|shl[5]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[5]" is converted into an equivalent circuit using register "rot_32:L29|shl[5]~_emulated" and latch "rot_32:L29|shl[5]~21" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L26|shl[4]" is converted into an equivalent circuit using register "rot_32:L26|shl[4]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L27|shl[4]" is converted into an equivalent circuit using register "rot_32:L27|shl[4]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[4]" is converted into an equivalent circuit using register "rot_32:L30|shl[4]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[4]" is converted into an equivalent circuit using register "rot_32:L31|shl[4]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[4]" is converted into an equivalent circuit using register "rot_32:L18|shl[4]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L16|shl[4]" is converted into an equivalent circuit using register "rot_32:L16|shl[4]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[4]" is converted into an equivalent circuit using register "rot_32:L17|shl[4]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L30|shl[3]" is converted into an equivalent circuit using register "rot_32:L30|shl[3]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L31|shl[3]" is converted into an equivalent circuit using register "rot_32:L31|shl[3]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L18|shl[3]" is converted into an equivalent circuit using register "rot_32:L18|shl[3]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L17|shl[3]" is converted into an equivalent circuit using register "rot_32:L17|shl[3]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[3]" is converted into an equivalent circuit using register "rot_32:L22|shl[3]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[3]" is converted into an equivalent circuit using register "rot_32:L21|shl[3]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[2]" is converted into an equivalent circuit using register "rot_32:L24|shl[2]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[2]" is converted into an equivalent circuit using register "rot_32:L25|shl[2]~_emulated" and latch "rot_32:L30|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L29|shl[2]" is converted into an equivalent circuit using register "rot_32:L29|shl[2]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L19|shl[2]" is converted into an equivalent circuit using register "rot_32:L19|shl[2]~_emulated" and latch "rot_32:L29|shl[5]~21" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[2]" is converted into an equivalent circuit using register "rot_32:L22|shl[2]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[2]" is converted into an equivalent circuit using register "rot_32:L21|shl[2]~_emulated" and latch "rot_32:L24|shl[24]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L24|shl[1]" is converted into an equivalent circuit using register "rot_32:L24|shl[1]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L25|shl[1]" is converted into an equivalent circuit using register "rot_32:L25|shl[1]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L28|shl[1]" is converted into an equivalent circuit using register "rot_32:L28|shl[1]~_emulated" and latch "rot_32:L18|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L22|shl[1]" is converted into an equivalent circuit using register "rot_32:L22|shl[1]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L23|shl[1]" is converted into an equivalent circuit using register "rot_32:L23|shl[1]~_emulated" and latch "rot_32:L18|shl[28]~19" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+    Warning (13310): Register "rot_32:L21|shl[1]" is converted into an equivalent circuit using register "rot_32:L21|shl[1]~_emulated" and latch "rot_32:L27|shl[22]~1" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/rot_32.vhd Line: 25
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "ghrd_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 9
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Gustavo/Documents/UFSC/3ª Fase/Circuitos e Técnicas Digitais/PROJETO-EEL5105/Projeto/PROJETO.vhd Line: 9
+Info (21057): Implemented 1529 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 1462 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 243 warnings
+    Info: Peak virtual memory: 755 megabytes
+    Info: Processing ended: Mon Jun 19 10:31:26 2017
+    Info: Elapsed time: 00:01:30
+    Info: Total CPU time (on all processors): 00:02:12
+
+

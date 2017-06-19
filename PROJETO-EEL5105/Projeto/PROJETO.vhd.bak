@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.Std_Logic_1164.all;
+
+entity topo is
+port (SW: in std_logic_vector(9 downto 0)
+		);
+end topo;
+
+architecture topo_stru of topo is
+signal Q1;
+
+component FSMctrl
+port(
+	CLK, RST, ENTER: in std_logic;
+	Operacao: in std_logic_vector(1 downto 0);
+	Selecao: out std_logic_vector(1 downto 0);
+	Enable_1, Enable_2: out std_logic
+	);
+end component;
+
+begin
+
+end topo_stru;
+
+

@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 --Rotacao de deslocamento 32 bits
 entity rot_32 is port(
@@ -22,19 +23,21 @@ begin
 	process (CLOCK_M, RST, EN_TIME, SET_ROLL)
 	begin
 	
-		if (RST = '0') then	-- Reset assíncrono do registrador
+		if RST = '0' then	-- Reset assíncrono do registrador
 			shl <= (others => '0');
+			shl2 <= (others => '0');
 		
 		elsif SET_ROLL = '0' then
 			shl <= REG_IN;
 			
-		elsif (rising_edge(CLOCK_M)) then -- Sinal de clock do registrador (subida)
+		elsif rising_edge(CLOCK_M) then -- Sinal de clock do registrador (subida)
 		
 			if EN_TIME = '1' and speed_sig = '1' and SET_ROLL = '1' then -- Sinal de enable do registrador
 				shl2 <= shl;
 				shl(31 downto 1) <= shl2(30 downto 0);-- Deslocamento para esquerda
 				shl(0) <= shl2(31); -- rotacao de deslocamento para a esquerda
 			end if;
+			
 		end if;
 	end process;
 	REG_OUT <= shl;

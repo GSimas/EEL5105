@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.Std_Logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
 
 
 --------------- INICIO		DA			ENTIDADE				-------------------------
@@ -69,9 +71,9 @@ signal	reg_in0, reg_in1, reg_in2, reg_in3, reg_in4, reg_in5, reg_in6, reg_in7, r
 signal	reg_out, reg_out0, reg_out1, reg_out2, reg_out3, reg_out4, reg_out5, reg_out6, reg_out7, reg_out8, -- sinais registradores mapa sai
 			reg_out9, reg_out10, reg_out11, reg_out12, reg_out13, reg_out14, reg_out15: std_logic_vector(31 downto 0);
 
-signal	mux1: std_logic_vector(29 downto 0) := "01110" & states & "101100101010111000" & SW(8) & SW(7); -- sinal 1 multiplexador display
-signal	mux2: std_logic_vector(29 downto 0) := "01110" & states & "11111000000111101111"; -- sinal 2 multiplexador display
-signal	mux3: std_logic_vector(29 downto 0) := "01110" & states & "1011111010" & point; -- sinal 3 multiplexador display
+signal	mux1: std_logic_vector(29 downto 0) := "01110" & states & "101100101011001000" & SW(8) & SW(7); -- sinal 1 multiplexador display
+signal	mux2: std_logic_vector(29 downto 0) := "01110" & states & "11110000000111101111"; -- sinal 2 multiplexador display
+signal	mux3: std_logic_vector(29 downto 0) := "01110" & states & "1100111101" & point; -- sinal 3 multiplexador display
 signal	hx: std_logic_vector(29 downto 0); -- sinal saida multiplexador display
 
 signal	mux2_sig1: std_logic_vector(9 downto 0) := "0000000000"; -- sinal 1 para multiplexador 2x1 10 bits (LEDS)
@@ -396,7 +398,8 @@ L57: decod7seg port map(hx(14 downto 10), HEX2); -- Decodificador 4 LED 7 segmen
 L58: decod7seg port map(hx(9 downto 5), HEX1); -- Decodificador 5 LED 7 segmentos
 L59: decod7seg port map(hx(4 downto 0), HEX0); -- Decodificador 6 LED 7 segmentos
 
-LEDR <= led_out;
+LEDR(9) <= clockled;
+LEDR(8 downto 0) <= led_out(8 downto 0);
 
 end topo_stru;
 

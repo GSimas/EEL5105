@@ -2,7 +2,7 @@
 
 Contadores Síncrono e Assíncrono. 
 
-Registradores, Flip-Flop Tipo D, Latches. Implementação de Circuito nos softwares ISIS Proteus e Quartus. Diagrama de Tempo e de blocos no Quartus II.
+Registradores, Flip-Flop Tipo D, Latches. Implementação de circuito nos softwares ISIS Proteus e Quartus II. Diagrama de Tempo e de blocos no Quartus II. Instruções em arquivo pdf.
 
 Simulação, validação em placa FPGA Intel Altera Cyclone.
 

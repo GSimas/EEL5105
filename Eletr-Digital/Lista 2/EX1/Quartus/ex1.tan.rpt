@@ -1,0 +1,184 @@
+Classic Timing Analyzer report for ex1
+Fri Aug 29 16:27:29 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                       ;
++------------------------------+-------+---------------+------------------------------------------------+----------------+---------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From           ; To            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+----------------+---------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 7.872 ns                                       ; jkff2:inst14|2 ; Q3johnson     ; CLOCK      ; --       ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A   ; None          ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst5|2  ; jkff2:inst6|2 ; CLOCK      ; CLOCK    ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                ;               ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+----------------+---------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP1C3T100C8        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK'                                                                                                                                                                                 ;
++-------+------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From           ; To             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst5|2  ; jkff2:inst6|2  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.825 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst8|2  ; jkff2:inst5|2  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.822 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst14|2 ; jkff2:inst10|2 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.822 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst13|2 ; jkff2:inst14|2 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.659 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst10|2 ; jkff2:inst12|2 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.658 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst7|2  ; jkff2:inst8|2  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.654 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst6|2  ; jkff2:inst7|2  ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.653 ns                ;
+; N/A   ; Restricted to 275.03 MHz ( period = 3.636 ns ) ; jkff2:inst12|2 ; jkff2:inst13|2 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 0.653 ns                ;
++-------+------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+----------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From           ; To        ; From Clock ;
++-------+--------------+------------+----------------+-----------+------------+
+; N/A   ; None         ; 7.872 ns   ; jkff2:inst14|2 ; Q3johnson ; CLOCK      ;
+; N/A   ; None         ; 7.172 ns   ; jkff2:inst13|2 ; Q2johnson ; CLOCK      ;
+; N/A   ; None         ; 7.154 ns   ; jkff2:inst7|2  ; Q2anel    ; CLOCK      ;
+; N/A   ; None         ; 7.031 ns   ; jkff2:inst12|2 ; Q1johnson ; CLOCK      ;
+; N/A   ; None         ; 7.026 ns   ; jkff2:inst10|2 ; Q0johnson ; CLOCK      ;
+; N/A   ; None         ; 6.650 ns   ; jkff2:inst5|2  ; Q0anel    ; CLOCK      ;
+; N/A   ; None         ; 6.641 ns   ; jkff2:inst8|2  ; Q3anel    ; CLOCK      ;
+; N/A   ; None         ; 6.260 ns   ; jkff2:inst6|2  ; Q1anel    ; CLOCK      ;
++-------+--------------+------------+----------------+-----------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Aug 29 16:27:28 2014
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ex1 -c ex1 --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK" is an undefined clock
+Info: Clock "CLOCK" Internal fmax is restricted to 275.03 MHz between source register "jkff2:inst5|2" and destination register "jkff2:inst6|2"
+    Info: fmax restricted to Clock High delay (1.818 ns) plus Clock Low delay (1.818 ns) : restricted to 3.636 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.825 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X1_Y11_N6; Fanout = 2; REG Node = 'jkff2:inst5|2'
+            Info: 2: + IC(0.516 ns) + CELL(0.309 ns) = 0.825 ns; Loc. = LC_X1_Y11_N8; Fanout = 2; REG Node = 'jkff2:inst6|2'
+            Info: Total cell delay = 0.309 ns ( 37.45 % )
+            Info: Total interconnect delay = 0.516 ns ( 62.55 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLOCK" to destination register is 2.768 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 8; CLK Node = 'CLOCK'
+                Info: 2: + IC(0.588 ns) + CELL(0.711 ns) = 2.768 ns; Loc. = LC_X1_Y11_N8; Fanout = 2; REG Node = 'jkff2:inst6|2'
+                Info: Total cell delay = 2.180 ns ( 78.76 % )
+                Info: Total interconnect delay = 0.588 ns ( 21.24 % )
+            Info: - Longest clock path from clock "CLOCK" to source register is 2.768 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 8; CLK Node = 'CLOCK'
+                Info: 2: + IC(0.588 ns) + CELL(0.711 ns) = 2.768 ns; Loc. = LC_X1_Y11_N6; Fanout = 2; REG Node = 'jkff2:inst5|2'
+                Info: Total cell delay = 2.180 ns ( 78.76 % )
+                Info: Total interconnect delay = 0.588 ns ( 21.24 % )
+        Info: + Micro clock to output delay of source is 0.224 ns
+        Info: + Micro setup delay of destination is 0.037 ns
+Info: tco from clock "CLOCK" to destination pin "Q3johnson" through register "jkff2:inst14|2" is 7.872 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 2.768 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_10; Fanout = 8; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.588 ns) + CELL(0.711 ns) = 2.768 ns; Loc. = LC_X5_Y10_N5; Fanout = 2; REG Node = 'jkff2:inst14|2'
+        Info: Total cell delay = 2.180 ns ( 78.76 % )
+        Info: Total interconnect delay = 0.588 ns ( 21.24 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 4.880 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X5_Y10_N5; Fanout = 2; REG Node = 'jkff2:inst14|2'
+        Info: 2: + IC(2.756 ns) + CELL(2.124 ns) = 4.880 ns; Loc. = PIN_22; Fanout = 0; PIN Node = 'Q3johnson'
+        Info: Total cell delay = 2.124 ns ( 43.52 % )
+        Info: Total interconnect delay = 2.756 ns ( 56.48 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 147 megabytes
+    Info: Processing ended: Fri Aug 29 16:27:29 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

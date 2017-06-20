@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.512 ns
+From           : jkff2:inst4|2
+To             : Q3
+From Clock     : CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'C/D'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 151.65 MHz ( period = 6.594 ns )
+From           : jkff2:inst4|2
+To             : jkff2:inst4|2
+From Clock     : C/D
+To Clock       : C/D
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : jkff2:inst1|2
+To             : jkff2:inst1|2
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Clock Hold: 'C/D'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : jkff2:inst4|2
+To             : jkff2:inst4|2
+From Clock     : C/D
+To Clock       : C/D
+Failed Paths   : 2
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 2
+
+--------------------------------------------------------------------------------------
+

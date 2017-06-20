@@ -1,3 +1,11 @@
+# Lista 1
+
+Registrador de Deslocamento (Shift Register). 
+
+Implementação de Circuito nos softwares ISIS Proteus e Quartus. Diagrama de Tempo e de blocos no Quartus II.
+
+Simulação, validação em placa FPGA Intel Altera Cyclone.
+
 # Eletrônica Digital II
 
 Esta pasta do repositório se refere à disciplina de Eletrônica Digital II - EDB60406, do Curso Técnico Integrado em Eletrônica do

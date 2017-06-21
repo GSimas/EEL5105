@@ -1,0 +1,10 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+
+entity FSMctrl is
+port(
+	CLK, RST, ENTER: in std_logic;
+	Operacao: in std_logic_vector(1 downto 0);
+	Selecao: out std_logic_vector(1 downto 0);
+	Enable_1, Enable_2: out std_logic;
+	

@@ -1,0 +1,11 @@
+
+State Machine - |LAB8|FSMctrl:L1|EA
+Name EA.S7 EA.S6 EA.S5 EA.S4 EA.S3 EA.S2 EA.S1 EA.S0 
+EA.S0 0 0 0 0 0 0 0 0 
+EA.S1 0 0 0 0 0 0 1 1 
+EA.S2 0 0 0 0 0 1 0 1 
+EA.S3 0 0 0 0 1 0 0 1 
+EA.S4 0 0 0 1 0 0 0 1 
+EA.S5 0 0 1 0 0 0 0 1 
+EA.S6 0 1 0 0 0 0 0 1 
+EA.S7 1 0 0 0 0 0 0 1 

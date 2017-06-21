@@ -1,0 +1,3 @@
+ELETRÔNICA DIGITAL 2 - LISTA 3 - CONTADORES SÍNCRONOS 1
+
+3) Com 8 Flip-Flops poderá ser montador um contador de módulo 256 que conte de 00000000 a 11111010

@@ -1,0 +1,10 @@
+ELETRÔNICA DIGITAL 2 - LISTA 3 - CONTADORES SÍNCRONOS 1
+
+2) Dentre as principais diferenças dos contadores síncronos em relação aos assíncronos listam-se:
+	1. São aplicáveis em frequências maiores que os assíncronos;
+	2. Somente o primeiro Flip-Flop (FF com o LSB) tem as suas entradas J e K constantemente em nível lógico alto;
+	3. O clock é aplicado em todas as entradas CLK dos FF que compõem o circuito, diferentemente dos assíncronos
+	que possuem a saída Q de um FF anterior ligado à entrada do próximo;
+	4. Possui menor atraso de propagação;
+	5. Necessitam de um circuito maior com portas lógicas, o que leva a consequência de maior dissipação de calor e
+	maior ocupação de espaço.

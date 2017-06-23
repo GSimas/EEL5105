@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.821 ns
+From           : jkff2:inst|2
+To             : A
+From Clock     : CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : jkff2:inst|2
+To             : jkff2:inst|2
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

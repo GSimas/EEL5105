@@ -1,0 +1,40 @@
+|ex2-lista4
+A <= JKFF2:inst.Q
+R => inst12.IN0
+CLOCK => JKFF2:inst2.CLK
+CLOCK => JKFF2:inst1.CLK
+CLOCK => JKFF2:inst.CLK
+C <= JKFF2:inst2.Q
+B <= JKFF2:inst1.Q
+
+
+|ex2-lista4|JKFF2:inst
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 2.PRESET
+CLRN => 2.ACLR
+K => 2.IN0
+J => 2.IN1
+CLK => 2.CLK
+Q <= 2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex2-lista4|JKFF2:inst1
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 2.PRESET
+CLRN => 2.ACLR
+K => 2.IN0
+J => 2.IN1
+CLK => 2.CLK
+Q <= 2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ex2-lista4|JKFF2:inst2
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 2.PRESET
+CLRN => 2.ACLR
+K => 2.IN0
+J => 2.IN1
+CLK => 2.CLK
+Q <= 2.DB_MAX_OUTPUT_PORT_TYPE
+
+

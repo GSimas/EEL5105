@@ -1,0 +1,30 @@
+|lista5
+Terminal1 <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => JKFF2:inst2.CLK
+CLOCK => JKFF2:inst1.CLK
+M => inst.IN1
+Terminal2 <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Terminal3 <= JKFF2:inst1.Q
+Terminal4 <= JKFF2:inst1.QN
+
+
+|lista5|JKFF2:inst2
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 2.PRESET
+CLRN => 2.ACLR
+K => 2.IN0
+J => 2.IN1
+CLK => 2.CLK
+Q <= 2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lista5|JKFF2:inst1
+QN <= 9.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 2.PRESET
+CLRN => 2.ACLR
+K => 2.IN0
+J => 2.IN1
+CLK => 2.CLK
+Q <= 2.DB_MAX_OUTPUT_PORT_TYPE
+
+

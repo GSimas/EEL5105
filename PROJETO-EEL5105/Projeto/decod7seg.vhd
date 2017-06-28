@@ -41,6 +41,6 @@ begin
 				"0101111" when C = "11011" else -- r
 				"0010010" when C = "11100" else -- S
 				"0000111" when C = "11101" else -- t
-				"1000001" when C = "11110" else -- U
+				"1111111" when C = "11110" else -- U
 				"1000001";
 end decod;

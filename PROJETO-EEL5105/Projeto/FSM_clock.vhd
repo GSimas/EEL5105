@@ -42,7 +42,7 @@ begin
 					
 			if conta2 = 25000000 then -- se atingir 25.000.000 CLK 2Hz
 				conta2 <= 0;
-				CLK2 <= '0';
+				CLK2 <= '1';
 			end if;
 					
 			if conta3 = 16666667 then -- se atingir 16.666.667 CLK 3Hz

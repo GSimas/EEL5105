@@ -8,7 +8,7 @@ Decodificador para display LED de 7-segmentos.
 
 Projetado no software Quartus II v.15.0 para dispositivo FPGA Intel Altera Cyclone V versão 5CSEMAF31C6
 
-# Class 7
+# Class 8
 
 Finite States Machine (FSM) operations flow controller. Implemented with VHDL
 

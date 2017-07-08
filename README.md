@@ -1,5 +1,7 @@
 # EEL5105 - VHDL
 
+> "A educação é a mais poderosa arma pela qual se pode mudar o mundo" - **Nelson Mandela**
+
 ## ***EEL5105 Discipline Repository - Digital Circuits and Techniques***
 
 **Course**: Electronic Engineering - Federal University of Santa Catarina (UFSC), Florianopolis, SC, Brazil

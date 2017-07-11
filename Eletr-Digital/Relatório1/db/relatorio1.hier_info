@@ -1,0 +1,10 @@
+|relatorio1
+Q <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst24.IN0
+CLOCK => inst22.IN2
+CLOCK => inst27.IN0
+K => inst24.IN2
+J => inst22.IN0
+Qbarrado <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,445 @@
+Analysis & Synthesis report for consumo_combustivel
+Fri Nov 25 14:53:16 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |consumo_combustivel|fsm:FSM_COMPONENT|actual_step
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT
+ 14. Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT
+ 15. Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT|somador:SUM
+ 16. Parameter Settings for User Entity Instance: expoente:EXPOENTE_COMPONENT
+ 17. Port Connectivity Checks: "multiplicador:MULTIPLICADOR_COMPONENT"
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 25 14:53:16 2011        ;
+; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                      ; consumo_combustivel                          ;
+; Top-level Entity Name              ; consumo_combustivel                          ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 118                                          ;
+;     Total combinational functions  ; 117                                          ;
+;     Dedicated logic registers      ; 58                                           ;
+; Total registers                    ; 58                                           ;
+; Total pins                         ; 24                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Option                                                                     ; Setting             ; Default Value       ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+; Device                                                                     ; EP2C35F672C6        ;                     ;
+; Top-level entity name                                                      ; consumo_combustivel ; consumo_combustivel ;
+; Family name                                                                ; Cyclone II          ; Stratix II          ;
+; Use Generated Physical Constraints File                                    ; Off                 ;                     ;
+; Use smart compilation                                                      ; Off                 ; Off                 ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                  ; On                  ;
+; Enable compact report table                                                ; Off                 ; Off                 ;
+; Restructure Multiplexers                                                   ; Auto                ; Auto                ;
+; Create Debugging Nodes for IP Cores                                        ; Off                 ; Off                 ;
+; Preserve fewer node names                                                  ; On                  ; On                  ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                 ; Off                 ;
+; Verilog Version                                                            ; Verilog_2001        ; Verilog_2001        ;
+; VHDL Version                                                               ; VHDL_1993           ; VHDL_1993           ;
+; State Machine Processing                                                   ; Auto                ; Auto                ;
+; Safe State Machine                                                         ; Off                 ; Off                 ;
+; Extract Verilog State Machines                                             ; On                  ; On                  ;
+; Extract VHDL State Machines                                                ; On                  ; On                  ;
+; Ignore Verilog initial constructs                                          ; Off                 ; Off                 ;
+; Iteration limit for constant Verilog loops                                 ; 5000                ; 5000                ;
+; Iteration limit for non-constant Verilog loops                             ; 250                 ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                  ; On                  ;
+; Parallel Synthesis                                                         ; On                  ; On                  ;
+; DSP Block Balancing                                                        ; Auto                ; Auto                ;
+; NOT Gate Push-Back                                                         ; On                  ; On                  ;
+; Power-Up Don't Care                                                        ; On                  ; On                  ;
+; Remove Redundant Logic Cells                                               ; Off                 ; Off                 ;
+; Remove Duplicate Registers                                                 ; On                  ; On                  ;
+; Ignore CARRY Buffers                                                       ; Off                 ; Off                 ;
+; Ignore CASCADE Buffers                                                     ; Off                 ; Off                 ;
+; Ignore GLOBAL Buffers                                                      ; Off                 ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                 ; Off                 ;
+; Ignore LCELL Buffers                                                       ; Off                 ; Off                 ;
+; Ignore SOFT Buffers                                                        ; On                  ; On                  ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                 ; Off                 ;
+; Optimization Technique                                                     ; Balanced            ; Balanced            ;
+; Carry Chain Length                                                         ; 70                  ; 70                  ;
+; Auto Carry Chains                                                          ; On                  ; On                  ;
+; Auto Open-Drain Pins                                                       ; On                  ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                 ; Off                 ;
+; Auto ROM Replacement                                                       ; On                  ; On                  ;
+; Auto RAM Replacement                                                       ; On                  ; On                  ;
+; Auto Shift Register Replacement                                            ; Auto                ; Auto                ;
+; Auto Clock Enable Replacement                                              ; On                  ; On                  ;
+; Strict RAM Replacement                                                     ; Off                 ; Off                 ;
+; Allow Synchronous Control Signals                                          ; On                  ; On                  ;
+; Force Use of Synchronous Clear Signals                                     ; Off                 ; Off                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                 ; Off                 ;
+; Auto Resource Sharing                                                      ; Off                 ; Off                 ;
+; Allow Any RAM Size For Recognition                                         ; Off                 ; Off                 ;
+; Allow Any ROM Size For Recognition                                         ; Off                 ; Off                 ;
+; Allow Any Shift Register Size For Recognition                              ; Off                 ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                  ; On                  ;
+; Ignore translate_off and synthesis_off directives                          ; Off                 ; Off                 ;
+; Timing-Driven Synthesis                                                    ; Off                 ; Off                 ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                  ; On                  ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                 ; Off                 ;
+; Synchronization Register Chain Length                                      ; 2                   ; 2                   ;
+; PowerPlay Power Optimization                                               ; Normal compilation  ; Normal compilation  ;
+; HDL message level                                                          ; Level2              ; Level2              ;
+; Suppress Register Optimization Related Messages                            ; Off                 ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                 ; 100                 ;
+; Clock MUX Protection                                                       ; On                  ; On                  ;
+; Auto Gated Clock Conversion                                                ; Off                 ; Off                 ;
+; Block Design Naming                                                        ; Auto                ; Auto                ;
+; SDC constraint protection                                                  ; Off                 ; Off                 ;
+; Synthesis Effort                                                           ; Auto                ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                  ; On                  ;
+; Analysis & Synthesis Message Level                                         ; Medium              ; Medium              ;
+; Disable Register Merging Across Hierarchies                                ; Auto                ; Auto                ;
+; Resource Aware Inference For Block RAM                                     ; On                  ; On                  ;
++----------------------------------------------------------------------------+---------------------+---------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
+; expoente.vhd                     ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/expoente.vhd            ;
+; fsm.vhd                          ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/fsm.vhd                 ;
+; input_control.vhd                ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/input_control.vhd       ;
+; multiplicador.vhd                ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/multiplicador.vhd       ;
+; reg_8.vhd                        ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/reg_8.vhd               ;
+; reg_16.vhd                       ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/reg_16.vhd              ;
+; somador.vhd                      ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/somador.vhd             ;
+; consumo_combustivel.vhd          ; yes             ; User VHDL File  ; C:/Users/Admin/Desktop/DS - Project/_PROJETO/consumo_combustivel.vhd ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 118    ;
+;                                             ;        ;
+; Total combinational functions               ; 117    ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 45     ;
+;     -- 3 input functions                    ; 60     ;
+;     -- <=2 input functions                  ; 12     ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 101    ;
+;     -- arithmetic mode                      ; 16     ;
+;                                             ;        ;
+; Total registers                             ; 58     ;
+;     -- Dedicated logic registers            ; 58     ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 24     ;
+; Maximum fan-out node                        ; KEY[0] ;
+; Maximum fan-out                             ; 57     ;
+; Total fan-out                               ; 617    ;
+; Average fan-out                             ; 3.10   ;
++---------------------------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                            ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+; |consumo_combustivel                       ; 117 (1)           ; 58 (0)       ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |consumo_combustivel                                                           ; work         ;
+;    |expoente:EXPOENTE_COMPONENT|           ; 16 (16)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|expoente:EXPOENTE_COMPONENT                               ;              ;
+;    |fsm:FSM_COMPONENT|                     ; 22 (22)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|fsm:FSM_COMPONENT                                         ;              ;
+;    |multiplicador:MULTIPLICADOR_COMPONENT| ; 78 (0)            ; 39 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT                     ;              ;
+;       |input_control:INPUT|                ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT ;              ;
+;       |reg_16:REG16|                       ; 40 (40)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16        ;              ;
+;       |reg_8:REG8|                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8          ;              ;
+;       |somador:SUM|                        ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|somador:SUM         ;              ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |consumo_combustivel|fsm:FSM_COMPONENT|actual_step                                                                                                                                                                                                                                             ;
++------------------------------+-------------------+----------------------+-----------------------+------------------------------+---------------------------+----------------------------+--------------------+---------------------------+--------------------+--------------------------+---------------------+
+; Name                         ; actual_step.final ; actual_step.expoente ; actual_step.normaliza ; actual_step.desloca_mantissa ; actual_step.soma_mantissa ; actual_step.soma_expoentes ; actual_step.dummy2 ; actual_step.carrega_reg16 ; actual_step.dummy1 ; actual_step.carrega_reg8 ; actual_step.inicial ;
++------------------------------+-------------------+----------------------+-----------------------+------------------------------+---------------------------+----------------------------+--------------------+---------------------------+--------------------+--------------------------+---------------------+
+; actual_step.inicial          ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 0                   ;
+; actual_step.carrega_reg8     ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 1                        ; 1                   ;
+; actual_step.dummy1           ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 1                  ; 0                        ; 1                   ;
+; actual_step.carrega_reg16    ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 1                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.dummy2           ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 1                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.soma_expoentes   ; 0                 ; 0                    ; 0                     ; 0                            ; 0                         ; 1                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.soma_mantissa    ; 0                 ; 0                    ; 0                     ; 0                            ; 1                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.desloca_mantissa ; 0                 ; 0                    ; 0                     ; 1                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.normaliza        ; 0                 ; 0                    ; 1                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.expoente         ; 0                 ; 1                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
+; actual_step.final            ; 1                 ; 0                    ; 0                     ; 0                            ; 0                         ; 0                          ; 0                  ; 0                         ; 0                  ; 0                        ; 1                   ;
++------------------------------+-------------------+----------------------+-----------------------+------------------------------+---------------------------+----------------------------+--------------------+---------------------------+--------------------+--------------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                                        ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; Latch Name                                                      ; Latch Enable Signal                                             ; Free of Timing Hazards ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|s1    ; KEY[0]                                                          ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l2    ; KEY[0]                                                          ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|shift ; KEY[0]                                                          ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|n1    ; KEY[0]                                                          ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13 ; yes                    ;
+; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l1    ; KEY[0]                                                          ; yes                    ;
+; Number of user-specified and inferred latches = 13              ;                                                                 ;                        ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; fsm:FSM_COMPONENT|actual_step.final   ; Lost fanout        ;
+; Total Number of Removed Registers = 1 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 58    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 17    ;
+; Number of registers using Asynchronous Clear ; 41    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |consumo_combustivel|fsm:FSM_COMPONENT|count[0]                                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 0 LEs                ; 10 LEs                 ; Yes        ; |consumo_combustivel|expoente:EXPOENTE_COMPONENT|aux[0]                             ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]  ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[7]      ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[10]     ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |consumo_combustivel|multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux5 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: multiplicador:MULTIPLICADOR_COMPONENT|somador:SUM ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: expoente:EXPOENTE_COMPONENT ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multiplicador:MULTIPLICADOR_COMPONENT"                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Nov 25 14:53:11 2011
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off consumo_combustivel -c consumo_combustivel
+Info: Found 2 design units, including 1 entities, in source file expoente.vhd
+    Info: Found design unit 1: expoente-func
+    Info: Found entity 1: expoente
+Info: Found 2 design units, including 1 entities, in source file fsm.vhd
+    Info: Found design unit 1: fsm-func
+    Info: Found entity 1: fsm
+Info: Found 2 design units, including 1 entities, in source file input_control.vhd
+    Info: Found design unit 1: input_control-func
+    Info: Found entity 1: input_control
+Info: Found 2 design units, including 1 entities, in source file multiplicador.vhd
+    Info: Found design unit 1: multiplicador-func
+    Info: Found entity 1: multiplicador
+Info: Found 2 design units, including 1 entities, in source file reg_8.vhd
+    Info: Found design unit 1: reg_8-func
+    Info: Found entity 1: reg_8
+Info: Found 2 design units, including 1 entities, in source file reg_16.vhd
+    Info: Found design unit 1: reg_16-func
+    Info: Found entity 1: reg_16
+Info: Found 2 design units, including 1 entities, in source file somador.vhd
+    Info: Found design unit 1: somador-func
+    Info: Found entity 1: somador
+Info: Found 2 design units, including 1 entities, in source file consumo_combustivel.vhd
+    Info: Found design unit 1: consumo_combustivel-func
+    Info: Found entity 1: consumo_combustivel
+Info: Elaborating entity "consumo_combustivel" for the top level hierarchy
+Info: Elaborating entity "fsm" for hierarchy "fsm:FSM_COMPONENT"
+Warning (10492): VHDL Process Statement warning at fsm.vhd(175): signal "argument_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "multiplicador" for hierarchy "multiplicador:MULTIPLICADOR_COMPONENT"
+Info: Elaborating entity "input_control" for hierarchy "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT"
+Warning (10492): VHDL Process Statement warning at input_control.vhd(70): signal "rst" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at input_control.vhd(74): signal "arguments" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "q", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "l1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "s1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "l2", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "shift", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at input_control.vhd(68): inferring latch(es) for signal or variable "n1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "n1" at input_control.vhd(68)
+Info (10041): Inferred latch for "shift" at input_control.vhd(68)
+Info (10041): Inferred latch for "l2" at input_control.vhd(68)
+Info (10041): Inferred latch for "s1" at input_control.vhd(68)
+Info (10041): Inferred latch for "l1" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[0]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[1]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[2]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[3]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[4]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[5]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[6]" at input_control.vhd(68)
+Info (10041): Inferred latch for "q[7]" at input_control.vhd(68)
+Info: Elaborating entity "reg_8" for hierarchy "multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8"
+Info: Elaborating entity "reg_16" for hierarchy "multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16"
+Warning (10492): VHDL Process Statement warning at reg_16.vhd(97): signal "exp_aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at reg_16.vhd(98): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "somador" for hierarchy "multiplicador:MULTIPLICADOR_COMPONENT|somador:SUM"
+Info: Elaborating entity "expoente" for hierarchy "expoente:EXPOENTE_COMPONENT"
+Warning (10492): VHDL Process Statement warning at expoente.vhd(77): signal "aux" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Warning: Latch multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal fsm:FSM_COMPONENT|actual_step.desloca_mantissa
+Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
+    Info: Register "fsm:FSM_COMPONENT|actual_step.final" lost all its fanouts during netlist optimizations.
+Info: Implemented 154 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 130 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 231 megabytes
+    Info: Processing ended: Fri Nov 25 14:53:16 2011
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:08
+
+

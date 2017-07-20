@@ -1,0 +1,14 @@
+
+State Machine - |consumo_combustivel|fsm:FSM_COMPONENT|actual_step
+Name actual_step.final actual_step.expoente actual_step.normaliza actual_step.desloca_mantissa actual_step.soma_mantissa actual_step.soma_expoentes actual_step.dummy2 actual_step.carrega_reg16 actual_step.dummy1 actual_step.carrega_reg8 actual_step.inicial 
+actual_step.inicial 0 0 0 0 0 0 0 0 0 0 0 
+actual_step.carrega_reg8 0 0 0 0 0 0 0 0 0 1 1 
+actual_step.dummy1 0 0 0 0 0 0 0 0 1 0 1 
+actual_step.carrega_reg16 0 0 0 0 0 0 0 1 0 0 1 
+actual_step.dummy2 0 0 0 0 0 0 1 0 0 0 1 
+actual_step.soma_expoentes 0 0 0 0 0 1 0 0 0 0 1 
+actual_step.soma_mantissa 0 0 0 0 1 0 0 0 0 0 1 
+actual_step.desloca_mantissa 0 0 0 1 0 0 0 0 0 0 1 
+actual_step.normaliza 0 0 1 0 0 0 0 0 0 0 1 
+actual_step.expoente 0 1 0 0 0 0 0 0 0 0 1 
+actual_step.final 1 0 0 0 0 0 0 0 0 0 1 

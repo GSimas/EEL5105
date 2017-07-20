@@ -1,0 +1,100 @@
+--	ALUNOS:
+--	Bruno Luiz da Silva
+--	Gustavo Fernades
+--
+--
+--	TÍTULO:
+--	Registrador de 16 (+ 1) bits
+--
+--
+--	RESUMO:
+--	Registrador de 16 bits com recurso de deslocamento e normalização. É utilizado num multiplicador.
+--
+--
+--	ENTRADAS/SAÍDAS (I/O):
+--	(I) soma: dado da saída do armazenador (soma ou somente a cópia da parte alta desse registrador)
+--	(I) chave: utilizado para carregar a parte baixa do registrador (7 downto 0), sendo conectado nas 
+--			   chaves (SW). Só será lida quando start tiver valor lógico alto.
+--	(I) start, load: o primeiro ativa a leitura de "chave" e então armazena dados na parte baixa do reg_16.
+--					 Já o load permite o armazenamento de "soma" na parte alta do registrador.
+--	(I) shift, normalize: recursos extras do registrador que serão utilizados para realizar a multiplicação
+--						  de números float. "shift", quando alto, deslocará os dados para a esquerda
+--						  e "normalize" irá deslocar os dados para a direita e acresentará 1 ao signal
+--						  "exp_aux".
+--	(I) clock,reset: clock e reset, sendo que o reset zera todas saídas
+--	(O) q: saída dos dados armazenados
+-- 	(O) exp: número de vezes em que os dados foram deslocados para direita até que o LSB fosse 1.
+--
+--
+--	DESCRIÇÃO:
+--	Serão, primeiramente, dados os valores do multiplicador e estes serão guardados na parte baixa do 
+--	registrador (7 downto 0). Para tal será necessário dar um valor lógico alto para "start".
+--	Para carregar o valor que vier do somador terá-se que colocar um valor lógico alto em "load" e assim
+--	o valor será guardado na parte alta do registrador (15 downto 8). 
+--
+--	Como esse bloco será usado para um multiplicador então será necessário que o valor seja deslocado
+--	após a operação do componente "somador". Para realizar isto será necessário dar um valor lógico alto
+--	para "shift" a cada deslocamento desejado.
+--
+--	A normalização far-se-á necessária neste projeto, logo "normalize" deve receber um valor lógico alto
+--	para que inicie-se a normalização. Nesse processo o signal "works" tornará-se 1 e enquanto o LSB não for
+--	1, "works" permanecerá em 1, desabilitando qualquer outra operação do componente. Quando a operação
+--	estiver concluída ter-se-á o número normalizado e "exp" armazenará o número de deslocamentos que foram
+--	necessários.
+--
+--
+--	(I): INPUT	/	(O): OUTPUT
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity reg_16 is 
+	port(
+		soma: std_logic_vector(8 downto 0);				-- Resultado do somador
+		chave: std_logic_vector (7 downto 0);			-- Valor do multiplicador
+		start, load, shift, normalize: in std_logic;	-- Recursos para armazenar e manipular valores
+		clk, rst: in std_logic;							-- Clock e reset do registrador
+		q: out std_logic_vector(15 downto 0);			-- Saída (dados armazenados)
+		exp: out std_logic_vector(3 downto 0)			-- Número de deslocamentos realizados pela normalização
+	);
+end reg_16;
+
+architecture func of reg_16 is
+	signal aux: std_logic_vector(16 downto 0);
+	signal exp_aux: std_logic_vector(3 downto 0);
+	signal works: std_logic;
+begin
+	REG16: process(clk,rst)
+	begin
+		if (rst = '1') then 
+			-- Deleta os dados atuais do registrador
+			aux <= (others => '0');
+			works <= '0';
+		elsif (rising_edge(clk)) then 
+			if(works = '0') then	
+				if(start = '1') then
+					-- Carrega o multiplicador para a parte baixa do 
+					-- registrador e preenche com 0s a parte alta.
+					aux <= '0' & x"00" & chave;
+				elsif(load = '1') then
+					-- Carrega a soma para a parte baixa do registrador
+					aux(16 downto 8) <= soma;
+				elsif(shift = '1') then
+					-- Desloca os bits uma unidade para a direita.
+					aux <= '0' & aux(16 downto 1);
+				elsif(normalize = '1') then
+					works <= '1';
+					exp_aux <= (others => '0');
+				end if;
+			else 
+				if(aux(15) = '0') then
+					exp_aux <= exp_aux + 1;
+					aux <= aux(15 downto 0) & '0';
+				end if;
+			end if;
+		end if;
+		exp <= exp_aux;
+		q <= aux(15 downto 0); -- Guarda as operações acima efetuadas no registrador.
+	end process;
+end func;

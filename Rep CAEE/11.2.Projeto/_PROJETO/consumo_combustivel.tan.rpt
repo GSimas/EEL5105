@@ -1,0 +1,787 @@
+Classic Timing Analyzer report for consumo_combustivel
+Fri Nov 25 14:53:36 2011
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK_50'
+  7. Clock Hold: 'CLOCK_50'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                             ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                           ; To                                                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 7.583 ns                         ; KEY[1]                                                         ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; --         ; CLOCK_50 ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 7.934 ns                         ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; LEDG[8]                                                        ; CLOCK_50   ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 5.952 ns                         ; SW[2]                                                          ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; --         ; CLOCK_50 ; 0            ;
+; Clock Setup: 'CLOCK_50'      ; N/A                                      ; None          ; 143.58 MHz ( period = 6.965 ns ) ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]      ; CLOCK_50   ; CLOCK_50 ; 0            ;
+; Clock Hold: 'CLOCK_50'       ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12]     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; 92           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                                ;                                                                ;            ;          ; 92           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK_50        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; KEY[0]          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; KEY[1]          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK_50'                                                                                                                                                                                                                                                                                                                     ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                           ; To                                                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 143.58 MHz ( period = 6.965 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.504 ns                ;
+; N/A                                     ; 143.68 MHz ( period = 6.960 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[1]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.497 ns                ;
+; N/A                                     ; 143.74 MHz ( period = 6.957 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[6]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.494 ns                ;
+; N/A                                     ; 146.37 MHz ( period = 6.832 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[7]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.506 ns                ;
+; N/A                                     ; 146.39 MHz ( period = 6.831 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[4]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.505 ns                ;
+; N/A                                     ; 146.43 MHz ( period = 6.829 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[2]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.504 ns                ;
+; N/A                                     ; 146.43 MHz ( period = 6.829 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[5]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.504 ns                ;
+; N/A                                     ; 147.82 MHz ( period = 6.765 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[0]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.487 ns                ;
+; N/A                                     ; 152.74 MHz ( period = 6.547 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[6]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 152.74 MHz ( period = 6.547 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[1]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 152.79 MHz ( period = 6.545 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[3]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 156.01 MHz ( period = 6.410 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[7]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 156.01 MHz ( period = 6.410 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[4]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 156.03 MHz ( period = 6.409 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[5]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 156.03 MHz ( period = 6.409 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[2]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 157.18 MHz ( period = 6.362 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_8:REG8|q[0]          ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 0.084 ns                ;
+; N/A                                     ; 157.48 MHz ( period = 6.350 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.320 ns                ;
+; N/A                                     ; 158.08 MHz ( period = 6.326 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.281 ns                ;
+; N/A                                     ; 159.26 MHz ( period = 6.279 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.249 ns                ;
+; N/A                                     ; 159.72 MHz ( period = 6.261 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.231 ns                ;
+; N/A                                     ; 159.87 MHz ( period = 6.255 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.210 ns                ;
+; N/A                                     ; 161.42 MHz ( period = 6.195 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.150 ns                ;
+; N/A                                     ; 161.55 MHz ( period = 6.190 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 162.76 MHz ( period = 6.144 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.099 ns                ;
+; N/A                                     ; 163.29 MHz ( period = 6.124 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.079 ns                ;
+; N/A                                     ; 164.66 MHz ( period = 6.073 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.028 ns                ;
+; N/A                                     ; 166.17 MHz ( period = 6.018 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.973 ns                ;
+; N/A                                     ; 168.15 MHz ( period = 5.947 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.902 ns                ;
+; N/A                                     ; 168.63 MHz ( period = 5.930 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.885 ns                ;
+; N/A                                     ; 170.68 MHz ( period = 5.859 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.814 ns                ;
+; N/A                                     ; 172.32 MHz ( period = 5.803 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.773 ns                ;
+; N/A                                     ; 173.04 MHz ( period = 5.779 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.734 ns                ;
+; N/A                                     ; 175.01 MHz ( period = 5.714 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.684 ns                ;
+; N/A                                     ; 177.05 MHz ( period = 5.648 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 177.27 MHz ( period = 5.641 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.596 ns                ;
+; N/A                                     ; 178.67 MHz ( period = 5.597 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.552 ns                ;
+; N/A                                     ; 179.53 MHz ( period = 5.570 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.525 ns                ;
+; N/A                                     ; 182.78 MHz ( period = 5.471 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.426 ns                ;
+; N/A                                     ; 184.40 MHz ( period = 5.423 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.378 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.338 ns                ;
+; N/A                                     ; 186.19 MHz ( period = 5.371 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.326 ns                ;
+; N/A                                     ; 186.85 MHz ( period = 5.352 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.307 ns                ;
+; N/A                                     ; 188.68 MHz ( period = 5.300 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.255 ns                ;
+; N/A                                     ; 188.82 MHz ( period = 5.296 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.266 ns                ;
+; N/A                                     ; 189.68 MHz ( period = 5.272 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.227 ns                ;
+; N/A                                     ; 192.05 MHz ( period = 5.207 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.177 ns                ;
+; N/A                                     ; 194.51 MHz ( period = 5.141 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.096 ns                ;
+; N/A                                     ; 196.31 MHz ( period = 5.094 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.049 ns                ;
+; N/A                                     ; 196.46 MHz ( period = 5.090 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.045 ns                ;
+; N/A                                     ; 201.45 MHz ( period = 4.964 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.919 ns                ;
+; N/A                                     ; 201.65 MHz ( period = 4.959 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.929 ns                ;
+; N/A                                     ; 202.63 MHz ( period = 4.935 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.890 ns                ;
+; N/A                                     ; 205.09 MHz ( period = 4.876 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.831 ns                ;
+; N/A                                     ; 205.09 MHz ( period = 4.876 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.831 ns                ;
+; N/A                                     ; 205.34 MHz ( period = 4.870 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.840 ns                ;
+; N/A                                     ; 207.30 MHz ( period = 4.824 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.779 ns                ;
+; N/A                                     ; 210.30 MHz ( period = 4.755 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.710 ns                ;
+; N/A                                     ; 210.39 MHz ( period = 4.753 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.708 ns                ;
+; N/A                                     ; 210.57 MHz ( period = 4.749 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                     ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.534 ns                ;
+; N/A                                     ; 213.77 MHz ( period = 4.678 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                     ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.463 ns                ;
+; N/A                                     ; 216.12 MHz ( period = 4.627 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 218.01 MHz ( period = 4.587 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.542 ns                ;
+; N/A                                     ; 222.32 MHz ( period = 4.498 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.453 ns                ;
+; N/A                                     ; 225.94 MHz ( period = 4.426 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.876 ns                ;
+; N/A                                     ; 227.17 MHz ( period = 4.402 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.837 ns                ;
+; N/A                                     ; 228.89 MHz ( period = 4.369 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.324 ns                ;
+; N/A                                     ; 230.57 MHz ( period = 4.337 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.787 ns                ;
+; N/A                                     ; 231.64 MHz ( period = 4.317 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.272 ns                ;
+; N/A                                     ; 234.14 MHz ( period = 4.271 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.226 ns                ;
+; N/A                                     ; 236.97 MHz ( period = 4.220 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.655 ns                ;
+; N/A                                     ; 237.98 MHz ( period = 4.202 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                     ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.987 ns                ;
+; N/A                                     ; 244.26 MHz ( period = 4.094 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.529 ns                ;
+; N/A                                     ; 251.07 MHz ( period = 3.983 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.938 ns                ;
+; N/A                                     ; 251.26 MHz ( period = 3.980 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.935 ns                ;
+; N/A                                     ; 252.21 MHz ( period = 3.965 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.400 ns                ;
+; N/A                                     ; 270.64 MHz ( period = 3.695 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                     ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.480 ns                ;
+; N/A                                     ; 271.44 MHz ( period = 3.684 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; fsm:FSM_COMPONENT|count[0]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.485 ns                ;
+; N/A                                     ; 271.96 MHz ( period = 3.677 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.112 ns                ;
+; N/A                                     ; 273.22 MHz ( period = 3.660 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; fsm:FSM_COMPONENT|count[0]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.446 ns                ;
+; N/A                                     ; 276.93 MHz ( period = 3.611 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.397 ns                ;
+; N/A                                     ; 278.16 MHz ( period = 3.595 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; fsm:FSM_COMPONENT|count[0]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.396 ns                ;
+; N/A                                     ; 278.78 MHz ( period = 3.587 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.373 ns                ;
+; N/A                                     ; 278.78 MHz ( period = 3.587 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.358 ns                ;
+; N/A                                     ; 280.66 MHz ( period = 3.563 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 282.01 MHz ( period = 3.546 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.981 ns                ;
+; N/A                                     ; 283.93 MHz ( period = 3.522 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.308 ns                ;
+; N/A                                     ; 285.88 MHz ( period = 3.498 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.284 ns                ;
+; N/A                                     ; 287.52 MHz ( period = 3.478 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; fsm:FSM_COMPONENT|count[0]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.264 ns                ;
+; N/A                                     ; 290.11 MHz ( period = 3.447 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.882 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.211 ns                ;
+; N/A                                     ; 293.69 MHz ( period = 3.405 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.176 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.144 ns                ;
+; N/A                                     ; 295.33 MHz ( period = 3.386 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.172 ns                ;
+; N/A                                     ; 295.77 MHz ( period = 3.381 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.152 ns                ;
+; N/A                                     ; 296.30 MHz ( period = 3.375 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.105 ns                ;
+; N/A                                     ; 297.35 MHz ( period = 3.363 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.107 ns                ;
+; N/A                                     ; 299.49 MHz ( period = 3.339 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.068 ns                ;
+; N/A                                     ; 300.12 MHz ( period = 3.332 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.066 ns                ;
+; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.122 ns                ;
+; N/A                                     ; 302.11 MHz ( period = 3.310 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.055 ns                ;
+; N/A                                     ; 302.21 MHz ( period = 3.309 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                     ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 302.30 MHz ( period = 3.308 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.027 ns                ;
+; N/A                                     ; 305.44 MHz ( period = 3.274 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 6.018 ns                ;
+; N/A                                     ; 307.60 MHz ( period = 3.251 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.667 ns                ;
+; N/A                                     ; 308.36 MHz ( period = 3.243 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.977 ns                ;
+; N/A                                     ; 309.89 MHz ( period = 3.227 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.628 ns                ;
+; N/A                                     ; 312.11 MHz ( period = 3.204 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.990 ns                ;
+; N/A                                     ; 313.19 MHz ( period = 3.193 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.923 ns                ;
+; N/A                                     ; 316.26 MHz ( period = 3.162 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.578 ns                ;
+; N/A                                     ; 316.76 MHz ( period = 3.157 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.886 ns                ;
+; N/A                                     ; 317.26 MHz ( period = 3.152 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]  ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.944 ns                ;
+; N/A                                     ; 319.18 MHz ( period = 3.133 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.904 ns                ;
+; N/A                                     ; 319.90 MHz ( period = 3.126 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.845 ns                ;
+; N/A                                     ; 321.65 MHz ( period = 3.109 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.880 ns                ;
+; N/A                                     ; 324.57 MHz ( period = 3.081 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]  ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.873 ns                ;
+; N/A                                     ; 326.05 MHz ( period = 3.067 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.797 ns                ;
+; N/A                                     ; 328.41 MHz ( period = 3.045 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.446 ns                ;
+; N/A                                     ; 329.92 MHz ( period = 3.031 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.760 ns                ;
+; N/A                                     ; 333.33 MHz ( period = 3.000 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.719 ns                ;
+; N/A                                     ; 335.46 MHz ( period = 2.981 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.357 ns                ;
+; N/A                                     ; 338.18 MHz ( period = 2.957 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.318 ns                ;
+; N/A                                     ; 340.37 MHz ( period = 2.938 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.668 ns                ;
+; N/A                                     ; 342.11 MHz ( period = 2.923 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.709 ns                ;
+; N/A                                     ; 342.23 MHz ( period = 2.922 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]  ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.714 ns                ;
+; N/A                                     ; 342.58 MHz ( period = 2.919 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[2]  ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.711 ns                ;
+; N/A                                     ; 342.58 MHz ( period = 2.919 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.320 ns                ;
+; N/A                                     ; 342.82 MHz ( period = 2.917 ns )                    ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.352 ns                ;
+; N/A                                     ; 344.59 MHz ( period = 2.902 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.631 ns                ;
+; N/A                                     ; 345.78 MHz ( period = 2.892 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.268 ns                ;
+; N/A                                     ; 346.02 MHz ( period = 2.890 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]  ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.682 ns                ;
+; N/A                                     ; 348.31 MHz ( period = 2.871 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.590 ns                ;
+; N/A                                     ; 350.63 MHz ( period = 2.852 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.638 ns                ;
+; N/A                                     ; 350.75 MHz ( period = 2.851 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]  ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.643 ns                ;
+; N/A                                     ; 351.00 MHz ( period = 2.849 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.635 ns                ;
+; N/A                                     ; 351.12 MHz ( period = 2.848 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[2]  ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.640 ns                ;
+; N/A                                     ; 352.61 MHz ( period = 2.836 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 354.74 MHz ( period = 2.819 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]  ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 358.42 MHz ( period = 2.790 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.191 ns                ;
+; N/A                                     ; 360.36 MHz ( period = 2.775 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.136 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[1]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[2]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[7]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[6]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[5]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 367.78 MHz ( period = 2.719 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[4]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.505 ns                ;
+; N/A                                     ; 371.20 MHz ( period = 2.694 ns )                    ; fsm:FSM_COMPONENT|actual_step.dummy2                           ; fsm:FSM_COMPONENT|count[3]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.296 ns                ;
+; N/A                                     ; 373.00 MHz ( period = 2.681 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.411 ns                ;
+; N/A                                     ; 374.53 MHz ( period = 2.670 ns )                    ; fsm:FSM_COMPONENT|actual_step.dummy2                           ; fsm:FSM_COMPONENT|count[2]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.272 ns                ;
+; N/A                                     ; 375.94 MHz ( period = 2.660 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]  ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.452 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.101 ns                ;
+; N/A                                     ; 377.50 MHz ( period = 2.649 ns )                    ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.010 ns                ;
+; N/A                                     ; 380.66 MHz ( period = 2.627 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.062 ns                ;
+; N/A                                     ; 382.56 MHz ( period = 2.614 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.343 ns                ;
+; N/A                                     ; 387.15 MHz ( period = 2.583 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.302 ns                ;
+; N/A                                     ; 387.90 MHz ( period = 2.578 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; fsm:FSM_COMPONENT|count[0]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.364 ns                ;
+; N/A                                     ; 388.95 MHz ( period = 2.571 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.357 ns                ;
+; N/A                                     ; 390.32 MHz ( period = 2.562 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.012 ns                ;
+; N/A                                     ; 394.79 MHz ( period = 2.533 ns )                    ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.934 ns                ;
+; N/A                                     ; 395.10 MHz ( period = 2.531 ns )                    ; fsm:FSM_COMPONENT|count[2]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.947 ns                ;
+; N/A                                     ; 396.83 MHz ( period = 2.520 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.881 ns                ;
+; N/A                                     ; 396.98 MHz ( period = 2.519 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.249 ns                ;
+; N/A                                     ; 398.88 MHz ( period = 2.507 ns )                    ; fsm:FSM_COMPONENT|count[1]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 400.00 MHz ( period = 2.500 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.286 ns                ;
+; N/A                                     ; 402.74 MHz ( period = 2.483 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.212 ns                ;
+; N/A                                     ; 405.68 MHz ( period = 2.465 ns )                    ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]  ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.257 ns                ;
+; N/A                                     ; 407.83 MHz ( period = 2.452 ns )                    ; fsm:FSM_COMPONENT|actual_step.expoente                         ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.171 ns                ;
+; N/A                                     ; 408.16 MHz ( period = 2.450 ns )                    ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.236 ns                ;
+; N/A                                     ; 409.00 MHz ( period = 2.445 ns )                    ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.880 ns                ;
+; N/A                                     ; 409.50 MHz ( period = 2.442 ns )                    ; fsm:FSM_COMPONENT|count[3]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.858 ns                ;
+; N/A                                     ; 413.22 MHz ( period = 2.420 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.150 ns                ;
+; N/A                                     ; 414.94 MHz ( period = 2.410 ns )                    ; fsm:FSM_COMPONENT|actual_step.dummy2                           ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 3.027 ns                ;
+; N/A                                     ; 419.46 MHz ( period = 2.384 ns )                    ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.113 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.159 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; expoente:EXPOENTE_COMPONENT|aux[4]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.158 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[2]  ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.164 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|actual_step.expoente                         ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.772 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 5.072 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.142 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[11]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.142 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[8]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.142 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[10]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.142 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[9]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.142 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; expoente:EXPOENTE_COMPONENT|aux[0]                             ; expoente:EXPOENTE_COMPONENT|aux[2]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.127 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[14]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.122 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|count[0]                                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.726 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 4.754 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[13]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.094 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|works       ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.090 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                    ; fsm:FSM_COMPONENT|count[1]                                     ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.090 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; fsm:FSM_COMPONENT|actual_step.dummy2                           ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 1.258 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; expoente:EXPOENTE_COMPONENT|aux[1]                             ; expoente:EXPOENTE_COMPONENT|aux[3]                             ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.087 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; fsm:FSM_COMPONENT|count[2]                                     ; fsm:FSM_COMPONENT|actual_step.normaliza                        ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.100 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[1]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[2]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[7]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[6]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[5]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15]     ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[4]      ; CLOCK_50   ; CLOCK_50 ; None                        ; None                      ; 2.069 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                                ;                                                                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------------------------------------+----------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'CLOCK_50'                                                                                                                                                                                                                                                              ;
++------------------------------------------+------------------------------------------------------------+----------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                                                       ; To                                                             ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+------------------------------------------------------------+----------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 1.772 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[14] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 1.982 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[13] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 1.876 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[11] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 2.342 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[9]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 2.395 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[10] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 2.298 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[8]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 2.551 ns                 ;
+; Not operational: Clock Skew > Data Delay ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 2.858 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.580 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.470 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.618 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.634 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.834 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.146 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.036 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.286 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.176 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.184 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.981 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.199 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.366 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.399 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.324 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.459 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.340 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.349 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.492 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.506 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.382 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.540 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.624 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.497 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.514 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.513 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.530 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.674 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.679 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.546 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.713 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.564 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.712 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.713 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.603 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.547 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.746 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.662 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.678 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.844 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.712 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.878 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.728 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.687 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.751 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.767 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.894 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.933 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.920 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.928 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.810 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.967 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.860 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.893 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.958 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 3.973 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.140 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.173 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.185 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[3]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.025 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.075 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[1]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.075 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[2]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.114 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.223 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.238 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.405 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.438 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_expoentes               ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.321 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.571 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 5.268 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.461 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.609 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.desloca_mantissa             ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.586 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.791 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.655 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.855 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.normaliza                    ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.834 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.974 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 4.972 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.expoente                     ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 5.147 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|count[0]                                 ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7] ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 5.180 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.dummy2                       ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                   ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 0.799 ns                 ;
+; Not operational: Clock Skew > Data Delay ; fsm:FSM_COMPONENT|actual_step.dummy1                       ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                    ; CLOCK_50   ; CLOCK_50 ; None                       ; None                       ; 0.826 ns                 ;
++------------------------------------------+------------------------------------------------------------+----------------------------------------------------------------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                     ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                                                              ; To Clock ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+; N/A   ; None         ; 7.583 ns   ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 7.512 ns   ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 7.156 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|shift ; KEY[0]   ;
+; N/A   ; None         ; 7.154 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|n1    ; KEY[0]   ;
+; N/A   ; None         ; 7.086 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l1    ; KEY[0]   ;
+; N/A   ; None         ; 7.036 ns   ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 6.712 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|s1    ; KEY[0]   ;
+; N/A   ; None         ; 6.529 ns   ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A   ; None         ; 6.525 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l2    ; KEY[0]   ;
+; N/A   ; None         ; 6.351 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; KEY[1]   ;
+; N/A   ; None         ; 6.143 ns   ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A   ; None         ; 5.413 ns   ; KEY[1] ; fsm:FSM_COMPONENT|count[3]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 5.389 ns   ; KEY[1] ; fsm:FSM_COMPONENT|count[2]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 5.354 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; KEY[1]   ;
+; N/A   ; None         ; 5.288 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; KEY[1]   ;
+; N/A   ; None         ; 5.257 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; KEY[1]   ;
+; N/A   ; None         ; 5.206 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; KEY[1]   ;
+; N/A   ; None         ; 5.129 ns   ; KEY[1] ; fsm:FSM_COMPONENT|count[1]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 5.094 ns   ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[3]   ; CLOCK_50 ;
+; N/A   ; None         ; 5.094 ns   ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[2]   ; CLOCK_50 ;
+; N/A   ; None         ; 5.094 ns   ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]   ; CLOCK_50 ;
+; N/A   ; None         ; 5.094 ns   ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]   ; CLOCK_50 ;
+; N/A   ; None         ; 5.077 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; CLOCK_50 ;
+; N/A   ; None         ; 5.066 ns   ; KEY[0] ; fsm:FSM_COMPONENT|count[3]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 5.042 ns   ; KEY[0] ; fsm:FSM_COMPONENT|count[2]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 4.906 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; KEY[1]   ;
+; N/A   ; None         ; 4.782 ns   ; KEY[0] ; fsm:FSM_COMPONENT|count[1]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 4.576 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; KEY[1]   ;
+; N/A   ; None         ; 4.456 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; KEY[1]   ;
+; N/A   ; None         ; 4.080 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; CLOCK_50 ;
+; N/A   ; None         ; 4.014 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.996 ns   ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.dummy1                            ; CLOCK_50 ;
+; N/A   ; None         ; 3.983 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.932 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.802 ns   ; KEY[1] ; fsm:FSM_COMPONENT|count[0]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 3.750 ns   ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                      ; CLOCK_50 ;
+; N/A   ; None         ; 3.730 ns   ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.dummy2                            ; CLOCK_50 ;
+; N/A   ; None         ; 3.632 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.302 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.209 ns   ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                     ; CLOCK_50 ;
+; N/A   ; None         ; 3.182 ns   ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; CLOCK_50 ;
+; N/A   ; None         ; 3.176 ns   ; KEY[0] ; fsm:FSM_COMPONENT|count[0]                                      ; CLOCK_50 ;
+; N/A   ; None         ; 2.901 ns   ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                    ; CLOCK_50 ;
+; N/A   ; None         ; 2.714 ns   ; SW[7]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 2.328 ns   ; SW[7]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 2.299 ns   ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 2.228 ns   ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 2.069 ns   ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.998 ns   ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.996 ns   ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.945 ns   ; SW[3]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.925 ns   ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.781 ns   ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.710 ns   ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.611 ns   ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.582 ns   ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.562 ns   ; SW[3]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.551 ns   ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.520 ns   ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.511 ns   ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.449 ns   ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.446 ns   ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.441 ns   ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.370 ns   ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.352 ns   ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.290 ns   ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.281 ns   ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A   ; None         ; 1.168 ns   ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A   ; None         ; 0.904 ns   ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A   ; None         ; 0.895 ns   ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A   ; None         ; 0.894 ns   ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A   ; None         ; 0.377 ns   ; SW[7]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; KEY[1]   ;
+; N/A   ; None         ; -0.012 ns  ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                     ; CLOCK_50 ;
+; N/A   ; None         ; -0.788 ns  ; SW[4]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; KEY[1]   ;
+; N/A   ; None         ; -0.889 ns  ; SW[5]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; KEY[1]   ;
+; N/A   ; None         ; -0.897 ns  ; SW[7]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; CLOCK_50 ;
+; N/A   ; None         ; -1.244 ns  ; SW[3]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; KEY[1]   ;
+; N/A   ; None         ; -1.427 ns  ; SW[0]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; KEY[1]   ;
+; N/A   ; None         ; -1.515 ns  ; SW[6]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; KEY[1]   ;
+; N/A   ; None         ; -1.804 ns  ; SW[2]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; KEY[1]   ;
+; N/A   ; None         ; -1.942 ns  ; SW[1]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; KEY[1]   ;
+; N/A   ; None         ; -2.062 ns  ; SW[4]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; CLOCK_50 ;
+; N/A   ; None         ; -2.163 ns  ; SW[5]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; CLOCK_50 ;
+; N/A   ; None         ; -2.518 ns  ; SW[3]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; CLOCK_50 ;
+; N/A   ; None         ; -2.701 ns  ; SW[0]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; CLOCK_50 ;
+; N/A   ; None         ; -2.789 ns  ; SW[6]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; CLOCK_50 ;
+; N/A   ; None         ; -3.078 ns  ; SW[2]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; CLOCK_50 ;
+; N/A   ; None         ; -3.216 ns  ; SW[1]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; CLOCK_50 ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                   ;
++-------+--------------+------------+------------------------------------------------------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                       ; To      ; From Clock ;
++-------+--------------+------------+------------------------------------------------------------+---------+------------+
+; N/A   ; None         ; 7.934 ns   ; expoente:EXPOENTE_COMPONENT|aux[4]                         ; LEDG[8] ; CLOCK_50   ;
+; N/A   ; None         ; 7.796 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[10] ; LEDG[2] ; CLOCK_50   ;
+; N/A   ; None         ; 7.747 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[15] ; LEDG[7] ; CLOCK_50   ;
+; N/A   ; None         ; 7.637 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[14] ; LEDG[6] ; CLOCK_50   ;
+; N/A   ; None         ; 7.602 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12] ; LEDG[4] ; CLOCK_50   ;
+; N/A   ; None         ; 7.600 ns   ; expoente:EXPOENTE_COMPONENT|aux[0]                         ; LEDR[0] ; CLOCK_50   ;
+; N/A   ; None         ; 7.599 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[8]  ; LEDG[0] ; CLOCK_50   ;
+; N/A   ; None         ; 7.591 ns   ; expoente:EXPOENTE_COMPONENT|aux[1]                         ; LEDR[1] ; CLOCK_50   ;
+; N/A   ; None         ; 7.582 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[11] ; LEDG[3] ; CLOCK_50   ;
+; N/A   ; None         ; 7.567 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[9]  ; LEDG[1] ; CLOCK_50   ;
+; N/A   ; None         ; 7.535 ns   ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[13] ; LEDG[5] ; CLOCK_50   ;
+; N/A   ; None         ; 7.533 ns   ; expoente:EXPOENTE_COMPONENT|aux[2]                         ; LEDR[2] ; CLOCK_50   ;
+; N/A   ; None         ; 7.405 ns   ; expoente:EXPOENTE_COMPONENT|aux[3]                         ; LEDR[3] ; CLOCK_50   ;
++-------+--------------+------------+------------------------------------------------------------+---------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                            ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                                                              ; To Clock ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+; N/A           ; None        ; 5.952 ns  ; SW[2]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; CLOCK_50 ;
+; N/A           ; None        ; 5.899 ns  ; SW[1]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; CLOCK_50 ;
+; N/A           ; None        ; 5.568 ns  ; SW[0]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; CLOCK_50 ;
+; N/A           ; None        ; 5.473 ns  ; SW[6]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; CLOCK_50 ;
+; N/A           ; None        ; 5.210 ns  ; SW[3]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; CLOCK_50 ;
+; N/A           ; None        ; 5.037 ns  ; SW[5]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; CLOCK_50 ;
+; N/A           ; None        ; 4.903 ns  ; SW[4]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; CLOCK_50 ;
+; N/A           ; None        ; 4.056 ns  ; SW[2]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; KEY[1]   ;
+; N/A           ; None        ; 4.003 ns  ; SW[1]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; KEY[1]   ;
+; N/A           ; None        ; 3.738 ns  ; SW[7]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; CLOCK_50 ;
+; N/A           ; None        ; 3.672 ns  ; SW[0]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; KEY[1]   ;
+; N/A           ; None        ; 3.577 ns  ; SW[6]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; KEY[1]   ;
+; N/A           ; None        ; 3.314 ns  ; SW[3]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; KEY[1]   ;
+; N/A           ; None        ; 3.141 ns  ; SW[5]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; KEY[1]   ;
+; N/A           ; None        ; 3.025 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; CLOCK_50 ;
+; N/A           ; None        ; 3.007 ns  ; SW[4]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; KEY[1]   ;
+; N/A           ; None        ; 2.999 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; CLOCK_50 ;
+; N/A           ; None        ; 2.852 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; CLOCK_50 ;
+; N/A           ; None        ; 2.836 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; CLOCK_50 ;
+; N/A           ; None        ; 2.807 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; CLOCK_50 ;
+; N/A           ; None        ; 2.774 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; CLOCK_50 ;
+; N/A           ; None        ; 2.441 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; CLOCK_50 ;
+; N/A           ; None        ; 1.842 ns  ; SW[7]  ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; KEY[1]   ;
+; N/A           ; None        ; 1.202 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; CLOCK_50 ;
+; N/A           ; None        ; 1.129 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]  ; KEY[1]   ;
+; N/A           ; None        ; 1.103 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]  ; KEY[1]   ;
+; N/A           ; None        ; 0.956 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]  ; KEY[1]   ;
+; N/A           ; None        ; 0.940 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]  ; KEY[1]   ;
+; N/A           ; None        ; 0.911 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]  ; KEY[1]   ;
+; N/A           ; None        ; 0.878 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]  ; KEY[1]   ;
+; N/A           ; None        ; 0.545 ns  ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]  ; KEY[1]   ;
+; N/A           ; None        ; 0.242 ns  ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.soma_mantissa                     ; CLOCK_50 ;
+; N/A           ; None        ; -0.664 ns ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -0.665 ns ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A           ; None        ; -0.674 ns ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A           ; None        ; -0.694 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]  ; KEY[1]   ;
+; N/A           ; None        ; -0.938 ns ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.051 ns ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.060 ns ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.122 ns ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.140 ns ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.211 ns ; SW[2]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.216 ns ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.219 ns ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.281 ns ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.290 ns ; SW[1]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.321 ns ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.332 ns ; SW[3]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.352 ns ; SW[0]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.381 ns ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.480 ns ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.551 ns ; SW[5]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.695 ns ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.715 ns ; SW[3]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.766 ns ; SW[6]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.768 ns ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.799 ns ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.799 ns ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.799 ns ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.799 ns ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[1]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.799 ns ; KEY[1] ; expoente:EXPOENTE_COMPONENT|aux[0]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.839 ns ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[2]                              ; CLOCK_50 ;
+; N/A           ; None        ; -1.998 ns ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -2.069 ns ; SW[4]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -2.098 ns ; SW[7]  ; expoente:EXPOENTE_COMPONENT|aux[3]                              ; CLOCK_50 ;
+; N/A           ; None        ; -2.303 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|s1    ; KEY[0]   ;
+; N/A           ; None        ; -2.484 ns ; SW[7]  ; expoente:EXPOENTE_COMPONENT|aux[4]                              ; CLOCK_50 ;
+; N/A           ; None        ; -2.501 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l2    ; KEY[0]   ;
+; N/A           ; None        ; -2.671 ns ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.soma_expoentes                    ; CLOCK_50 ;
+; N/A           ; None        ; -2.764 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l1    ; KEY[0]   ;
+; N/A           ; None        ; -2.868 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|n1    ; KEY[0]   ;
+; N/A           ; None        ; -2.875 ns ; KEY[1] ; multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|shift ; KEY[0]   ;
+; N/A           ; None        ; -2.946 ns ; KEY[0] ; fsm:FSM_COMPONENT|count[0]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -2.979 ns ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.carrega_reg16                     ; CLOCK_50 ;
+; N/A           ; None        ; -3.500 ns ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.dummy2                            ; CLOCK_50 ;
+; N/A           ; None        ; -3.520 ns ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.carrega_reg8                      ; CLOCK_50 ;
+; N/A           ; None        ; -3.572 ns ; KEY[1] ; fsm:FSM_COMPONENT|count[0]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -3.766 ns ; KEY[1] ; fsm:FSM_COMPONENT|actual_step.dummy1                            ; CLOCK_50 ;
+; N/A           ; None        ; -4.552 ns ; KEY[0] ; fsm:FSM_COMPONENT|count[1]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -4.812 ns ; KEY[0] ; fsm:FSM_COMPONENT|count[2]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -4.836 ns ; KEY[0] ; fsm:FSM_COMPONENT|count[3]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -4.864 ns ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[3]   ; CLOCK_50 ;
+; N/A           ; None        ; -4.864 ns ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[2]   ; CLOCK_50 ;
+; N/A           ; None        ; -4.864 ns ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[1]   ; CLOCK_50 ;
+; N/A           ; None        ; -4.864 ns ; KEY[0] ; multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|exp_aux[0]   ; CLOCK_50 ;
+; N/A           ; None        ; -4.899 ns ; KEY[1] ; fsm:FSM_COMPONENT|count[1]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -5.159 ns ; KEY[1] ; fsm:FSM_COMPONENT|count[2]                                      ; CLOCK_50 ;
+; N/A           ; None        ; -5.183 ns ; KEY[1] ; fsm:FSM_COMPONENT|count[3]                                      ; CLOCK_50 ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Nov 25 14:53:36 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off consumo_combustivel -c consumo_combustivel --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|s1" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|n1" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l2" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|shift" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[7]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[6]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l1" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[0]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[5]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[1]" is a latch
+    Warning: Node "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK_50" is an undefined clock
+    Info: Assuming node "KEY[0]" is an undefined clock
+    Info: Assuming node "KEY[1]" is a latch enable. Will not compute fmax for this pin.
+Warning: Found 16 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|l2" as buffer
+    Info: Detected gated clock "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.carrega_reg16" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|count[0]" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|count[3]" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|count[1]" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|count[2]" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.soma_mantissa" as buffer
+    Info: Detected gated clock "fsm:FSM_COMPONENT|Selector1~0" as buffer
+    Info: Detected gated clock "fsm:FSM_COMPONENT|Selector7~0" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.soma_expoentes" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.desloca_mantissa" as buffer
+    Info: Detected gated clock "fsm:FSM_COMPONENT|Selector1~1" as buffer
+    Info: Detected gated clock "fsm:FSM_COMPONENT|Selector6~0" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.normaliza" as buffer
+    Info: Detected ripple clock "fsm:FSM_COMPONENT|actual_step.expoente" as buffer
+Info: Clock "CLOCK_50" has Internal fmax of 143.58 MHz between source register "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]" and destination register "multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]" (period= 6.965 ns)
+    Info: + Longest register to register delay is 0.504 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X62_Y13_N30; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]'
+        Info: 2: + IC(0.270 ns) + CELL(0.150 ns) = 0.420 ns; Loc. = LCCOMB_X62_Y13_N16; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux~32'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 0.504 ns; Loc. = LCFF_X62_Y13_N17; Fanout = 2; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]'
+        Info: Total cell delay = 0.234 ns ( 46.43 % )
+        Info: Total interconnect delay = 0.270 ns ( 53.57 % )
+    Info: - Smallest clock skew is -6.497 ns
+        Info: + Shortest clock path from clock "CLOCK_50" to destination register is 2.674 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 39; COMB Node = 'CLOCK_50~clkctrl'
+            Info: 3: + IC(1.020 ns) + CELL(0.537 ns) = 2.674 ns; Loc. = LCFF_X62_Y13_N17; Fanout = 2; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[3]'
+            Info: Total cell delay = 1.536 ns ( 57.44 % )
+            Info: Total interconnect delay = 1.138 ns ( 42.56 % )
+        Info: - Longest clock path from clock "CLOCK_50" to source register is 9.171 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(1.959 ns) + CELL(0.787 ns) = 3.745 ns; Loc. = LCFF_X60_Y14_N31; Fanout = 4; REG Node = 'fsm:FSM_COMPONENT|count[2]'
+            Info: 3: + IC(0.477 ns) + CELL(0.398 ns) = 4.620 ns; Loc. = LCCOMB_X61_Y14_N4; Fanout = 5; COMB Node = 'fsm:FSM_COMPONENT|Selector7~0'
+            Info: 4: + IC(0.478 ns) + CELL(0.437 ns) = 5.535 ns; Loc. = LCCOMB_X61_Y14_N30; Fanout = 10; COMB Node = 'fsm:FSM_COMPONENT|Selector1~1'
+            Info: 5: + IC(0.438 ns) + CELL(0.398 ns) = 6.371 ns; Loc. = LCCOMB_X62_Y14_N0; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2'
+            Info: 6: + IC(1.112 ns) + CELL(0.000 ns) = 7.483 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2clkctrl'
+            Info: 7: + IC(1.413 ns) + CELL(0.275 ns) = 9.171 ns; Loc. = LCCOMB_X62_Y13_N30; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[3]'
+            Info: Total cell delay = 3.294 ns ( 35.92 % )
+            Info: Total interconnect delay = 5.877 ns ( 64.08 % )
+    Info: + Micro clock to output delay of source is 0.000 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Warning: Circuit may not operate. Detected 92 non-operational path(s) clocked by clock "CLOCK_50" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12]" and destination pin or register "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]" for clock "CLOCK_50" (Hold time is 4.335 ns)
+    Info: + Largest clock skew is 6.357 ns
+        Info: + Longest clock path from clock "CLOCK_50" to destination register is 9.036 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(1.959 ns) + CELL(0.787 ns) = 3.745 ns; Loc. = LCFF_X60_Y14_N31; Fanout = 4; REG Node = 'fsm:FSM_COMPONENT|count[2]'
+            Info: 3: + IC(0.477 ns) + CELL(0.398 ns) = 4.620 ns; Loc. = LCCOMB_X61_Y14_N4; Fanout = 5; COMB Node = 'fsm:FSM_COMPONENT|Selector7~0'
+            Info: 4: + IC(0.478 ns) + CELL(0.437 ns) = 5.535 ns; Loc. = LCCOMB_X61_Y14_N30; Fanout = 10; COMB Node = 'fsm:FSM_COMPONENT|Selector1~1'
+            Info: 5: + IC(0.438 ns) + CELL(0.398 ns) = 6.371 ns; Loc. = LCCOMB_X62_Y14_N0; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2'
+            Info: 6: + IC(1.112 ns) + CELL(0.000 ns) = 7.483 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2clkctrl'
+            Info: 7: + IC(1.403 ns) + CELL(0.150 ns) = 9.036 ns; Loc. = LCCOMB_X62_Y13_N26; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]'
+            Info: Total cell delay = 3.169 ns ( 35.07 % )
+            Info: Total interconnect delay = 5.867 ns ( 64.93 % )
+        Info: - Shortest clock path from clock "CLOCK_50" to source register is 2.679 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 39; COMB Node = 'CLOCK_50~clkctrl'
+            Info: 3: + IC(1.025 ns) + CELL(0.537 ns) = 2.679 ns; Loc. = LCFF_X63_Y14_N17; Fanout = 4; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12]'
+            Info: Total cell delay = 1.536 ns ( 57.33 % )
+            Info: Total interconnect delay = 1.143 ns ( 42.67 % )
+    Info: - Micro clock to output delay of source is 0.250 ns
+    Info: - Shortest register to register delay is 1.772 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X63_Y14_N17; Fanout = 4; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|reg_16:REG16|aux[12]'
+        Info: 2: + IC(0.735 ns) + CELL(0.150 ns) = 0.885 ns; Loc. = LCCOMB_X61_Y13_N10; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux8~0'
+        Info: 3: + IC(0.449 ns) + CELL(0.438 ns) = 1.772 ns; Loc. = LCCOMB_X62_Y13_N26; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[4]'
+        Info: Total cell delay = 0.588 ns ( 33.18 % )
+        Info: Total interconnect delay = 1.184 ns ( 66.82 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+Info: tsu for register "expoente:EXPOENTE_COMPONENT|aux[4]" (data pin = "KEY[1]", clock pin = "CLOCK_50") is 7.583 ns
+    Info: + Longest pin to register delay is 10.298 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_N23; Fanout = 8; CLK Node = 'KEY[1]'
+        Info: 2: + IC(5.363 ns) + CELL(0.438 ns) = 6.643 ns; Loc. = LCCOMB_X61_Y14_N22; Fanout = 1; COMB Node = 'fsm:FSM_COMPONENT|Selector2~0'
+        Info: 3: + IC(0.245 ns) + CELL(0.149 ns) = 7.037 ns; Loc. = LCCOMB_X61_Y14_N2; Fanout = 8; COMB Node = 'fsm:FSM_COMPONENT|Selector2~1'
+        Info: 4: + IC(0.257 ns) + CELL(0.150 ns) = 7.444 ns; Loc. = LCCOMB_X61_Y14_N6; Fanout = 10; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux3~0'
+        Info: 5: + IC(0.774 ns) + CELL(0.271 ns) = 8.489 ns; Loc. = LCCOMB_X61_Y13_N26; Fanout = 2; COMB Node = 'expoente:EXPOENTE_COMPONENT|Add0~5'
+        Info: 6: + IC(0.740 ns) + CELL(0.504 ns) = 9.733 ns; Loc. = LCCOMB_X61_Y14_N14; Fanout = 2; COMB Node = 'expoente:EXPOENTE_COMPONENT|aux[2]~14'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 9.804 ns; Loc. = LCCOMB_X61_Y14_N16; Fanout = 1; COMB Node = 'expoente:EXPOENTE_COMPONENT|aux[3]~16'
+        Info: 8: + IC(0.000 ns) + CELL(0.410 ns) = 10.214 ns; Loc. = LCCOMB_X61_Y14_N18; Fanout = 1; COMB Node = 'expoente:EXPOENTE_COMPONENT|aux[4]~17'
+        Info: 9: + IC(0.000 ns) + CELL(0.084 ns) = 10.298 ns; Loc. = LCFF_X61_Y14_N19; Fanout = 2; REG Node = 'expoente:EXPOENTE_COMPONENT|aux[4]'
+        Info: Total cell delay = 2.919 ns ( 28.35 % )
+        Info: Total interconnect delay = 7.379 ns ( 71.65 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CLOCK_50" to destination register is 2.679 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 39; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(1.025 ns) + CELL(0.537 ns) = 2.679 ns; Loc. = LCFF_X61_Y14_N19; Fanout = 2; REG Node = 'expoente:EXPOENTE_COMPONENT|aux[4]'
+        Info: Total cell delay = 1.536 ns ( 57.33 % )
+        Info: Total interconnect delay = 1.143 ns ( 42.67 % )
+Info: tco from clock "CLOCK_50" to destination pin "LEDG[8]" through register "expoente:EXPOENTE_COMPONENT|aux[4]" is 7.934 ns
+    Info: + Longest clock path from clock "CLOCK_50" to source register is 2.679 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 39; COMB Node = 'CLOCK_50~clkctrl'
+        Info: 3: + IC(1.025 ns) + CELL(0.537 ns) = 2.679 ns; Loc. = LCFF_X61_Y14_N19; Fanout = 2; REG Node = 'expoente:EXPOENTE_COMPONENT|aux[4]'
+        Info: Total cell delay = 1.536 ns ( 57.33 % )
+        Info: Total interconnect delay = 1.143 ns ( 42.67 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.005 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X61_Y14_N19; Fanout = 2; REG Node = 'expoente:EXPOENTE_COMPONENT|aux[4]'
+        Info: 2: + IC(2.247 ns) + CELL(2.758 ns) = 5.005 ns; Loc. = PIN_Y12; Fanout = 0; PIN Node = 'LEDG[8]'
+        Info: Total cell delay = 2.758 ns ( 55.10 % )
+        Info: Total interconnect delay = 2.247 ns ( 44.90 % )
+Info: th for register "multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]" (data pin = "SW[2]", clock pin = "CLOCK_50") is 5.952 ns
+    Info: + Longest clock path from clock "CLOCK_50" to destination register is 9.035 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 11; CLK Node = 'CLOCK_50'
+        Info: 2: + IC(1.959 ns) + CELL(0.787 ns) = 3.745 ns; Loc. = LCFF_X60_Y14_N31; Fanout = 4; REG Node = 'fsm:FSM_COMPONENT|count[2]'
+        Info: 3: + IC(0.477 ns) + CELL(0.398 ns) = 4.620 ns; Loc. = LCCOMB_X61_Y14_N4; Fanout = 5; COMB Node = 'fsm:FSM_COMPONENT|Selector7~0'
+        Info: 4: + IC(0.478 ns) + CELL(0.437 ns) = 5.535 ns; Loc. = LCCOMB_X61_Y14_N30; Fanout = 10; COMB Node = 'fsm:FSM_COMPONENT|Selector1~1'
+        Info: 5: + IC(0.438 ns) + CELL(0.398 ns) = 6.371 ns; Loc. = LCCOMB_X62_Y14_N0; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2'
+        Info: 6: + IC(1.112 ns) + CELL(0.000 ns) = 7.483 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux13~2clkctrl'
+        Info: 7: + IC(1.402 ns) + CELL(0.150 ns) = 9.035 ns; Loc. = LCCOMB_X62_Y13_N10; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]'
+        Info: Total cell delay = 3.169 ns ( 35.07 % )
+        Info: Total interconnect delay = 5.866 ns ( 64.93 % )
+    Info: + Micro hold delay of destination is 0.000 ns
+    Info: - Shortest pin to register delay is 3.083 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P25; Fanout = 2; PIN Node = 'SW[2]'
+        Info: 2: + IC(1.200 ns) + CELL(0.150 ns) = 2.349 ns; Loc. = LCCOMB_X61_Y13_N4; Fanout = 1; COMB Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|Mux10~0'
+        Info: 3: + IC(0.459 ns) + CELL(0.275 ns) = 3.083 ns; Loc. = LCCOMB_X62_Y13_N10; Fanout = 5; REG Node = 'multiplicador:MULTIPLICADOR_COMPONENT|input_control:INPUT|q[2]'
+        Info: Total cell delay = 1.424 ns ( 46.19 % )
+        Info: Total interconnect delay = 1.659 ns ( 53.81 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 169 megabytes
+    Info: Processing ended: Fri Nov 25 14:53:36 2011
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,40 @@
+%Cyclone II EP2C35F672C6
+\documentclass[a4paper]{report}
+	%	Pacotes a serem usados
+	\usepackage[latin1]{inputenc}
+	\usepackage[brazil]{babel}
+	\usepackage{a4wide}
+	\usepackage{graphicx}
+	\usepackage[pdftex]{hyperref}
+	\hypersetup{
+		pdftex,
+	  pdftitle = {Relatório Sistemas Digitais - Consumo instantâneo de combustível},
+	  pdfkeywords = {sistemas digitais, ufsc, combustível, consumo},
+	  pdfauthor = {Bruno Luiz da Silva \\ Gustavo Fernandes},
+	  colorlinks=true,
+	 	citecolor=black,
+	 	filecolor=black,
+	 	urlcolor=black,
+	 	linkcolor=black
+	}
+		
+	%	Início do relatório (corpo do documento)
+	\begin{document}
+		%	Informações do relatório
+		\title{Relatório do projeto de sistemas digitais \\ Consumo instantâneo de combustível}
+		\author{Bruno Luiz da Silva \\ Gustavo Fernandes}
+		
+		%	Cria capa do relatório
+		\begin{titlepage}
+			\maketitle
+		\end{titlepage}
+		
+		\tableofcontents
+		
+		\chapter{Introdução}
+			\input{introducao}
+		\chapter{Desenvolvimento e testes do medidor de consumo de combustível}
+			\input{desenvolvimento}
+		\chapter{Conclusão}
+			\input{conclusao}
+	\end{document}

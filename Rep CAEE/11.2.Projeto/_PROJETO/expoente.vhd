@@ -1,0 +1,79 @@
+--	ALUNOS:
+--	Bruno Luiz da Silva
+--	Gustavo Fernades
+--
+--
+--	TÍTULO:
+--		Expoente
+--
+--
+--	RESUMO:
+--		Calcula o expoente baseado na normalização e nos expoentes dados
+--
+--
+--	ENTRADAS/SAÍDAS (I/O):
+--		(I) a,b: entradas de 4 bits cada que serão os expoentes que o usuário dará
+--		(I) normal: entrada que receberá o número de vezes que a mantissa foi deslocada para ficar normalizada
+--		(I) arguments: argumentos que serão recebidos para realizar a soma dos expoentes dados ou o resultado
+--					   dessa soma mais o número de deslocamentos realizados.
+--		(I) clk,rst: clock e reset, sendo que o reset zera todas saídas
+--		(O) q: saída do componente, sendo que será esse o expoente final
+--
+--
+--	DESCRIÇÃO:
+--		Esse componente será responsável por dar o expoente da multiplicação que será realizada. Para tal o
+--		usuário entrará com os expoentes (em a e b) e dará o valor "110" para o "argument" para realizar a 
+--		soma de ambos. Para previnir casos onde houver uma soma que extrapole o valor "1111" (7 em decimal)
+--		então foi adicionado um bit extra na saída para armazenar o possível valor extra. Em algum momento
+--		será enviado o número de deslocamentos realizados para normalizar a mantissa (normal) e assim terá-se
+--		um valor negativo que deverá ser decrementado do atual expoente. Após essa decrementação então tem-se
+--		o expoente final, porém ele deve estar na faixa de "0000" a "1111" (0 a 15 em decimal), pois caso
+--		extrapole essa faixa ele não poderá apresentar o valor correto nos LEDs designados sendo assim um caso
+--		de overflow, que ativará o LED designado para tal.
+--
+--
+--	ANEXO - ARGUMENTS:
+--		O "arguments" será dado pela FSM e o mesmo é ligado ao bloco de multiplicação. Aproveitando essa mesma
+--		saída então usa-se o arguments aqui. Os sinais utilizados e o que fazem são:
+--
+--		110: realiza a soma entre os dois expoentes dados (a e b).
+--		111: realiza a subtração do atual valor guardado (soma de a e b) com o número de deslocamentos realizados 
+--			 na normalização da mantissa.
+--
+--
+--	(I): INPUT	/	(O): OUTPUT
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity expoente is
+	generic(N: natural := 4);
+	port(
+		a,b: in std_logic_vector((N-1) downto 0);		-- Expoentes dados pelo usuário
+		normal: in std_logic_vector((N-1) downto 0);	-- Deslocamentos que foram necessários para normalizar a mantissa
+		arguments: in std_logic_vector(2 downto 0);		-- Argumentos que dará as ordens para o componente
+		clk,rst: in std_logic;							-- Clock e reset
+		q: out std_logic_vector((N) downto 0)			-- Expoente final
+	);
+end expoente;
+
+architecture func of expoente is
+	signal aux: std_logic_vector(N downto 0);
+begin
+	EXPOENTE: process(clk,rst)
+	begin
+		if(rst = '1') then aux <= (others => '0');
+		elsif(rising_edge(clk)) then
+			if(arguments = "110") then
+				-- Soma dos dois expoentes dados com o bit extra para o carry
+				aux <= ('0'&a) + ('0'&b);
+			elsif(arguments = "111") then
+				-- Decremento do resultado da soma anterior com o número de deslocamentos da normalização
+				aux <= aux - ('0'&normal);
+			else aux <= aux;
+			end if;
+		end if;
+		q <= aux;
+	end process;
+end func;

@@ -1,0 +1,10 @@
+\select@language {brazil}
+\contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{2}{chapter.1}
+\contentsline {chapter}{\numberline {2}Desenvolvimento e testes do medidor de consumo de combust\IeC {\'\i }vel}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Realiza\c c\~ao de multiplica\c c\~oes com n\'umero em ponto flutuante}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Revis\~ao te\'orica de sistemas digitais}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Fluxo do projeto}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Implementa\c c\~ao do circuito}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}M\'aquina de estados (Finite State Machine)}{10}{section.2.5}
+\contentsline {section}{\numberline {2.6}Resultados e simula\c c\~oes}{12}{section.2.6}
+\contentsline {chapter}{\numberline {3}Conclus\~ao}{15}{chapter.3}

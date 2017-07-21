@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="circuito1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|circuito1|divisor120:inst24|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_gfj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|circuito1|divisor:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_5ij.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

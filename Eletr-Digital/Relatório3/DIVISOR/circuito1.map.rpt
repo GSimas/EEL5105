@@ -1,0 +1,404 @@
+Analysis & Synthesis report for circuito1
+Fri Sep 26 17:19:42 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Source assignments for divisor:inst|lpm_counter:lpm_counter_component
+ 10. Source assignments for divisor120:inst24|lpm_counter:lpm_counter_component
+ 11. Parameter Settings for User Entity Instance: divisor:inst|lpm_counter:lpm_counter_component
+ 12. Parameter Settings for User Entity Instance: divisor120:inst24|lpm_counter:lpm_counter_component
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Sep 26 17:19:42 2014        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; circuito1                                    ;
+; Top-level Entity Name       ; circuito1                                    ;
+; Family                      ; Cyclone                                      ;
+; Total logic elements        ; 103                                          ;
+; Total pins                  ; 13                                           ;
+; Total virtual pins          ; 0                                            ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C3T100C8        ;                    ;
+; Top-level entity name                                                      ; circuito1          ; circuito1          ;
+; Family name                                                                ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                    ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+
+; divisor.vhd                      ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/Desktop/DIVISOR/divisor.vhd                      ;
+; circuito1.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Aluno/Desktop/DIVISOR/circuito1.bdf                    ;
+; divisor120.vhd                   ; yes             ; User Wizard-Generated File         ; C:/Users/Aluno/Desktop/DIVISOR/divisor120.vhd                   ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_counter.tdf ;
+; db/cntr_5ij.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/DIVISOR/db/cntr_5ij.tdf                  ;
+; db/cmpr_56c.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/DIVISOR/db/cmpr_56c.tdf                  ;
+; 7476.bdf                         ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/others/maxplus2/7476.bdf      ;
+; db/cntr_gfj.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/DIVISOR/db/cntr_gfj.tdf                  ;
+; db/cmpr_46c.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Aluno/Desktop/DIVISOR/db/cmpr_46c.tdf                  ;
+; 74373.bdf                        ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/others/maxplus2/74373.bdf     ;
+; 7447.bdf                         ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/others/maxplus2/7447.bdf      ;
+; 74190.bdf                        ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/others/maxplus2/74190.bdf     ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 103   ;
+;     -- Combinational with no register       ; 42    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 61    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 31    ;
+;     -- 3 input functions                    ; 11    ;
+;     -- 2 input functions                    ; 53    ;
+;     -- 1 input functions                    ; 7     ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 53    ;
+;     -- arithmetic mode                      ; 50    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 50    ;
+;     -- asynchronous clear/load mode         ; 8     ;
+;                                             ;       ;
+; Total registers                             ; 61    ;
+; Total logic cells in carry chains           ; 52    ;
+; I/O pins                                    ; 13    ;
+; Maximum fan-out node                        ; ~GND  ;
+; Maximum fan-out                             ; 50    ;
+; Total fan-out                               ; 449   ;
+; Average fan-out                             ; 3.87  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                    ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                   ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------+
+; |circuito1                                ; 103 (3)     ; 61           ; 0           ; 13   ; 0            ; 42 (1)       ; 0 (0)             ; 61 (2)           ; 52 (0)          ; 0 (0)      ; |circuito1                                                                                            ; work         ;
+;    |74190:inst2|                          ; 4 (4)       ; 4            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |circuito1|74190:inst2                                                                                ; work         ;
+;    |74190:inst6|                          ; 5 (5)       ; 4            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |circuito1|74190:inst6                                                                                ;              ;
+;    |74373:inst4|                          ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito1|74373:inst4                                                                                ;              ;
+;    |74373:inst8|                          ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito1|74373:inst8                                                                                ;              ;
+;    |7447:inst3|                           ; 1 (1)       ; 0            ; 0           ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito1|7447:inst3                                                                                 ;              ;
+;    |7476:inst5|                           ; 1 (1)       ; 1            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |circuito1|7476:inst5                                                                                 ;              ;
+;    |divisor120:inst24|                    ; 28 (0)      ; 20           ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 20 (0)           ; 21 (0)          ; 0 (0)      ; |circuito1|divisor120:inst24                                                                          ;              ;
+;       |lpm_counter:lpm_counter_component| ; 28 (0)      ; 20           ; 0           ; 0    ; 0            ; 8 (0)        ; 0 (0)             ; 20 (0)           ; 21 (0)          ; 0 (0)      ; |circuito1|divisor120:inst24|lpm_counter:lpm_counter_component                                        ;              ;
+;          |cntr_gfj:auto_generated|        ; 28 (21)     ; 20           ; 0           ; 0    ; 0            ; 8 (1)        ; 0 (0)             ; 20 (20)          ; 21 (21)         ; 0 (0)      ; |circuito1|divisor120:inst24|lpm_counter:lpm_counter_component|cntr_gfj:auto_generated                ;              ;
+;             |cmpr_46c:cmpr1|              ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito1|divisor120:inst24|lpm_counter:lpm_counter_component|cntr_gfj:auto_generated|cmpr_46c:cmpr1 ;              ;
+;    |divisor:inst|                         ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |circuito1|divisor:inst                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |circuito1|divisor:inst|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_5ij:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |circuito1|divisor:inst|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |circuito1|divisor:inst|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated|cmpr_56c:cmpr1      ;              ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 61    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 50    ;
+; Number of registers using Asynchronous Clear ; 8     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------+
+; Source assignments for divisor:inst|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+----------------------------+
+; Assignment                ; Value ; From ; To                         ;
++---------------------------+-------+------+----------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                          ;
++---------------------------+-------+------+----------------------------+
+
+
++----------------------------------------------------------------------------+
+; Source assignments for divisor120:inst24|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+---------------------------------+
+; Assignment                ; Value ; From ; To                              ;
++---------------------------+-------+------+---------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                               ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                               ;
++---------------------------+-------+------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor:inst|lpm_counter:lpm_counter_component ;
++------------------------+-------------+------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                 ;
++------------------------+-------------+------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                         ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                       ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                       ;
+; LPM_DIRECTION          ; UP          ; Untyped                                              ;
+; LPM_MODULUS            ; 25000000    ; Signed Integer                                       ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                              ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                              ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                              ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                              ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                              ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                   ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                   ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                              ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                              ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                              ;
+; CBXI_PARAMETER         ; cntr_5ij    ; Untyped                                              ;
++------------------------+-------------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor120:inst24|lpm_counter:lpm_counter_component ;
++------------------------+-------------+-----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                      ;
++------------------------+-------------+-----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                            ;
+; LPM_WIDTH              ; 20          ; Signed Integer                                            ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                   ;
+; LPM_MODULUS            ; 208333      ; Signed Integer                                            ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                   ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                   ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                   ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                   ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                   ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                        ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                        ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                   ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                   ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                   ;
+; CBXI_PARAMETER         ; cntr_gfj    ; Untyped                                                   ;
++------------------------+-------------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Sep 26 17:19:39 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off circuito1 -c circuito1
+Info: Found 2 design units, including 1 entities, in source file divisor.vhd
+    Info: Found design unit 1: divisor-SYN
+    Info: Found entity 1: divisor
+Info: Found 1 design units, including 1 entities, in source file circuito1.bdf
+    Info: Found entity 1: circuito1
+Info: Found 2 design units, including 1 entities, in source file divisor120.vhd
+    Info: Found design unit 1: divisor120-SYN
+    Info: Found entity 1: divisor120
+Info: Elaborating entity "circuito1" for the top level hierarchy
+Info: Elaborating entity "divisor" for hierarchy "divisor:inst"
+Info: Elaborating entity "lpm_counter" for hierarchy "divisor:inst|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "divisor:inst|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "divisor:inst|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "25000000"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_5ij.tdf
+    Info: Found entity 1: cntr_5ij
+Info: Elaborating entity "cntr_5ij" for hierarchy "divisor:inst|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_56c.tdf
+    Info: Found entity 1: cmpr_56c
+Info: Elaborating entity "cmpr_56c" for hierarchy "divisor:inst|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated|cmpr_56c:cmpr1"
+Info: Elaborating entity "7476" for hierarchy "7476:inst5"
+Info: Elaborated megafunction instantiation "7476:inst5"
+Info: Elaborating entity "divisor120" for hierarchy "divisor120:inst24"
+Info: Elaborating entity "lpm_counter" for hierarchy "divisor120:inst24|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "divisor120:inst24|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "divisor120:inst24|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "208333"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "20"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_gfj.tdf
+    Info: Found entity 1: cntr_gfj
+Info: Elaborating entity "cntr_gfj" for hierarchy "divisor120:inst24|lpm_counter:lpm_counter_component|cntr_gfj:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_46c.tdf
+    Info: Found entity 1: cmpr_46c
+Info: Elaborating entity "cmpr_46c" for hierarchy "divisor120:inst24|lpm_counter:lpm_counter_component|cntr_gfj:auto_generated|cmpr_46c:cmpr1"
+Info: Elaborating entity "74373" for hierarchy "74373:inst8"
+Info: Elaborated megafunction instantiation "74373:inst8"
+Info: Elaborating entity "7447" for hierarchy "7447:inst7"
+Info: Elaborated megafunction instantiation "7447:inst7"
+Info: Elaborating entity "74190" for hierarchy "74190:inst6"
+Info: Elaborated megafunction instantiation "74190:inst6"
+Warning: LATCH primitive "74373:inst4|18" is permanently enabled
+Warning: LATCH primitive "74373:inst4|17" is permanently enabled
+Warning: LATCH primitive "74373:inst4|16" is permanently enabled
+Warning: LATCH primitive "74373:inst4|15" is permanently enabled
+Warning: LATCH primitive "74373:inst4|14" is permanently enabled
+Warning: LATCH primitive "74373:inst4|13" is permanently enabled
+Warning: LATCH primitive "74373:inst4|12" is permanently enabled
+Warning: LATCH primitive "74373:inst8|18" is permanently enabled
+Warning: LATCH primitive "74373:inst8|17" is permanently enabled
+Warning: LATCH primitive "74373:inst8|16" is permanently enabled
+Warning: LATCH primitive "74373:inst8|15" is permanently enabled
+Warning: LATCH primitive "74373:inst8|14" is permanently enabled
+Warning: LATCH primitive "74373:inst8|13" is permanently enabled
+Warning: LATCH primitive "74373:inst8|12" is permanently enabled
+Warning: Always-enabled tri-state buffer(s) removed
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst8|67" to the node "SEGA" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst4|68" to the node "SEGB" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst4|69" to the node "SEGC" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst4|70" to the node "SEGD" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst8|71" to the node "SEGE" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst8|72" to the node "SEGF" into a wire
+    Warning: Converted the fanout from the always-enabled tri-state buffer "74373:inst8|73" to the node "SEGG" into a wire
+Info: Implemented 116 device resources after synthesis - the final resource count might be different
+    Info: Implemented 3 input pins
+    Info: Implemented 10 output pins
+    Info: Implemented 103 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 224 megabytes
+    Info: Processing ended: Fri Sep 26 17:19:42 2014
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

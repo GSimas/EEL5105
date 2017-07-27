@@ -1,0 +1,116 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.102 ns
+From           : FPGA_PIN41
+To             : 7474:inst|9
+From Clock     : --
+To Clock       : FPGA_PIN37
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.651 ns
+From           : 7474:inst|9
+To             : Z1_PIN65
+From Clock     : FPGA_PIN10
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.666 ns
+From           : FPGA_PIN41
+To             : 7474:inst|10
+From Clock     : --
+To Clock       : FPGA_PIN10
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN10'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 130.60 MHz ( period = 7.657 ns )
+From           : divisor:inst14|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated|safe_q[13]
+To             : divisor:inst14|lpm_counter:lpm_counter_component|cntr_5ij:auto_generated|safe_q[24]
+From Clock     : FPGA_PIN10
+To Clock       : FPGA_PIN10
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN37'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : 7474:inst|10
+To             : 7474:inst|9
+From Clock     : FPGA_PIN37
+To Clock       : FPGA_PIN37
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN29'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : 7474:inst|10
+To             : 7474:inst|9
+From Clock     : FPGA_PIN29
+To Clock       : FPGA_PIN29
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN35'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : 7474:inst|10
+To             : 7474:inst|9
+From Clock     : FPGA_PIN35
+To Clock       : FPGA_PIN35
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN34'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : 7474:inst|10
+To             : 7474:inst|9
+From Clock     : FPGA_PIN34
+To Clock       : FPGA_PIN34
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FPGA_PIN38'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : 7474:inst|10
+To             : 7474:inst|9
+From Clock     : FPGA_PIN38
+To Clock       : FPGA_PIN38
+Failed Paths   : 0
+
+Type           : Clock Hold: 'FPGA_PIN10'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : 7474:inst|9
+To             : 7474:inst|10
+From Clock     : FPGA_PIN10
+To Clock       : FPGA_PIN10
+Failed Paths   : 7
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 7
+
+--------------------------------------------------------------------------------------
+

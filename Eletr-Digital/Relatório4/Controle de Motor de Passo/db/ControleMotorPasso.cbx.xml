@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ControleMotorPasso">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ControleMotorPasso|divisor100:inst24|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_5fj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ControleMotorPasso|divisor10:inst22|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_lgj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ControleMotorPasso|divisor5:inst20|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_jgj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ControleMotorPasso|divisor:inst14|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_5ij.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ControleMotorPasso|divisor2:inst17|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_6ij.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

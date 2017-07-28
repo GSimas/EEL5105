@@ -1,0 +1,226 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 59.770 ns
+From           : inst400
+To             : ALERTA
+From Clock     : confirma_
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.644 ns
+From           : chavemestre_
+To             : CHAVEMESTRE
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'confirma_'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 27.14 MHz ( period = 36.842 ns )
+From           : inst376
+To             : inst380
+From Clock     : confirma_
+To Clock       : confirma_
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ChaveDo'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.19 MHz ( period = 30.127 ns )
+From           : inst376
+To             : inst380
+From Clock     : ChaveDo
+To Clock       : ChaveDo
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ClockFPGA'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.13 MHz ( period = 29.296 ns )
+From           : inst380
+To             : inst389
+From Clock     : ClockFPGA
+To Clock       : ClockFPGA
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ChaveRe'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.78 MHz ( period = 28.752 ns )
+From           : inst376
+To             : inst380
+From Clock     : ChaveRe
+To Clock       : ChaveRe
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ChaveFa'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.95 MHz ( period = 28.609 ns )
+From           : inst376
+To             : inst380
+From Clock     : ChaveFa
+To Clock       : ChaveFa
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ChaveMi'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 35.93 MHz ( period = 27.831 ns )
+From           : inst376
+To             : inst380
+From Clock     : ChaveMi
+To Clock       : ChaveMi
+Failed Paths   : 0
+
+Type           : Clock Setup: 'cancela_'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 50.00 MHz ( period = 20.000 ns )
+From           : inst376
+To             : inst380
+From Clock     : cancela_
+To Clock       : cancela_
+Failed Paths   : 0
+
+Type           : Clock Setup: 'reseta_'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 56.93 MHz ( period = 17.564 ns )
+From           : inst8
+To             : 74373:inst157|18
+From Clock     : reseta_
+To Clock       : reseta_
+Failed Paths   : 0
+
+Type           : Clock Setup: 'proximo_'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 65.41 MHz ( period = 15.289 ns )
+From           : inst376
+To             : inst380
+From Clock     : proximo_
+To Clock       : proximo_
+Failed Paths   : 0
+
+Type           : Clock Setup: 'anterior_'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 275.03 MHz ( period = 3.636 ns )
+From           : inst292
+To             : inst292
+From Clock     : anterior_
+To Clock       : anterior_
+Failed Paths   : 0
+
+Type           : Clock Hold: 'confirma_'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : confirma_
+To Clock       : confirma_
+Failed Paths   : 79
+
+Type           : Clock Hold: 'ChaveDo'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : ChaveDo
+To Clock       : ChaveDo
+Failed Paths   : 11
+
+Type           : Clock Hold: 'cancela_'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : cancela_
+To Clock       : cancela_
+Failed Paths   : 20
+
+Type           : Clock Hold: 'ChaveRe'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : ChaveRe
+To Clock       : ChaveRe
+Failed Paths   : 14
+
+Type           : Clock Hold: 'ChaveFa'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : ChaveFa
+To Clock       : ChaveFa
+Failed Paths   : 11
+
+Type           : Clock Hold: 'ClockFPGA'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst376
+To             : inst380
+From Clock     : ClockFPGA
+To Clock       : ClockFPGA
+Failed Paths   : 690
+
+Type           : Clock Hold: 'ChaveMi'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : ChaveMi
+To Clock       : ChaveMi
+Failed Paths   : 13
+
+Type           : Clock Hold: 'reseta_'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : reseta_
+To Clock       : reseta_
+Failed Paths   : 38
+
+Type           : Clock Hold: 'proximo_'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : inst372
+To             : inst376
+From Clock     : proximo_
+To Clock       : proximo_
+Failed Paths   : 114
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 990
+
+--------------------------------------------------------------------------------------
+

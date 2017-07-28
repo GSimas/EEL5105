@@ -1,0 +1,174 @@
+Flow report for ProjetoCofreV2
+Fri Dec 12 08:51:05 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Flow Summary                                                           ;
++-------------------------+----------------------------------------------+
+; Flow Status             ; Successful - Fri Dec 12 08:51:04 2014        ;
+; Quartus II Version      ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name           ; ProjetoCofreV2                               ;
+; Top-level Entity Name   ; ProjetoCofreV2                               ;
+; Family                  ; Cyclone                                      ;
+; Device                  ; EP1C3T100C8                                  ;
+; Timing Models           ; Final                                        ;
+; Met timing requirements ; No                                           ;
+; Total logic elements    ; 901 / 2,910 ( 31 % )                         ;
+; Total pins              ; 32 / 65 ( 49 % )                             ;
+; Total virtual pins      ; 0                                            ;
+; Total memory bits       ; 0 / 59,904 ( 0 % )                           ;
+; Total PLLs              ; 0 / 1 ( 0 % )                                ;
++-------------------------+----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/12/2014 08:50:09 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; ProjetoCofreV2      ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                 ;
++------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                                                                                        ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 198695771311664.141838140806896                                                                                              ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_COUNTER                                                                                                                  ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 9.1                                                                                                                          ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                                                                                           ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock1hz.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock1hz_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock1hz.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock1hz.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Vítor/Desktop/Projeto digital - Cofre (VERSAO 2)/ProjetoCofreV2.dpf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 2)/ProjetoCofreV2.dpf ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Aluno/Desktop/Projeto digital - Cofre (VERSAO 2)/ProjetoCofreV2.dpf                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer.bsf                                                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer_inst.vhd                                                                                                         ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer.inc                                                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer.cmp                                                                                                              ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer1k.bsf                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer1k_inst.vhd                                                                                                       ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer1k.inc                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; clockbuzzer1k.cmp                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerDo.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerDo_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerDo.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerDo.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerRe.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerRe_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerRe.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerRe.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerMi.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerMi_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerMi.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerMi.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerFa.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerFa_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerFa.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; BuzzerFa.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/ProjetoCofreV2.dpf ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock3hz.bsf                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock3hz_inst.vhd                                                                                                            ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock3hz.inc                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; clock3hz.cmp                                                                                                                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; buzzermusiquinha.bsf                                                                                                         ; --            ; --          ; --             ;
+; MISC_FILE                          ; buzzermusiquinha_inst.vhd                                                                                                    ; --            ; --          ; --             ;
+; MISC_FILE                          ; buzzermusiquinha.inc                                                                                                         ; --            ; --          ; --             ;
+; MISC_FILE                          ; buzzermusiquinha.cmp                                                                                                         ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                                                                                     ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                                                                                       ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                                                                          ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:25     ; 1.0                     ; 256 MB              ; 00:00:33                           ;
+; Fitter                  ; 00:00:10     ; 1.0                     ; 204 MB              ; 00:00:11                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 188 MB              ; 00:00:02                           ;
+; Classic Timing Analyzer ; 00:00:09     ; 1.0                     ; 158 MB              ; 00:00:11                           ;
+; Total                   ; 00:00:46     ; --                      ; --                  ; 00:00:57                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; GS-SAMSUNG       ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; GS-SAMSUNG       ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; GS-SAMSUNG       ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; GS-SAMSUNG       ; Windows Vista ; 6.2        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off ProjetoCofreV2 -c ProjetoCofreV2
+quartus_fit --read_settings_files=off --write_settings_files=off ProjetoCofreV2 -c ProjetoCofreV2
+quartus_asm --read_settings_files=off --write_settings_files=off ProjetoCofreV2 -c ProjetoCofreV2
+quartus_tan --read_settings_files=off --write_settings_files=off ProjetoCofreV2 -c ProjetoCofreV2 --timing_analysis_only
+
+
+

@@ -1,0 +1,1541 @@
+Analysis & Synthesis report for ProjetoCofreV2
+Fri Dec 12 08:50:34 2014
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Source assignments for clock3hz:inst750|lpm_counter:lpm_counter_component
+ 12. Source assignments for clock3hz:inst759|lpm_counter:lpm_counter_component
+ 13. Source assignments for clock1hz:inst282|lpm_counter:lpm_counter_component
+ 14. Source assignments for clock1hz:inst283|lpm_counter:lpm_counter_component
+ 15. Source assignments for clock1hz:inst281|lpm_counter:lpm_counter_component
+ 16. Source assignments for BuzzerDo:inst|lpm_counter:lpm_counter_component
+ 17. Source assignments for clock3hz:inst770|lpm_counter:lpm_counter_component
+ 18. Source assignments for BuzzerMi:inst94|lpm_counter:lpm_counter_component
+ 19. Source assignments for BuzzerFa:inst112|lpm_counter:lpm_counter_component
+ 20. Source assignments for BuzzerRe:inst37|lpm_counter:lpm_counter_component
+ 21. Source assignments for clockbuzzer1k:inst111|lpm_counter:lpm_counter_component
+ 22. Source assignments for clockbuzzer:inst272|lpm_counter:lpm_counter_component
+ 23. Parameter Settings for User Entity Instance: clock3hz:inst750|lpm_counter:lpm_counter_component
+ 24. Parameter Settings for User Entity Instance: clock3hz:inst759|lpm_counter:lpm_counter_component
+ 25. Parameter Settings for User Entity Instance: clock1hz:inst282|lpm_counter:lpm_counter_component
+ 26. Parameter Settings for User Entity Instance: clock1hz:inst283|lpm_counter:lpm_counter_component
+ 27. Parameter Settings for User Entity Instance: clock1hz:inst281|lpm_counter:lpm_counter_component
+ 28. Parameter Settings for User Entity Instance: BuzzerDo:inst|lpm_counter:lpm_counter_component
+ 29. Parameter Settings for User Entity Instance: clock3hz:inst770|lpm_counter:lpm_counter_component
+ 30. Parameter Settings for User Entity Instance: BuzzerMi:inst94|lpm_counter:lpm_counter_component
+ 31. Parameter Settings for User Entity Instance: BuzzerFa:inst112|lpm_counter:lpm_counter_component
+ 32. Parameter Settings for User Entity Instance: BuzzerRe:inst37|lpm_counter:lpm_counter_component
+ 33. Parameter Settings for User Entity Instance: clockbuzzer1k:inst111|lpm_counter:lpm_counter_component
+ 34. Parameter Settings for User Entity Instance: clockbuzzer:inst272|lpm_counter:lpm_counter_component
+ 35. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Dec 12 08:50:34 2014        ;
+; Quartus II Version          ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name               ; ProjetoCofreV2                               ;
+; Top-level Entity Name       ; ProjetoCofreV2                               ;
+; Family                      ; Cyclone                                      ;
+; Total logic elements        ; 932                                          ;
+; Total pins                  ; 32                                           ;
+; Total virtual pins          ; 0                                            ;
+; Total memory bits           ; 0                                            ;
+; Total PLLs                  ; 0                                            ;
++-----------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP1C3T100C8        ;                    ;
+; Top-level entity name                                                      ; ProjetoCofreV2     ; ProjetoCofreV2     ;
+; Family name                                                                ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+; clock1hz.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/clock1hz.vhd       ;
+; ProjetoCofreV2.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/ProjetoCofreV2.bdf ;
+; clockbuzzer.vhd                  ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/clockbuzzer.vhd    ;
+; clockbuzzer1k.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/clockbuzzer1k.vhd  ;
+; BuzzerDo.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/BuzzerDo.vhd       ;
+; BuzzerRe.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/BuzzerRe.vhd       ;
+; BuzzerMi.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/BuzzerMi.vhd       ;
+; BuzzerFa.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/BuzzerFa.vhd       ;
+; clock3hz.vhd                     ; yes             ; User Wizard-Generated File         ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/clock3hz.vhd       ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/users/gustavo/documents/ifsc/altera/quartus/libraries/megafunctions/lpm_counter.tdf                                       ;
+; db/cntr_8hj.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_8hj.tdf    ;
+; db/cmpr_56c.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cmpr_56c.tdf    ;
+; db/cntr_0fj.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_0fj.tdf    ;
+; 74373.bdf                        ; yes             ; Megafunction                       ; c:/users/gustavo/documents/ifsc/altera/quartus/libraries/others/maxplus2/74373.bdf                                           ;
+; 7447.bdf                         ; yes             ; Megafunction                       ; c:/users/gustavo/documents/ifsc/altera/quartus/libraries/others/maxplus2/7447.bdf                                            ;
+; 74190.bdf                        ; yes             ; Megafunction                       ; c:/users/gustavo/documents/ifsc/altera/quartus/libraries/others/maxplus2/74190.bdf                                           ;
+; db/cntr_hej.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_hej.tdf    ;
+; db/cntr_dej.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_dej.tdf    ;
+; db/cntr_rdj.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_rdj.tdf    ;
+; db/cntr_7ej.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_7ej.tdf    ;
+; db/cntr_2ej.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_2ej.tdf    ;
+; db/cntr_ldj.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/Gustavo/Documents/IFSC/Eletrônica Digital II/Projeto DIGITAL2/Projeto digital - Cofre (VERSAO 3)/db/cntr_ldj.tdf    ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 932   ;
+;     -- Combinational with no register       ; 472   ;
+;     -- Register only                        ; 54    ;
+;     -- Combinational with a register        ; 406   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 254   ;
+;     -- 3 input functions                    ; 154   ;
+;     -- 2 input functions                    ; 424   ;
+;     -- 1 input functions                    ; 27    ;
+;     -- 0 input functions                    ; 19    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 572   ;
+;     -- arithmetic mode                      ; 360   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 360   ;
+;     -- asynchronous clear/load mode         ; 88    ;
+;                                             ;       ;
+; Total registers                             ; 460   ;
+; Total logic cells in carry chains           ; 372   ;
+; I/O pins                                    ; 32    ;
+; Maximum fan-out node                        ; ~GND  ;
+; Maximum fan-out                             ; 360   ;
+; Total fan-out                               ; 3707  ;
+; Average fan-out                             ; 3.85  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                             ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                            ; Library Name ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; |ProjetoCofreV2                           ; 932 (242)   ; 460          ; 0           ; 32   ; 0            ; 472 (146)    ; 54 (54)           ; 406 (42)         ; 372 (0)         ; 0 (0)      ; |ProjetoCofreV2                                                                                                ; work         ;
+;    |74190:inst113|                        ; 8 (8)       ; 4            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74190:inst113                                                                                  ;              ;
+;    |74373:inst100|                        ; 8 (8)       ; 0            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst100                                                                                  ;              ;
+;    |74373:inst109|                        ; 9 (9)       ; 0            ; 0           ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst109                                                                                  ;              ;
+;    |74373:inst118|                        ; 15 (15)     ; 0            ; 0           ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst118                                                                                  ;              ;
+;    |74373:inst142|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst142                                                                                  ; work         ;
+;    |74373:inst155|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst155                                                                                  ; work         ;
+;    |74373:inst157|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst157                                                                                  ; work         ;
+;    |74373:inst158|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst158                                                                                  ; work         ;
+;    |74373:inst171|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst171                                                                                  ; work         ;
+;    |74373:inst180|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst180                                                                                  ; work         ;
+;    |74373:inst183|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst183                                                                                  ; work         ;
+;    |74373:inst187|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst187                                                                                  ; work         ;
+;    |74373:inst192|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst192                                                                                  ; work         ;
+;    |74373:inst410|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst410                                                                                  ; work         ;
+;    |74373:inst411|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst411                                                                                  ; work         ;
+;    |74373:inst425|                        ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst425                                                                                  ; work         ;
+;    |74373:inst91|                         ; 67 (67)     ; 0            ; 0           ; 0    ; 0            ; 67 (67)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|74373:inst91                                                                                   ;              ;
+;    |7447:inst89|                          ; 7 (7)       ; 0            ; 0           ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|7447:inst89                                                                                    ;              ;
+;    |BuzzerDo:inst|                        ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerDo:inst                                                                                  ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerDo:inst|lpm_counter:lpm_counter_component                                                ; work         ;
+;          |cntr_hej:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|BuzzerDo:inst|lpm_counter:lpm_counter_component|cntr_hej:auto_generated                        ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|BuzzerDo:inst|lpm_counter:lpm_counter_component|cntr_hej:auto_generated|cmpr_56c:cmpr1         ; work         ;
+;    |BuzzerFa:inst112|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerFa:inst112                                                                               ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerFa:inst112|lpm_counter:lpm_counter_component                                             ; work         ;
+;          |cntr_rdj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|BuzzerFa:inst112|lpm_counter:lpm_counter_component|cntr_rdj:auto_generated                     ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|BuzzerFa:inst112|lpm_counter:lpm_counter_component|cntr_rdj:auto_generated|cmpr_56c:cmpr1      ; work         ;
+;    |BuzzerMi:inst94|                      ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerMi:inst94                                                                                ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerMi:inst94|lpm_counter:lpm_counter_component                                              ; work         ;
+;          |cntr_dej:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|BuzzerMi:inst94|lpm_counter:lpm_counter_component|cntr_dej:auto_generated                      ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|BuzzerMi:inst94|lpm_counter:lpm_counter_component|cntr_dej:auto_generated|cmpr_56c:cmpr1       ; work         ;
+;    |BuzzerRe:inst37|                      ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerRe:inst37                                                                                ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|BuzzerRe:inst37|lpm_counter:lpm_counter_component                                              ; work         ;
+;          |cntr_7ej:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|BuzzerRe:inst37|lpm_counter:lpm_counter_component|cntr_7ej:auto_generated                      ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|BuzzerRe:inst37|lpm_counter:lpm_counter_component|cntr_7ej:auto_generated|cmpr_56c:cmpr1       ; work         ;
+;    |clock1hz:inst281|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst281                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst281|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_0fj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst281|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst281|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated|cmpr_56c:cmpr1      ;              ;
+;    |clock1hz:inst282|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst282                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst282|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_0fj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst282|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst282|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated|cmpr_56c:cmpr1      ;              ;
+;    |clock1hz:inst283|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst283                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst283|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_0fj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst283|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock1hz:inst283|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated|cmpr_56c:cmpr1      ;              ;
+;    |clock3hz:inst750|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst750                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst750|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_8hj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst750|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst750|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated|cmpr_56c:cmpr1      ;              ;
+;    |clock3hz:inst759|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst759                                                                               ;              ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst759|lpm_counter:lpm_counter_component                                             ;              ;
+;          |cntr_8hj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst759|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated                     ;              ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst759|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated|cmpr_56c:cmpr1      ;              ;
+;    |clock3hz:inst770|                     ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst770                                                                               ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst770|lpm_counter:lpm_counter_component                                             ; work         ;
+;          |cntr_8hj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst770|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated                     ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clock3hz:inst770|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated|cmpr_56c:cmpr1      ; work         ;
+;    |clockbuzzer1k:inst111|                ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer1k:inst111                                                                          ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer1k:inst111|lpm_counter:lpm_counter_component                                        ; work         ;
+;          |cntr_2ej:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer1k:inst111|lpm_counter:lpm_counter_component|cntr_2ej:auto_generated                ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer1k:inst111|lpm_counter:lpm_counter_component|cntr_2ej:auto_generated|cmpr_56c:cmpr1 ; work         ;
+;    |clockbuzzer:inst272|                  ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer:inst272                                                                            ; work         ;
+;       |lpm_counter:lpm_counter_component| ; 41 (0)      ; 30           ; 0           ; 0    ; 0            ; 11 (0)       ; 0 (0)             ; 30 (0)           ; 31 (0)          ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer:inst272|lpm_counter:lpm_counter_component                                          ; work         ;
+;          |cntr_ldj:auto_generated|        ; 41 (31)     ; 30           ; 0           ; 0    ; 0            ; 11 (1)       ; 0 (0)             ; 30 (30)          ; 31 (31)         ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer:inst272|lpm_counter:lpm_counter_component|cntr_ldj:auto_generated                  ; work         ;
+;             |cmpr_56c:cmpr1|              ; 10 (10)     ; 0            ; 0           ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |ProjetoCofreV2|clockbuzzer:inst272|lpm_counter:lpm_counter_component|cntr_ldj:auto_generated|cmpr_56c:cmpr1   ; work         ;
++-------------------------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; inst256                                              ; VCC                 ; yes                    ;
+; inst262                                              ; VCC                 ; yes                    ;
+; inst296                                              ; VCC                 ; yes                    ;
+; inst567                                              ; VCC                 ; yes                    ;
+; inst570                                              ; VCC                 ; yes                    ;
+; inst564                                              ; VCC                 ; yes                    ;
+; 74373:inst91|12                                      ; inst333             ; yes                    ;
+; 74373:inst100|12                                     ; inst334             ; yes                    ;
+; 74373:inst109|12                                     ; inst335             ; yes                    ;
+; 74373:inst118|12                                     ; inst336             ; yes                    ;
+; 74373:inst91|13                                      ; inst333             ; yes                    ;
+; 74373:inst100|13                                     ; inst334             ; yes                    ;
+; 74373:inst109|13                                     ; inst335             ; yes                    ;
+; 74373:inst118|13                                     ; inst336             ; yes                    ;
+; 74373:inst91|14                                      ; inst333             ; yes                    ;
+; 74373:inst100|14                                     ; inst334             ; yes                    ;
+; 74373:inst109|14                                     ; inst335             ; yes                    ;
+; 74373:inst118|14                                     ; inst336             ; yes                    ;
+; 74373:inst91|15                                      ; inst333             ; yes                    ;
+; 74373:inst100|15                                     ; inst334             ; yes                    ;
+; 74373:inst109|15                                     ; inst335             ; yes                    ;
+; 74373:inst118|15                                     ; inst336             ; yes                    ;
+; 74373:inst91|16                                      ; inst333             ; yes                    ;
+; 74373:inst100|16                                     ; inst334             ; yes                    ;
+; 74373:inst109|16                                     ; inst335             ; yes                    ;
+; 74373:inst118|16                                     ; inst336             ; yes                    ;
+; 74373:inst91|17                                      ; inst333             ; yes                    ;
+; 74373:inst100|17                                     ; inst334             ; yes                    ;
+; 74373:inst109|17                                     ; inst335             ; yes                    ;
+; 74373:inst118|17                                     ; inst336             ; yes                    ;
+; 74373:inst91|18                                      ; inst333             ; yes                    ;
+; 74373:inst100|18                                     ; inst334             ; yes                    ;
+; 74373:inst109|18                                     ; inst335             ; yes                    ;
+; 74373:inst118|18                                     ; inst336             ; yes                    ;
+; inst265                                              ; VCC                 ; yes                    ;
+; inst259                                              ; VCC                 ; yes                    ;
+; 74373:inst91|19                                      ; inst333             ; yes                    ;
+; 74373:inst100|19                                     ; inst334             ; yes                    ;
+; 74373:inst109|19                                     ; inst335             ; yes                    ;
+; 74373:inst118|19                                     ; inst336             ; yes                    ;
+; inst252                                              ; VCC                 ; yes                    ;
+; 74373:inst142|12                                     ; inst436             ; yes                    ;
+; 74373:inst180|12                                     ; inst440             ; yes                    ;
+; 74373:inst142|14                                     ; inst436             ; yes                    ;
+; 74373:inst180|14                                     ; inst440             ; yes                    ;
+; 74373:inst142|17                                     ; inst436             ; yes                    ;
+; 74373:inst180|17                                     ; inst440             ; yes                    ;
+; 74373:inst142|18                                     ; inst436             ; yes                    ;
+; 74373:inst180|18                                     ; inst440             ; yes                    ;
+; 74373:inst142|13                                     ; inst436             ; yes                    ;
+; 74373:inst180|13                                     ; inst440             ; yes                    ;
+; 74373:inst142|15                                     ; inst436             ; yes                    ;
+; 74373:inst180|15                                     ; inst440             ; yes                    ;
+; 74373:inst142|16                                     ; inst436             ; yes                    ;
+; 74373:inst180|16                                     ; inst440             ; yes                    ;
+; 74373:inst158|12                                     ; inst435             ; yes                    ;
+; 74373:inst157|12                                     ; inst439             ; yes                    ;
+; 74373:inst158|14                                     ; inst435             ; yes                    ;
+; 74373:inst157|14                                     ; inst439             ; yes                    ;
+; 74373:inst158|17                                     ; inst435             ; yes                    ;
+; 74373:inst157|17                                     ; inst439             ; yes                    ;
+; 74373:inst158|18                                     ; inst435             ; yes                    ;
+; 74373:inst157|18                                     ; inst439             ; yes                    ;
+; 74373:inst158|13                                     ; inst435             ; yes                    ;
+; 74373:inst157|13                                     ; inst439             ; yes                    ;
+; 74373:inst158|15                                     ; inst435             ; yes                    ;
+; 74373:inst157|15                                     ; inst439             ; yes                    ;
+; 74373:inst158|16                                     ; inst435             ; yes                    ;
+; 74373:inst157|16                                     ; inst439             ; yes                    ;
+; 74373:inst155|12                                     ; inst434             ; yes                    ;
+; 74373:inst425|12                                     ; inst438             ; yes                    ;
+; 74373:inst155|14                                     ; inst434             ; yes                    ;
+; 74373:inst425|14                                     ; inst438             ; yes                    ;
+; 74373:inst155|17                                     ; inst434             ; yes                    ;
+; 74373:inst425|17                                     ; inst438             ; yes                    ;
+; 74373:inst155|18                                     ; inst434             ; yes                    ;
+; 74373:inst425|18                                     ; inst438             ; yes                    ;
+; 74373:inst155|13                                     ; inst434             ; yes                    ;
+; 74373:inst425|13                                     ; inst438             ; yes                    ;
+; 74373:inst155|15                                     ; inst434             ; yes                    ;
+; 74373:inst425|15                                     ; inst438             ; yes                    ;
+; 74373:inst155|16                                     ; inst434             ; yes                    ;
+; 74373:inst425|16                                     ; inst438             ; yes                    ;
+; 74373:inst411|12                                     ; inst433             ; yes                    ;
+; 74373:inst410|12                                     ; inst437             ; yes                    ;
+; 74373:inst411|14                                     ; inst433             ; yes                    ;
+; 74373:inst410|14                                     ; inst437             ; yes                    ;
+; 74373:inst411|17                                     ; inst433             ; yes                    ;
+; 74373:inst410|17                                     ; inst437             ; yes                    ;
+; 74373:inst411|18                                     ; inst433             ; yes                    ;
+; 74373:inst410|18                                     ; inst437             ; yes                    ;
+; 74373:inst411|13                                     ; inst433             ; yes                    ;
+; 74373:inst410|13                                     ; inst437             ; yes                    ;
+; 74373:inst411|15                                     ; inst433             ; yes                    ;
+; 74373:inst410|15                                     ; inst437             ; yes                    ;
+; 74373:inst411|16                                     ; inst433             ; yes                    ;
+; 74373:inst410|16                                     ; inst437             ; yes                    ;
+; 74373:inst187|18                                     ; inst110             ; yes                    ;
+; 74373:inst187|17                                     ; inst110             ; yes                    ;
+; 74373:inst187|16                                     ; inst110             ; yes                    ;
+; Number of user-specified and inferred latches = 182  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                    ;
++----------------------------------------+------------------------------+
+; Register name                          ; Reason for Removal           ;
++----------------------------------------+------------------------------+
+; 74190:inst104|48                       ; Merged with 74190:inst113|48 ;
+; 74190:inst95|48                        ; Merged with 74190:inst113|48 ;
+; 74190:inst86|48                        ; Merged with 74190:inst113|48 ;
+; 74190:inst104|51                       ; Merged with 74190:inst113|51 ;
+; 74190:inst95|51                        ; Merged with 74190:inst113|51 ;
+; 74190:inst86|51                        ; Merged with 74190:inst113|51 ;
+; 74190:inst104|49                       ; Merged with 74190:inst113|49 ;
+; 74190:inst95|49                        ; Merged with 74190:inst113|49 ;
+; 74190:inst86|49                        ; Merged with 74190:inst113|49 ;
+; 74190:inst104|50                       ; Merged with 74190:inst113|50 ;
+; 74190:inst95|50                        ; Merged with 74190:inst113|50 ;
+; 74190:inst86|50                        ; Merged with 74190:inst113|50 ;
+; Total Number of Removed Registers = 12 ;                              ;
++----------------------------------------+------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 460   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 360   ;
+; Number of registers using Asynchronous Clear ; 88    ;
+; Number of registers using Asynchronous Load  ; 3     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock3hz:inst750|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock3hz:inst759|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock1hz:inst282|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock1hz:inst283|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock1hz:inst281|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++------------------------------------------------------------------------+
+; Source assignments for BuzzerDo:inst|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-----------------------------+
+; Assignment                ; Value ; From ; To                          ;
++---------------------------+-------+------+-----------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                           ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                           ;
++---------------------------+-------+------+-----------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for clock3hz:inst770|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Source assignments for BuzzerMi:inst94|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------+
+; Assignment                ; Value ; From ; To                            ;
++---------------------------+-------+------+-------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                             ;
++---------------------------+-------+------+-------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Source assignments for BuzzerFa:inst112|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+--------------------------------+
+; Assignment                ; Value ; From ; To                             ;
++---------------------------+-------+------+--------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                              ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                              ;
++---------------------------+-------+------+--------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Source assignments for BuzzerRe:inst37|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------+
+; Assignment                ; Value ; From ; To                            ;
++---------------------------+-------+------+-------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                             ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                             ;
++---------------------------+-------+------+-------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Source assignments for clockbuzzer1k:inst111|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------+
+; Assignment                ; Value ; From ; To                                  ;
++---------------------------+-------+------+-------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                   ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                   ;
++---------------------------+-------+------+-------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Source assignments for clockbuzzer:inst272|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-----------------------------------+
+; Assignment                ; Value ; From ; To                                ;
++---------------------------+-------+------+-----------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                 ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                 ;
++---------------------------+-------+------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock3hz:inst750|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 8333333     ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_8hj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock3hz:inst759|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 8333333     ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_8hj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock1hz:inst282|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 200000      ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_0fj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock1hz:inst283|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 200000      ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_0fj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock1hz:inst281|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 200000      ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_0fj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BuzzerDo:inst|lpm_counter:lpm_counter_component ;
++------------------------+-------------+-------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                  ;
++------------------------+-------------+-------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                        ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                        ;
+; LPM_DIRECTION          ; UP          ; Untyped                                               ;
+; LPM_MODULUS            ; 94697       ; Signed Integer                                        ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                               ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                               ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                               ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                               ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                    ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                    ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                               ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                               ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                               ;
+; CBXI_PARAMETER         ; cntr_hej    ; Untyped                                               ;
++------------------------+-------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clock3hz:inst770|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 8333333     ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_8hj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BuzzerMi:inst94|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                    ;
++------------------------+-------------+---------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                          ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                          ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                 ;
+; LPM_MODULUS            ; 75757       ; Signed Integer                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                 ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                      ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                      ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                 ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                 ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                 ;
+; CBXI_PARAMETER         ; cntr_dej    ; Untyped                                                 ;
++------------------------+-------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BuzzerFa:inst112|lpm_counter:lpm_counter_component ;
++------------------------+-------------+----------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                     ;
++------------------------+-------------+----------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                             ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                           ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                           ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                  ;
+; LPM_MODULUS            ; 71023       ; Signed Integer                                           ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                  ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                  ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                  ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                  ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                       ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                       ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                  ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                  ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                  ;
+; CBXI_PARAMETER         ; cntr_rdj    ; Untyped                                                  ;
++------------------------+-------------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BuzzerRe:inst37|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                    ;
++------------------------+-------------+---------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                            ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                          ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                          ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                 ;
+; LPM_MODULUS            ; 84175       ; Signed Integer                                          ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                 ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                 ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                 ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                 ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                      ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                      ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                 ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                 ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                 ;
+; CBXI_PARAMETER         ; cntr_7ej    ; Untyped                                                 ;
++------------------------+-------------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockbuzzer1k:inst111|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                          ;
++------------------------+-------------+---------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                                ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                       ;
+; LPM_MODULUS            ; 83333       ; Signed Integer                                                ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                       ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                       ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                       ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                            ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                            ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                       ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                       ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                       ;
+; CBXI_PARAMETER         ; cntr_2ej    ; Untyped                                                       ;
++------------------------+-------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clockbuzzer:inst272|lpm_counter:lpm_counter_component ;
++------------------------+-------------+-------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                        ;
++------------------------+-------------+-------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                              ;
+; LPM_WIDTH              ; 30          ; Signed Integer                                              ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                     ;
+; LPM_MODULUS            ; 25000       ; Signed Integer                                              ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                     ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                     ;
+; DEVICE_FAMILY          ; Cyclone     ; Untyped                                                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                          ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                          ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                     ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                     ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                     ;
+; CBXI_PARAMETER         ; cntr_ldj    ; Untyped                                                     ;
++------------------------+-------------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Dec 12 08:50:07 2014
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProjetoCofreV2 -c ProjetoCofreV2
+Info: Found 2 design units, including 1 entities, in source file clock1hz.vhd
+    Info: Found design unit 1: clock1hz-SYN
+    Info: Found entity 1: clock1hz
+Info: Found 1 design units, including 1 entities, in source file projetocofrev2.bdf
+    Info: Found entity 1: ProjetoCofreV2
+Info: Found 2 design units, including 1 entities, in source file clockbuzzer.vhd
+    Info: Found design unit 1: clockbuzzer-SYN
+    Info: Found entity 1: clockbuzzer
+Info: Found 2 design units, including 1 entities, in source file clockbuzzer1k.vhd
+    Info: Found design unit 1: clockbuzzer1k-SYN
+    Info: Found entity 1: clockbuzzer1k
+Info: Found 2 design units, including 1 entities, in source file buzzerdo.vhd
+    Info: Found design unit 1: buzzerdo-SYN
+    Info: Found entity 1: BuzzerDo
+Info: Found 2 design units, including 1 entities, in source file buzzerre.vhd
+    Info: Found design unit 1: buzzerre-SYN
+    Info: Found entity 1: BuzzerRe
+Info: Found 2 design units, including 1 entities, in source file buzzermi.vhd
+    Info: Found design unit 1: buzzermi-SYN
+    Info: Found entity 1: BuzzerMi
+Info: Found 2 design units, including 1 entities, in source file buzzerfa.vhd
+    Info: Found design unit 1: buzzerfa-SYN
+    Info: Found entity 1: BuzzerFa
+Info: Found 2 design units, including 1 entities, in source file clock3hz.vhd
+    Info: Found design unit 1: clock3hz-SYN
+    Info: Found entity 1: clock3hz
+Info: Found 2 design units, including 1 entities, in source file buzzermusiquinha.vhd
+    Info: Found design unit 1: buzzermusiquinha-SYN
+    Info: Found entity 1: buzzermusiquinha
+Info: Elaborating entity "ProjetoCofreV2" for the top level hierarchy
+Warning: Primitive "OR2" of instance "inst178" not used
+Warning: Primitive "OR2" of instance "inst179" not used
+Info: Elaborating entity "clock3hz" for hierarchy "clock3hz:inst750"
+Info: Elaborating entity "lpm_counter" for hierarchy "clock3hz:inst750|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "clock3hz:inst750|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "clock3hz:inst750|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "8333333"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_8hj.tdf
+    Info: Found entity 1: cntr_8hj
+Info: Elaborating entity "cntr_8hj" for hierarchy "clock3hz:inst750|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_56c.tdf
+    Info: Found entity 1: cmpr_56c
+Info: Elaborating entity "cmpr_56c" for hierarchy "clock3hz:inst750|lpm_counter:lpm_counter_component|cntr_8hj:auto_generated|cmpr_56c:cmpr1"
+Info: Elaborating entity "clock1hz" for hierarchy "clock1hz:inst282"
+Info: Elaborating entity "lpm_counter" for hierarchy "clock1hz:inst282|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "clock1hz:inst282|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "clock1hz:inst282|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "200000"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_0fj.tdf
+    Info: Found entity 1: cntr_0fj
+Info: Elaborating entity "cntr_0fj" for hierarchy "clock1hz:inst282|lpm_counter:lpm_counter_component|cntr_0fj:auto_generated"
+Info: Elaborating entity "74373" for hierarchy "74373:inst91"
+Info: Elaborated megafunction instantiation "74373:inst91"
+Info: Elaborating entity "7447" for hierarchy "7447:inst89"
+Info: Elaborated megafunction instantiation "7447:inst89"
+Info: Elaborating entity "74190" for hierarchy "74190:inst86"
+Info: Elaborated megafunction instantiation "74190:inst86"
+Info: Elaborating entity "BuzzerDo" for hierarchy "BuzzerDo:inst"
+Info: Elaborating entity "lpm_counter" for hierarchy "BuzzerDo:inst|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "BuzzerDo:inst|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "BuzzerDo:inst|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "94697"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_hej.tdf
+    Info: Found entity 1: cntr_hej
+Info: Elaborating entity "cntr_hej" for hierarchy "BuzzerDo:inst|lpm_counter:lpm_counter_component|cntr_hej:auto_generated"
+Info: Elaborating entity "BuzzerMi" for hierarchy "BuzzerMi:inst94"
+Info: Elaborating entity "lpm_counter" for hierarchy "BuzzerMi:inst94|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "BuzzerMi:inst94|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "BuzzerMi:inst94|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "75757"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_dej.tdf
+    Info: Found entity 1: cntr_dej
+Info: Elaborating entity "cntr_dej" for hierarchy "BuzzerMi:inst94|lpm_counter:lpm_counter_component|cntr_dej:auto_generated"
+Info: Elaborating entity "BuzzerFa" for hierarchy "BuzzerFa:inst112"
+Info: Elaborating entity "lpm_counter" for hierarchy "BuzzerFa:inst112|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "BuzzerFa:inst112|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "BuzzerFa:inst112|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "71023"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_rdj.tdf
+    Info: Found entity 1: cntr_rdj
+Info: Elaborating entity "cntr_rdj" for hierarchy "BuzzerFa:inst112|lpm_counter:lpm_counter_component|cntr_rdj:auto_generated"
+Info: Elaborating entity "BuzzerRe" for hierarchy "BuzzerRe:inst37"
+Info: Elaborating entity "lpm_counter" for hierarchy "BuzzerRe:inst37|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "BuzzerRe:inst37|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "BuzzerRe:inst37|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "84175"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_7ej.tdf
+    Info: Found entity 1: cntr_7ej
+Info: Elaborating entity "cntr_7ej" for hierarchy "BuzzerRe:inst37|lpm_counter:lpm_counter_component|cntr_7ej:auto_generated"
+Info: Elaborating entity "clockbuzzer1k" for hierarchy "clockbuzzer1k:inst111"
+Info: Elaborating entity "lpm_counter" for hierarchy "clockbuzzer1k:inst111|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "clockbuzzer1k:inst111|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "clockbuzzer1k:inst111|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "83333"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_2ej.tdf
+    Info: Found entity 1: cntr_2ej
+Info: Elaborating entity "cntr_2ej" for hierarchy "clockbuzzer1k:inst111|lpm_counter:lpm_counter_component|cntr_2ej:auto_generated"
+Info: Elaborating entity "clockbuzzer" for hierarchy "clockbuzzer:inst272"
+Info: Elaborating entity "lpm_counter" for hierarchy "clockbuzzer:inst272|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "clockbuzzer:inst272|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "clockbuzzer:inst272|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_modulus" = "25000"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "30"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_ldj.tdf
+    Info: Found entity 1: cntr_ldj
+Info: Elaborating entity "cntr_ldj" for hierarchy "clockbuzzer:inst272|lpm_counter:lpm_counter_component|cntr_ldj:auto_generated"
+Warning: LATCH primitive "74373:inst420|19" is permanently enabled
+Warning: LATCH primitive "74373:inst420|18" is permanently enabled
+Warning: LATCH primitive "74373:inst420|17" is permanently enabled
+Warning: LATCH primitive "74373:inst420|16" is permanently enabled
+Warning: LATCH primitive "74373:inst420|15" is permanently enabled
+Warning: LATCH primitive "74373:inst420|14" is permanently enabled
+Warning: LATCH primitive "74373:inst420|13" is permanently enabled
+Warning: LATCH primitive "74373:inst420|12" is permanently enabled
+Warning: LATCH primitive "74373:inst407|19" is permanently enabled
+Warning: LATCH primitive "74373:inst407|18" is permanently enabled
+Warning: LATCH primitive "74373:inst407|17" is permanently enabled
+Warning: LATCH primitive "74373:inst407|16" is permanently enabled
+Warning: LATCH primitive "74373:inst407|15" is permanently enabled
+Warning: LATCH primitive "74373:inst407|14" is permanently enabled
+Warning: LATCH primitive "74373:inst407|13" is permanently enabled
+Warning: LATCH primitive "74373:inst407|12" is permanently enabled
+Warning: LATCH primitive "74373:inst168|19" is permanently enabled
+Warning: LATCH primitive "74373:inst168|18" is permanently enabled
+Warning: LATCH primitive "74373:inst168|17" is permanently enabled
+Warning: LATCH primitive "74373:inst168|16" is permanently enabled
+Warning: LATCH primitive "74373:inst168|15" is permanently enabled
+Warning: LATCH primitive "74373:inst168|14" is permanently enabled
+Warning: LATCH primitive "74373:inst168|13" is permanently enabled
+Warning: LATCH primitive "74373:inst168|12" is permanently enabled
+Warning: LATCH primitive "74373:inst152|19" is permanently enabled
+Warning: LATCH primitive "74373:inst152|18" is permanently enabled
+Warning: LATCH primitive "74373:inst152|17" is permanently enabled
+Warning: LATCH primitive "74373:inst152|16" is permanently enabled
+Warning: LATCH primitive "74373:inst152|15" is permanently enabled
+Warning: LATCH primitive "74373:inst152|14" is permanently enabled
+Warning: LATCH primitive "74373:inst152|13" is permanently enabled
+Warning: LATCH primitive "74373:inst152|12" is permanently enabled
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "74373:inst348|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst348|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst685|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst349|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst703|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst350|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst717|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst359|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst731|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst365|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst661|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst357|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst628|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst358|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst639|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst364|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst650|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst410|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst411|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst420|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst425|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst155|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst407|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst157|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst158|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst168|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst180|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst142|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|74" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst152|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst192|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst615|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst171|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst573|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst183|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst587|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst187|67" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|73" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|72" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|71" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|70" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|69" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|68" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "74373:inst601|67" feeding internal logic into a wire
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|67" to the node "74373:inst187|12" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|68" to the node "74373:inst187|13" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|69" to the node "74373:inst187|14" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|70" to the node "74373:inst187|15" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|71" to the node "74373:inst187|16" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|72" to the node "74373:inst187|17" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74373:inst91|73" to the node "74373:inst187|18" into an OR gate
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "74373:inst364|18" merged with LATCH primitive "74373:inst187|18"
+    Info: Duplicate LATCH primitive "74373:inst350|18" merged with LATCH primitive "74373:inst187|18"
+    Info: Duplicate LATCH primitive "74373:inst364|17" merged with LATCH primitive "74373:inst187|17"
+    Info: Duplicate LATCH primitive "74373:inst350|17" merged with LATCH primitive "74373:inst187|17"
+    Info: Duplicate LATCH primitive "74373:inst364|16" merged with LATCH primitive "74373:inst187|16"
+    Info: Duplicate LATCH primitive "74373:inst350|16" merged with LATCH primitive "74373:inst187|16"
+    Info: Duplicate LATCH primitive "74373:inst364|15" merged with LATCH primitive "74373:inst187|15"
+    Info: Duplicate LATCH primitive "74373:inst350|15" merged with LATCH primitive "74373:inst187|15"
+    Info: Duplicate LATCH primitive "74373:inst364|14" merged with LATCH primitive "74373:inst187|14"
+    Info: Duplicate LATCH primitive "74373:inst350|14" merged with LATCH primitive "74373:inst187|14"
+    Info: Duplicate LATCH primitive "74373:inst364|13" merged with LATCH primitive "74373:inst187|13"
+    Info: Duplicate LATCH primitive "74373:inst350|13" merged with LATCH primitive "74373:inst187|13"
+    Info: Duplicate LATCH primitive "74373:inst364|12" merged with LATCH primitive "74373:inst187|12"
+    Info: Duplicate LATCH primitive "74373:inst350|12" merged with LATCH primitive "74373:inst187|12"
+    Info: Duplicate LATCH primitive "74373:inst358|18" merged with LATCH primitive "74373:inst183|18"
+    Info: Duplicate LATCH primitive "74373:inst349|18" merged with LATCH primitive "74373:inst183|18"
+    Info: Duplicate LATCH primitive "74373:inst358|17" merged with LATCH primitive "74373:inst183|17"
+    Info: Duplicate LATCH primitive "74373:inst349|17" merged with LATCH primitive "74373:inst183|17"
+    Info: Duplicate LATCH primitive "74373:inst358|16" merged with LATCH primitive "74373:inst183|16"
+    Info: Duplicate LATCH primitive "74373:inst349|16" merged with LATCH primitive "74373:inst183|16"
+    Info: Duplicate LATCH primitive "74373:inst358|15" merged with LATCH primitive "74373:inst183|15"
+    Info: Duplicate LATCH primitive "74373:inst349|15" merged with LATCH primitive "74373:inst183|15"
+    Info: Duplicate LATCH primitive "74373:inst358|14" merged with LATCH primitive "74373:inst183|14"
+    Info: Duplicate LATCH primitive "74373:inst349|14" merged with LATCH primitive "74373:inst183|14"
+    Info: Duplicate LATCH primitive "74373:inst358|13" merged with LATCH primitive "74373:inst183|13"
+    Info: Duplicate LATCH primitive "74373:inst349|13" merged with LATCH primitive "74373:inst183|13"
+    Info: Duplicate LATCH primitive "74373:inst358|12" merged with LATCH primitive "74373:inst183|12"
+    Info: Duplicate LATCH primitive "74373:inst349|12" merged with LATCH primitive "74373:inst183|12"
+    Info: Duplicate LATCH primitive "74373:inst357|18" merged with LATCH primitive "74373:inst171|18"
+    Info: Duplicate LATCH primitive "74373:inst348|18" merged with LATCH primitive "74373:inst171|18"
+    Info: Duplicate LATCH primitive "74373:inst357|17" merged with LATCH primitive "74373:inst171|17"
+    Info: Duplicate LATCH primitive "74373:inst348|17" merged with LATCH primitive "74373:inst171|17"
+    Info: Duplicate LATCH primitive "74373:inst357|16" merged with LATCH primitive "74373:inst171|16"
+    Info: Duplicate LATCH primitive "74373:inst348|16" merged with LATCH primitive "74373:inst171|16"
+    Info: Duplicate LATCH primitive "74373:inst357|15" merged with LATCH primitive "74373:inst171|15"
+    Info: Duplicate LATCH primitive "74373:inst348|15" merged with LATCH primitive "74373:inst171|15"
+    Info: Duplicate LATCH primitive "74373:inst357|14" merged with LATCH primitive "74373:inst171|14"
+    Info: Duplicate LATCH primitive "74373:inst348|14" merged with LATCH primitive "74373:inst171|14"
+    Info: Duplicate LATCH primitive "74373:inst357|13" merged with LATCH primitive "74373:inst171|13"
+    Info: Duplicate LATCH primitive "74373:inst348|13" merged with LATCH primitive "74373:inst171|13"
+    Info: Duplicate LATCH primitive "74373:inst357|12" merged with LATCH primitive "74373:inst171|12"
+    Info: Duplicate LATCH primitive "74373:inst348|12" merged with LATCH primitive "74373:inst171|12"
+    Info: Duplicate LATCH primitive "74373:inst365|18" merged with LATCH primitive "74373:inst192|18"
+    Info: Duplicate LATCH primitive "74373:inst359|18" merged with LATCH primitive "74373:inst192|18"
+    Info: Duplicate LATCH primitive "74373:inst365|17" merged with LATCH primitive "74373:inst192|17"
+    Info: Duplicate LATCH primitive "74373:inst359|17" merged with LATCH primitive "74373:inst192|17"
+    Info: Duplicate LATCH primitive "74373:inst365|16" merged with LATCH primitive "74373:inst192|16"
+    Info: Duplicate LATCH primitive "74373:inst359|16" merged with LATCH primitive "74373:inst192|16"
+    Info: Duplicate LATCH primitive "74373:inst365|15" merged with LATCH primitive "74373:inst192|15"
+    Info: Duplicate LATCH primitive "74373:inst359|15" merged with LATCH primitive "74373:inst192|15"
+    Info: Duplicate LATCH primitive "74373:inst365|14" merged with LATCH primitive "74373:inst192|14"
+    Info: Duplicate LATCH primitive "74373:inst359|14" merged with LATCH primitive "74373:inst192|14"
+    Info: Duplicate LATCH primitive "74373:inst365|13" merged with LATCH primitive "74373:inst192|13"
+    Info: Duplicate LATCH primitive "74373:inst359|13" merged with LATCH primitive "74373:inst192|13"
+    Info: Duplicate LATCH primitive "74373:inst365|12" merged with LATCH primitive "74373:inst192|12"
+    Info: Duplicate LATCH primitive "74373:inst359|12" merged with LATCH primitive "74373:inst192|12"
+Warning: Latch 74373:inst142|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst142|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst180|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst92
+Warning: Latch 74373:inst158|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst158|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst157|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst101
+Warning: Latch 74373:inst155|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst155|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst425|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst110
+Warning: Latch 74373:inst411|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|12 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|14 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|17 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|18 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|13 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|15 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst411|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Warning: Latch 74373:inst410|16 has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal inst72
+Info: Implemented 964 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 21 output pins
+    Info: Implemented 932 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 419 warnings
+    Info: Peak virtual memory: 256 megabytes
+    Info: Processing ended: Fri Dec 12 08:50:34 2014
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:35
+
+

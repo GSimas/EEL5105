@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ProjetoCofreV2">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock1hz:inst281|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_0fj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock3hz:inst759|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_8hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|BuzzerDo:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_hej.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|BuzzerFa:inst112|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_rdj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|BuzzerMi:inst94|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_dej.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|BuzzerRe:inst37|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_7ej.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock1hz:inst282|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_0fj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock3hz:inst750|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_8hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock3hz:inst770|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_8hj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clockbuzzer1k:inst111|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_2ej.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clockbuzzer:inst272|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_ldj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ProjetoCofreV2|clock1hz:inst283|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_0fj.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

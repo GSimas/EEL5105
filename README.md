@@ -1,4 +1,4 @@
-# EEL5105 - VHDL
+# EEL5105 - Circuitos e Técnicas Digitais
 
 > "A educação é a mais poderosa arma pela qual se pode mudar o mundo" - **Nelson Mandela**
 

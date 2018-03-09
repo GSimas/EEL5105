@@ -1,4 +1,4 @@
-# EEL5105 - Circuitos e Técnicas Digitais
+# 💻EEL5105 - Circuitos e Técnicas Digitais
 
 > "A educação é a mais poderosa arma pela qual se pode mudar o mundo" - **Nelson Mandela**
 
@@ -18,6 +18,17 @@
 **Ementa**: Sistemas de numeração e códigos numéricos. Álgebra Booleana. Funções e portas lógicas. Portas lógicas CMOS. Síntese e otimização de circuitos lógicos. Circuitos combinacionais. Circuitos sequenciais. Máquinas de estados finitos. Relógio e temporização. Modelo bloco operativo/bloco de controle. Introdução às linguagens de descrição de hardware (HDL). Dispositivos lógicos programáveis (PLD).
 
 **Plataforma**: Desenvolvido com o software Intel Altera Quartus II (v.15). Dispositivo: Cyclone V, versão 5CSEMAF31C6
+
+## **Contribuições**
+
+Se você tem interesse em contribuir, faça o clone do repositório da seguinte forma:
+
+```
+$ git clone git@github.com:GSimas/EEL5105.git
+```
+
+Fique livre para adicionar issues *relevantes*, acrescentar resoluções de exercícios, desenvolvimento de projetos, aperfeiçoamento de conteúdo, entre outros materiais adicionais. Caso utilize material de terceiros, referencie da devida forma, dando os créditos para os autores.
+Leia o arquivo [CONTRIBUTING.md](https://github.com/GSimas/EEL5105/blob/master/CONTRIBUTING.md) para maiores especificações.
 
 References:
 

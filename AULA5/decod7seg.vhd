@@ -18,10 +18,11 @@ begin
 				"0000010" when C = "0110" else -- 6
 				"1111000" when C = "0111" else -- 7
 				"0000000" when C = "1000" else -- 8
-				"0001000" when C = "1001" else -- A
-				"0000011" when C = "1010" else -- b
-				"1000110" when C = "1011" else -- C
-				"0100001" when C = "1100" else -- d
-				"0000110" when C = "1101" else -- E
-				"0001110";
+				"0010000" when C = "1001" else -- 9
+				"0001000" when C = "1010" else -- A
+				"0000011" when C = "1011" else -- b
+				"1000110" when C = "1100" else -- C
+				"0100001" when C = "1101" else -- d
+				"0000110" when C = "1110" else -- E
+				"0001110"; -- F
 end decod;

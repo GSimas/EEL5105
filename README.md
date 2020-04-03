@@ -37,4 +37,9 @@ References:
 - BEZERRA, E. A.; LETTNIN, D. V. **Synthesizable VHDL Design for FPGAs**. Springer, 2014.
 - VAHID, F. **Digital Design**. Wiley & Sons, 2005.
 
-![UFSC](http://laship.ufsc.br/site/wp-content/themes/emc_completo/resource/img/filiacoes/brasao_UFSC_vertical_sigla.png) ![CTC](http://tisc.com.br/wp-content/uploads/ctcufsc.gif)
+<table style="width:100%">
+  <tr>
+    <th><img width="200px" src="http://laship.ufsc.br/site/wp-content/themes/emc_completo/resource/img/filiacoes/brasao_UFSC_vertical_sigla.png"></th>
+    <th><img width="200px" src="http://tisc.com.br/wp-content/uploads/ctcufsc.gif"></th> 
+  </tr>
+</table>
